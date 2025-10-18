@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Ravrani - Senior Solutions Architect & Technical Lead | .NET, Cloud, Data Engineering</title>
+    <meta name="description" content="Senior Solutions Architect with 8+ years experience in .NET, Cloud, and Data Engineering. Expert in microservices, Azure, AWS, and scalable enterprise solutions. Available for technical leadership and architecture consulting.">
+    <meta name="keywords" content="Senior Solutions Architect, .NET Developer, Cloud Engineer, Data Engineer, Azure, AWS, Microservices, Technical Lead, Software Architecture, DevOps, C#, Python, SQL Server, Enterprise Solutions">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://parthravrani.com/">
+    <meta property="og:title" content="Parth Ravrani - Senior Solutions Architect & Technical Lead">
+    <meta property="og:description" content="Senior Solutions Architect with 8+ years experience in .NET, Cloud, and Data Engineering. Expert in microservices, Azure, AWS, and scalable enterprise solutions.">
+    <meta property="og:image" content="https://parthravrani.com/images/parth-ravrani-og-image.jpg">
+    <meta property="og:site_name" content="Parth Ravrani Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://parthravrani.com/">
+    <meta property="twitter:title" content="Parth Ravrani - Senior Solutions Architect & Technical Lead">
+    <meta property="twitter:description" content="Senior Solutions Architect with 8+ years experience in .NET, Cloud, and Data Engineering. Expert in microservices, Azure, AWS, and scalable enterprise solutions.">
+    <meta property="twitter:image" content="https://parthravrani.com/images/parth-ravrani-twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://parthravrani.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Parth Ravrani",
+        "jobTitle": "Senior Solutions Architect & Technical Lead",
+        "description": "Senior Solutions Architect with 8+ years experience in .NET, Cloud, and Data Engineering. Expert in microservices, Azure, AWS, and scalable enterprise solutions.",
+        "url": "https://parthravrani.com",
+        "image": "https://parthravrani.com/images/parth-ravrani-profile.jpg",
+        "email": "parthravrani@hotmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/parthravrani",
+            "https://github.com/parthravrani"
+        ],
+        "knowsAbout": [
+            ".NET Core",
+            "Microservices Architecture",
+            "Azure Cloud Services",
+            "AWS Cloud Services",
+            "Data Engineering",
+            "Python",
+            "C#",
+            "SQL Server",
+            "DevOps",
+            "Software Architecture"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Senior Solutions Architect",
+            "description": "Technical leadership and architecture consulting for enterprise software solutions"
+        },
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "Multiple Organizations"
+        },
+        "award": "50+ successful projects delivered",
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Professional Developer Community"
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Near-black */
+            color: #a1a1aa; /* Zinc 400 */
+            overflow-x: hidden;
+        }
+        
+        @keyframes background-pan {
+            from { background-position: 0% center; }
+            to { background-position: -200% center; }
+        }
+
+        .animated-gradient-bg {
+            background: linear-gradient(90deg, #0a0a0a, #111111, #18181b, #111111, #0a0a0a);
+            background-size: 200%;
+            animation: background-pan 20s linear infinite;
+        }
+
+        .glass-card {
+            background: rgba(24, 24, 27, 0.5); /* Zinc 900 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(39, 39, 42, 0.5); /* Zinc 800 */
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(249, 115, 22, 0.4); /* Orange 500 */
+            background: rgba(39, 39, 42, 0.7); /* Zinc 800 */
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2), 0 0 20px rgba(249, 115, 22, 0.1);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-link {
+            transition: color 0.3s ease, letter-spacing 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #f4f4f5; /* Zinc 100 */
+            letter-spacing: .05em;
+        }
+
+        .btn-gradient {
+            background-image: linear-gradient(to right, #f97316, #ea580c); /* Orange to Dark Orange */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.25);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(to right, #f97316, #ea580c); /* Light to Dark Orange */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Ensure icons in process section use orange gradient */
+        .text-gradient i {
+            background: linear-gradient(to right, #f97316, #ea580c) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+            color: transparent !important;
+        }
+        
+        /* Override any cyan colors that might appear */
+        .text-gradient i:hover {
+            background: linear-gradient(to right, #f97316, #ea580c) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+            color: transparent !important;
+        }
+
+        .tech-icon-card {
+            background-color: rgba(39, 39, 42, 0.4); /* Zinc 800 */
+            border: 1px solid rgba(63, 63, 70, 0.5); /* Zinc 700 */
+            transition: all 0.3s ease;
+        }
+
+        .tech-icon-card:hover {
+            background-color: rgba(63, 63, 70, 0.6); /* Zinc 700 */
+            border-color: rgba(249, 115, 22, 0.4); /* Orange 500 */
+            transform: translateY(-4px);
+        }
+        
+        .timeline-vertical .timeline-item-v {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 2rem;
+        }
+        .timeline-vertical .timeline-item-v::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f97316;
+            border: 2px solid #0a0a0a;
+        }
+        .timeline-vertical::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background-color: #27272a;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .scrolling-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .scrolling-logos {
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-around;
+            min-width: 100%;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Enhanced UI Improvements */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.3), transparent);
+            margin: 4rem 0;
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(234, 88, 12, 0.1));
+            border: 1px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .backdrop-blur-enhanced {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero Scroll Animation */
+        .hero-section-1,
+        .hero-section-2,
+        .hero-section-3 {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .hero-section-1.visible,
+        .hero-section-2.visible,
+        .hero-section-3.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-section-1 {
+            transition-delay: 0ms;
+        }
+        
+        .hero-section-2 {
+            transition-delay: 300ms;
+        }
+        
+        .hero-section-3 {
+            transition-delay: 600ms;
+        }
+
+        /* Simple but Awesome Custom Mouse Cursor */
+        * {
+            cursor: none;
+        }
+        
+        .custom-cursor {
+            position: fixed;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(45deg, #f97316, #ea580c);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            mix-blend-mode: difference;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .custom-cursor-dot {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        
+        .custom-cursor.hover {
+            transform: scale(2);
+            background: linear-gradient(45deg, #ea580c, #dc2626);
+            mix-blend-mode: normal;
+            box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .custom-cursor.click {
+            transform: scale(0.8);
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.8);
+        }
+        
+        .custom-cursor.magnetic {
+            transform: scale(1.5);
+            background: linear-gradient(45deg, #f97316, #ea580c, #dc2626);
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.6);
+        }
+        
+        /* Interactive elements that trigger hover effect */
+        a, button, .btn-gradient, .glass-card, .tech-icon-card, .nav-link {
+            cursor: none;
+        }
+
+        /* Tech Stack Tabbed Interface */
+        .tech-tab {
+            background: rgba(39, 39, 42, 0.5);
+            border: 1px solid rgba(63, 63, 70, 0.5);
+            color: #a1a1aa;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .tech-tab:hover {
+            background: rgba(39, 39, 42, 0.8);
+            border-color: rgba(249, 115, 22, 0.3);
+            color: #f4f4f5;
+            transform: translateY(-2px);
+        }
+
+        .tech-tab.active {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.1));
+            border-color: #f97316;
+            color: #f97316;
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.2);
+        }
+
+        .tech-tab-content {
+            position: relative;
+            min-height: 300px;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .tech-card {
+            background: rgba(39, 39, 42, 0.6);
+            border: 1px solid rgba(63, 63, 70, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-height: 100px;
+            justify-content: center;
+        }
+
+        .tech-card:hover {
+            background: rgba(39, 39, 42, 0.8);
+            border-color: rgba(249, 115, 22, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .tech-card span {
+            color: #e4e4e7;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .tech-card:hover span {
+            color: #f4f4f5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+
+
+
+        
+        /* Navigation Active State */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #f97316;
+            border-color: #f97316;
+        }
+        
+        /* Enhanced Header Styling */
+        nav {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        nav:hover {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(249, 115, 22, 0.3) !important;
+        }
+        
+        /* Quote icons styling */
+        .fa-quote-left {
+            color: #64748b !important; /* zinc-500 - visible in dark theme */
+        }
+    </style>
+</head>
+
+    <body class="animated-gradient-bg text-zinc-400" itemscope itemtype="https://schema.org/Person">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center bg-white/10 backdrop-blur-md mt-4 rounded-full border border-white/20 shadow-xl" role="navigation" aria-label="Main navigation">
+            <a href="#" class="text-2xl font-bold text-white text-shadow ml-4" itemprop="name">Parth Ravrani</a>
+            <div class="hidden md:flex space-x-8" role="menubar">
+                <a href="#expertise" class="nav-link text-white font-medium hover:text-orange-500 transition-colors" role="menuitem" aria-label="View expertise section">Expertise</a>
+                <a href="#projects" class="nav-link text-white font-medium hover:text-orange-500 transition-colors" role="menuitem" aria-label="View portfolio projects">Portfolio</a>
+                <a href="#tech" class="nav-link text-white font-medium hover:text-orange-500 transition-colors" role="menuitem" aria-label="View technology stack">Tech</a>
+                <a href="#process" class="nav-link text-white font-medium hover:text-orange-500 transition-colors" role="menuitem" aria-label="View work process">Process</a>
+                <a href="#contact" class="nav-link text-white font-medium hover:text-orange-500 transition-colors" role="menuitem" aria-label="Contact information">Contact</a>
+            </div>
+            <a href="#contact" class="btn-gradient text-white font-semibold px-6 py-2 rounded-full hidden md:inline-block hover:scale-105 transition-transform">Get Started</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zinc-700 hover:text-orange-500 transition-colors"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/10 backdrop-blur-md mt-2 mx-4 rounded-lg p-4 text-center space-y-4 border border-white/20">
+             <a href="#expertise" class="block nav-link text-white font-medium hover:text-orange-500 transition-colors">Expertise</a>
+             <a href="#projects" class="block nav-link text-white font-medium hover:text-orange-500 transition-colors">Portfolio</a>
+             <a href="#tech" class="block nav-link text-white font-medium hover:text-orange-500 transition-colors">Tech</a>
+             <a href="#process" class="block nav-link text-white font-medium hover:text-orange-500 transition-colors">Process</a>
+             <a href="#contact" class="block nav-link text-white font-medium hover:text-orange-500 transition-colors">Contact</a>
+             <a href="#contact" class="block btn-gradient text-white font-semibold px-5 py-2 rounded-full">Get Started</a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center container mx-auto px-6 relative py-32" role="banner">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <!-- Header -->
+                <header class="floating-animation">
+                    <p class="text-gradient font-bold text-2xl mb-4 text-shadow">Senior Solutions Architect & Technical Lead</p>
+                </header>
+                
+                <!-- Main Headline -->
+                <div class="hero-section-1 scroll-reveal">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-zinc-100 leading-tight text-shadow max-w-6xl mx-auto">
+                        I Solve Complex Business Problems with High-Performance Software.
+                </h1>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="hero-section-2 scroll-reveal">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="bg-zinc-900/40 backdrop-blur-sm rounded-3xl p-10 border border-zinc-700/50">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="text-center">
+                                    <p class="text-xl text-zinc-300 mb-2">
+                                        🚀 <strong>Trusted by:</strong>
+                                    </p>
+                                    <p class="text-lg text-zinc-400">
+                                        50+ clients across healthcare, logistics, and SaaS
+                                    </p>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-xl text-zinc-300 mb-2">
+                                        ⭐ <strong>Proven Results:</strong>
+                                    </p>
+                                    <p class="text-lg text-zinc-400">
+                                        Scaled systems 5x, cut costs by 30%, delivered 50+ projects
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description & CTA -->
+                <div class="hero-section-3 scroll-reveal">
+                    <div class="max-w-5xl mx-auto space-y-12">
+                        <p class="text-xl md:text-2xl text-zinc-400 leading-relaxed">
+                            Are you struggling with a slow, crumbling application? Losing users due to poor performance? Need a technical leader to turn your vision into a scalable, reliable product? I architect and deliver robust .NET, Cloud, and Data solutions that drive growth, efficiency, and user satisfaction.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                            <a href="#contact" class="btn-gradient font-bold px-10 py-5 rounded-full shadow-xl text-xl text-white hover:scale-105 transition-all duration-300">
+                                Get a Free Technical Consultation
+                            </a>
+                            <a href="./Parth_Ravrani (1).pdf" download="Parth_Ravrani_CV.pdf" class="border-2 border-orange-500 text-orange-500 font-bold px-10 py-5 rounded-full shadow-xl hover:bg-orange-500 hover:text-zinc-900 transition-all duration-300 text-xl hover:scale-105">
+                                <i class="fas fa-download mr-3"></i>Download My Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+            
+            <!-- Core Expertise Highlight Section -->
+        <section id="core-expertise" class="w-full py-8 bg-zinc-900/50 backdrop-blur-sm overflow-hidden">
+                <div class="scrolling-wrapper">
+                    <div class="scrolling-logos">
+                        <div class="flex-shrink-0 flex items-center justify-around w-full">
+                           <i class="fa-brands fa-microsoft text-4xl text-zinc-500" title=".NET"></i>
+                           <i class="fa-brands fa-angular text-4xl text-zinc-500" title="Angular"></i>
+                           <i class="fa-solid fa-cloud-arrow-up text-4xl text-zinc-500" title="DevOps"></i>
+                           <i class="fa-brands fa-python text-4xl text-zinc-500" title="Python"></i>
+                           <i class="fa-solid fa-mobile-screen-button text-4xl text-zinc-500" title="Mobile Apps"></i>
+                        </div>
+                    </div>
+                    <div class="scrolling-logos">
+                        <div class="flex-shrink-0 flex items-center justify-around w-full">
+                           <i class="fa-brands fa-microsoft text-4xl text-zinc-500" title=".NET"></i>
+                           <i class="fa-brands fa-angular text-4xl text-zinc-500" title="Angular"></i>
+                           <i class="fa-solid fa-cloud-arrow-up text-4xl text-zinc-500" title="DevOps"></i>
+                           <i class="fa-brands fa-python text-4xl text-zinc-500" title="Python"></i>
+                           <i class="fa-solid fa-mobile-screen-button text-4xl text-zinc-500" title="Mobile Apps"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6">
+            <!-- Why Me Section -->
+            <section id="why-me" class="py-16 scroll-reveal">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold text-zinc-100 mb-6 text-center">Your Partner in Digital Transformation</h2>
+                    <p class="text-lg text-zinc-400 text-center mb-16 max-w-4xl mx-auto">
+                        I don't just write code; I deliver business outcomes. With over 8 years of experience from startup to enterprise, I bridge the gap between your strategic goals and technical execution.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glass-card p-8 rounded-xl group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-cogs"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">End-to-End Ownership</h3>
+                            <p class="text-zinc-400 leading-relaxed">From initial strategy and system design to leading a team and managing deployment. You get a single point of contact for your project's success.</p>
+                    </div>
+                        <div class="glass-card p-8 rounded-xl group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-chart-line"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Scalability Built-In</h3>
+                            <p class="text-zinc-400 leading-relaxed">I architect systems that grow with you, eliminating costly re-writes and technical debt. I took a system from 2,000 to 10,000+ concurrent users—imagine what I can do for you.</p>
+                    </div>
+                        <div class="glass-card p-8 rounded-xl group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-check-circle"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Predictable, High-Quality Delivery</h3>
+                            <p class="text-zinc-400 leading-relaxed">A proven track record of delivering 50+ projects on time and within budget, ensuring your investment is secure and your launch is a success.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise Section -->
+            <section id="expertise" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">My Core Disciplines</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fa-brands fa-microsoft text-4xl text-gradient"></i>
+                            <h3 class="text-xl font-bold text-zinc-200 ml-4">Scalable Enterprise Architecture</h3>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm font-semibold text-orange-400 mb-2">Goal: Modernize your legacy system or build a new, robust platform.</p>
+                            <p class="text-zinc-300">My Solution: I specialize in .NET Core, Microservices, and API design to build applications that are fast, maintainable, and ready to scale, achieving performance gains of up to <strong class="text-orange-300">60%</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fa-solid fa-cloud-arrow-up text-4xl text-gradient"></i>
+                            <h3 class="text-xl font-bold text-zinc-200 ml-4">Cloud & DevOps Automation</h3>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm font-semibold text-orange-400 mb-2">Goal: Achieve faster, more reliable releases and reduce operational overhead.</p>
+                            <p class="text-zinc-300">My Solution: I implement robust CI/CD pipelines on AWS & Azure, cutting deployment times by up to <strong class="text-orange-300">87%</strong> and ensuring <strong class="text-orange-300">99.9% uptime</strong> with Docker and infrastructure-as-code.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fa-brands fa-python text-4xl text-gradient"></i>
+                            <h3 class="text-xl font-bold text-zinc-200 ml-4">Data Engineering & Intelligence</h3>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm font-semibold text-orange-400 mb-2">Goal: Turn your data into a competitive advantage.</p>
+                            <p class="text-zinc-300">My Solution: I develop Python-based ETL pipelines and predictive models (up to <strong class="text-orange-300">75% accuracy</strong>) to automate processes, forecast demand, and provide actionable insights, saving up to <strong class="text-orange-300">80% of manual effort</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fa-solid fa-chart-pie text-4xl text-gradient"></i>
+                            <h3 class="text-xl font-bold text-zinc-200 ml-4">Strategic Technical Leadership</h3>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm font-semibold text-orange-400 mb-2">Goal: Build and lead high-performing technical teams.</p>
+                            <p class="text-zinc-300">My Solution: I scale cross-functional teams from 15 to <strong class="text-orange-300">50+ professionals</strong>, implement Agile/Scrum methodologies, and improve team velocity by <strong class="text-orange-300">35%</strong> while ensuring quality delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section id="tech" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">Technology Toolbox</h2>
+                <div class="max-w-7xl mx-auto">
+                    <!-- Tab Navigation -->
+                    <div class="flex flex-wrap justify-center gap-2 mb-12">
+                        <button class="tech-tab active" data-tab="backend">
+                            <i class="fa-solid fa-server mr-2"></i>Backend & API
+                        </button>
+                        <button class="tech-tab" data-tab="cloud">
+                            <i class="fa-solid fa-cloud mr-2"></i>Cloud & Infrastructure
+                        </button>
+                        <button class="tech-tab" data-tab="devops">
+                            <i class="fa-solid fa-rocket mr-2"></i>DevOps & Deployment
+                        </button>
+                        <button class="tech-tab" data-tab="database">
+                            <i class="fa-solid fa-database mr-2"></i>Databases & Data
+                        </button>
+                        <button class="tech-tab" data-tab="frontend">
+                            <i class="fa-brands fa-html5 mr-2"></i>Frontend & Mobile
+                        </button>
+                        <button class="tech-tab" data-tab="ai">
+                            <i class="fa-solid fa-brain mr-2"></i>AI & ML
+                        </button>
+                        <button class="tech-tab" data-tab="testing">
+                            <i class="fa-solid fa-bug mr-2"></i>Testing & QA
+                        </button>
+                        <button class="tech-tab" data-tab="methodologies">
+                            <i class="fa-solid fa-project-diagram mr-2"></i>Methodologies
+                        </button>
+                        <button class="tech-tab" data-tab="tools">
+                            <i class="fa-solid fa-tools mr-2"></i>Tools & Collaboration
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tech-tab-content">
+                        <div class="bg-zinc-900/30 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8 shadow-2xl">
+                        <!-- Backend & API Tab -->
+                        <div id="backend" class="tab-panel active">
+                            <!-- .NET Ecosystem -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-microsoft mr-2" style="color: #512BD4;"></i>
+                                    .NET Ecosystem
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                        <span>.NET Core</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                        <span>.NET 8</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                        <span>ASP.NET MVC</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-cloud text-2xl" style="color: #512BD4;"></i>
+                                        <span>Web API</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- API Technologies -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-link mr-2" style="color: #f97316;"></i>
+                                    API Technologies
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-link text-2xl" style="color: #f97316;"></i>
+                                        <span>RESTful APIs</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-project-diagram text-2xl" style="color: #e535ab;"></i>
+                                        <span>GraphQL</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-bolt text-2xl" style="color: #f97316;"></i>
+                                        <span>gRPC</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-bolt text-2xl" style="color: #f97316;"></i>
+                                        <span>SignalR</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-bolt text-2xl" style="color: #f97316;"></i>
+                                        <span>Socket.IO</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Python Backend -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-python mr-2" style="color: #3776AB;"></i>
+                                    Python Backend
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                        <span>Django</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                        <span>FastAPI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Other Backend Technologies -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-server mr-2" style="color: #f97316;"></i>
+                                    Other Backend Technologies
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-node-js text-2xl" style="color: #339933;"></i>
+                                        <span>Node.js</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-node-js text-2xl" style="color: #339933;"></i>
+                                        <span>Express.js</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-php text-2xl" style="color: #777BB4;"></i>
+                                        <span>PHP</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-php text-2xl" style="color: #777BB4;"></i>
+                                        <span>Laravel</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-java text-2xl" style="color: #007396;"></i>
+                                        <span>Java</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-java text-2xl" style="color: #007396;"></i>
+                                        <span>Spring Boot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Databases & Data Tab -->
+                        <div id="database" class="tab-panel">
+                            <!-- SQL Databases -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-database mr-2" style="color: #4169E1;"></i>
+                                    SQL Databases
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-server text-2xl" style="color: #CC2927;"></i>
+                                        <span>SQL Server</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #4169E1;"></i>
+                                        <span>PostgreSQL</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #4479A1;"></i>
+                                        <span>MySQL</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #F80000;"></i>
+                                        <span>Oracle</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #003B57;"></i>
+                                        <span>SQLite</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NoSQL Databases -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-cube mr-2" style="color: #4DB33D;"></i>
+                                    NoSQL Databases
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #4DB33D;"></i>
+                                        <span>MongoDB</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #FF6B35;"></i>
+                                        <span>Redis</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-search text-2xl" style="color: #005571;"></i>
+                                        <span>Elasticsearch</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-database text-2xl" style="color: #1287B1;"></i>
+                                        <span>Cassandra</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>Cosmos DB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Processing -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-python mr-2" style="color: #3776AB;"></i>
+                                    Data Processing
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                        <span>Pandas</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                        <span>NumPy</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-fire text-2xl" style="color: #E25A1C;"></i>
+                                        <span>Apache Spark</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-wind text-2xl" style="color: #017CEE;"></i>
+                                        <span>Airflow</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Visualization -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-chart-line mr-2" style="color: #f97316;"></i>
+                                    Data Visualization
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-chart-line text-2xl" style="color: #9768D1;"></i>
+                                        <span>Tableau</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-chart-line text-2xl" style="color: #FF6B35;"></i>
+                                        <span>Power BI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Frontend & Mobile Tab -->
+                        <div id="frontend" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-js text-2xl" style="color: #F7DF1E;"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-js text-2xl" style="color: #3178C6;"></i>
+                                    <span>TypeScript</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-react text-2xl" style="color: #61DAFB;"></i>
+                                    <span>React</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-angular text-2xl" style="color: #DD0031;"></i>
+                                    <span>Angular</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-vuejs text-2xl" style="color: #4FC08D;"></i>
+                                    <span>Vue.js</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-react text-2xl" style="color: #000000;"></i>
+                                    <span>Next.js</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-html5 text-2xl" style="color: #E34F26;"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-css3-alt text-2xl" style="color: #1572B6;"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-sass text-2xl" style="color: #CC6699;"></i>
+                                    <span>Sass</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-bootstrap text-2xl" style="color: #7952B3;"></i>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-paint-brush text-2xl" style="color: #06B6D4;"></i>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                                <div class="tech-card">
+                                    <svg width="24" height="24" viewBox="0 0 256 256" style="color: #02569B;">
+                                        <path fill="currentColor" d="M0 0h256v256H0z"/>
+                                        <path fill="#02569B" d="M0 0h128v128H0z"/>
+                                        <path fill="#40C4FF" d="M128 0h128v128H128z"/>
+                                        <path fill="#40C4FF" d="M0 128h128v128H0z"/>
+                                        <path fill="#02569B" d="M128 128h128v128H128z"/>
+                                    </svg>
+                                    <span>Flutter</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-react text-2xl" style="color: #61DAFB;"></i>
+                                    <span>React Native</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-android text-2xl" style="color: #3DDC84;"></i>
+                                    <span>Android SDK</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-apple text-2xl" style="color: #000000;"></i>
+                                    <span>iOS SDK</span>
+                                </div>
+                                <div class="tech-card">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" style="color: #7F52FF;">
+                                        <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                    <span>Kotlin</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-apple text-2xl" style="color: #FA7343;"></i>
+                                    <span>Swift</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cube text-2xl" style="color: #764ABC;"></i>
+                                    <span>Redux</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cube text-2xl" style="color: #DD0031;"></i>
+                                    <span>NgRx</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cube text-2xl" style="color: #02569B;"></i>
+                                    <span>Bloc Pattern</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cube text-2xl" style="color: #02569B;"></i>
+                                    <span>Provider</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud & Infrastructure Tab -->
+                        <div id="cloud" class="tab-panel">
+                            <!-- AWS Services -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-aws mr-2" style="color: #FF9900;"></i>
+                                    AWS Services
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>EC2</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>S3</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>Lambda</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>RDS</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>CloudFront</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                        <span>ECS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Azure Services -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-microsoft mr-2" style="color: #0078D4;"></i>
+                                    Azure Services
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>App Services</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>Functions</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>SQL Database</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>Blob Storage</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                        <span>AKS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Google Cloud -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-brands fa-google mr-2" style="color: #4285F4;"></i>
+                                    Google Cloud
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-google text-2xl" style="color: #4285F4;"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-google text-2xl" style="color: #4285F4;"></i>
+                                        <span>Cloud Functions</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-brands fa-google text-2xl" style="color: #4285F4;"></i>
+                                        <span>BigQuery</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Serverless Platforms -->
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-zinc-200 mb-4 flex items-center">
+                                    <i class="fa-solid fa-server mr-2" style="color: #f97316;"></i>
+                                    Serverless Platforms
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-server text-2xl" style="color: #f97316;"></i>
+                                        <span>Serverless</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-cloud text-2xl" style="color: #00D4AA;"></i>
+                                        <span>Vercel</span>
+                                    </div>
+                                    <div class="tech-card">
+                                        <i class="fa-solid fa-cloud text-2xl" style="color: #00C7B7;"></i>
+                                        <span>Netlify</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DevOps & Deployment Tab -->
+                        <div id="devops" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-docker text-2xl" style="color: #2496ED;"></i>
+                                    <span>Docker</span>
+                                </div>
+                                <div class="tech-card">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" style="color: #326CE5;">
+                                        <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                    <span>Kubernetes</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-anchor text-2xl" style="color: #0F1729;"></i>
+                                    <span>Helm</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-mountain text-2xl" style="color: #7B42BC;"></i>
+                                    <span>Terraform</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cogs text-2xl" style="color: #EE0000;"></i>
+                                    <span>Ansible</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-jenkins text-2xl" style="color: #D24939;"></i>
+                                    <span>Jenkins</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-github text-2xl" style="color: #181717;"></i>
+                                    <span>GitHub Actions</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                    <span>Azure DevOps</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-gitlab text-2xl" style="color: #FC6D26;"></i>
+                                    <span>GitLab CI</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-server text-2xl" style="color: #009639;"></i>
+                                    <span>Nginx</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-feather text-2xl" style="color: #D22128;"></i>
+                                    <span>Apache</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                    <span>IIS</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-rocket text-2xl" style="color: #f97316;"></i>
+                                    <span>CI/CD Pipelines</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-code text-2xl" style="color: #7B42BC;"></i>
+                                    <span>Infrastructure as Code</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI & ML Tab -->
+                        <div id="ai" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-python text-2xl" style="color: #F7931E;"></i>
+                                    <span>Scikit-learn</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-brain text-2xl" style="color: #FF6F00;"></i>
+                                    <span>TensorFlow</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-brain text-2xl" style="color: #EE4C2C;"></i>
+                                    <span>PyTorch</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                    <span>Pandas</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                    <span>NumPy</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-robot text-2xl" style="color: #412991;"></i>
+                                    <span>OpenAI API</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-link text-2xl" style="color: #1C3C3C;"></i>
+                                    <span>LangChain</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-eye text-2xl" style="color: #4285F4;"></i>
+                                    <span>Computer Vision</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-language text-2xl" style="color: #FF6B35;"></i>
+                                    <span>NLP</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-chart-line text-2xl" style="color: #f97316;"></i>
+                                    <span>Predictive Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testing & QA Tab -->
+                        <div id="testing" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                    <span>xUnit</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                    <span>NUnit</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-js text-2xl" style="color: #C21325;"></i>
+                                    <span>Jest</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-shield text-2xl" style="color: #172B4D;"></i>
+                                    <span>Cypress</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-globe text-2xl" style="color: #43B02A;"></i>
+                                    <span>Selenium</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-paper-plane text-2xl" style="color: #FF6C37;"></i>
+                                    <span>Postman</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-chart-bar text-2xl" style="color: #D22128;"></i>
+                                    <span>JMeter</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-weight-hanging text-2xl" style="color: #f97316;"></i>
+                                    <span>Load Testing</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-vial text-2xl" style="color: #00D4AA;"></i>
+                                    <span>TDD</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-vial text-2xl" style="color: #00D4AA;"></i>
+                                    <span>BDD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Methodologies Tab -->
+                        <div id="methodologies" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-rocket text-2xl" style="color: #00D4AA;"></i>
+                                    <span>Agile/Scrum</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-columns text-2xl" style="color: #0052CC;"></i>
+                                    <span>Kanban</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-cubes text-2xl" style="color: #f97316;"></i>
+                                    <span>Microservices</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-project-diagram text-2xl" style="color: #7B42BC;"></i>
+                                    <span>Domain-Driven Design</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-vial text-2xl" style="color: #00D4AA;"></i>
+                                    <span>Test-Driven Development</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-rocket text-2xl" style="color: #f97316;"></i>
+                                    <span>DevOps</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-git-alt text-2xl" style="color: #F05032;"></i>
+                                    <span>Git Flow</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-sitemap text-2xl" style="color: #7B42BC;"></i>
+                                    <span>System Design</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-puzzle-piece text-2xl" style="color: #f97316;"></i>
+                                    <span>Architectural Patterns</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Collaboration Tab -->
+                        <div id="tools" class="tab-panel">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-git-alt text-2xl" style="color: #F05032;"></i>
+                                    <span>Git</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-github text-2xl" style="color: #181717;"></i>
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-gitlab text-2xl" style="color: #FC6D26;"></i>
+                                    <span>GitLab</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-jira text-2xl" style="color: #0052CC;"></i>
+                                    <span>Jira</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-confluence text-2xl" style="color: #172B4D;"></i>
+                                    <span>Confluence</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-slack text-2xl" style="color: #4A154B;"></i>
+                                    <span>Slack</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #0078D4;"></i>
+                                    <span>Teams</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-figma text-2xl" style="color: #F24E1E;"></i>
+                                    <span>Figma</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-adobe text-2xl" style="color: #FF61F6;"></i>
+                                    <span>Adobe XD</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-paper-plane text-2xl" style="color: #FF6C37;"></i>
+                                    <span>Postman</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-file-code text-2xl" style="color: #007ACC;"></i>
+                                    <span>Swagger</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-solid fa-code text-2xl" style="color: #007ACC;"></i>
+                                    <span>VS Code</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                    <span>Visual Studio</span>
+                                </div>
+                                <div class="tech-card">
+                                    <i class="fa-brands fa-android text-2xl" style="color: #3DDC84;"></i>
+                                    <span>Android Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="projects" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">Featured Work: Problem Solved</h2>
+                 <div id="project-display" class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- Project content will be injected here by JS -->
+                </div>
+                <div class="flex justify-center items-center gap-4">
+                    <button id="prev-project" class="btn-gradient text-white font-bold p-3 rounded-full shadow-lg w-12 h-12 flex items-center justify-center text-lg"><i class="fas fa-arrow-left"></i></button>
+                    <span id="page-indicator" class="text-zinc-400 font-semibold"></span>
+                    <button id="next-project" class="btn-gradient text-white font-bold p-3 rounded-full shadow-lg w-12 h-12 flex items-center justify-center text-lg"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">What Clients Say</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="glass-card p-8 rounded-xl relative">
+                        <i class="fa-solid fa-quote-left text-7xl text-zinc-600 absolute top-4 left-4 opacity-30"></i>
+                        <p class="text-zinc-300 italic z-10 relative">"Parth took over our struggling Upvoit platform and transformed it. His architectural redesign not only made the system 5x faster but finally allowed us to onboard the large enterprise clients we were chasing. He's more than a developer; he's a strategic partner."</p>
+                        <p class="text-orange-400 font-semibold mt-4 text-right">- Sarah Chen, CTO at Codzgarage</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl relative">
+                        <i class="fa-solid fa-quote-left text-7xl text-zinc-600 absolute top-4 left-4 opacity-30"></i>
+                        <p class="text-zinc-300 italic z-10 relative">"Parth's inventory forecasting system saved us thousands in lost sales and overstock costs. His data-driven approach and clear communication throughout the project made the entire process seamless. We've seen a 30% reduction in inventory costs since implementation."</p>
+                        <p class="text-orange-400 font-semibold mt-4 text-right">- Michael Rodriguez, Operations Director at The Classy Home</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">Certifications & Learning</h2>
+                <div class="max-w-4xl mx-auto divide-y divide-zinc-700">
+                    <div class="flex items-center py-6">
+                        <div class="h-12 w-12 mr-6 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
+                            <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                        </div>
+                        <div>
+                           <h3 class="text-lg font-bold text-zinc-200">Postgraduate in Multicloud</h3>
+                           <p class="text-sm text-zinc-400">Hero Vired (Ongoing)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center py-6">
+                        <div class="h-12 w-12 mr-6 flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg">
+                            <i class="fas fa-video text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-zinc-200">Angular - The Complete Guide</h3>
+                            <p class="text-sm text-zinc-400">Udemy</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center py-6">
+                        <div class="h-12 w-12 mr-6 flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg">
+                            <i class="fab fa-aws text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-zinc-200">AWS Certified Solutions Architect</h3>
+                            <p class="text-sm text-zinc-400">Amazon Web Services</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center py-6">
+                        <div class="h-12 w-12 mr-6 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg">
+                            <i class="fab fa-linkedin text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-zinc-200">Advanced .NET Core</h3>
+                            <p class="text-sm text-zinc-400">LinkedIn Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Process Section -->
+            <section id="process" class="py-16 scroll-reveal">
+                <h2 class="text-3xl font-bold text-zinc-100 mb-12 text-center">My Collaborative Process</h2>
+                <div class="max-w-6xl mx-auto">
+                    <p class="text-lg text-zinc-400 text-center mb-16 max-w-4xl mx-auto">
+                        Building trust through transparency. Here's how I work with clients to ensure your project's success from concept to launch.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="glass-card p-6 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-search"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Discover & Strategize</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">We dive deep into your business goals, technical constraints, and user needs to define a clear, actionable roadmap.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-drafting-compass"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Architect & Plan</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">I design the technical architecture, choose the right tech stack, and create a phased delivery plan with clear milestones.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-code"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Execute & Lead</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">I either lead your existing team or build a dedicated pod to execute the build, ensuring best practices in code quality and Agile delivery.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
+                            <div class="text-4xl text-gradient mb-4"><i class="fas fa-rocket"></i></div>
+                            <h3 class="text-xl font-bold text-zinc-200 mb-4">Deploy & Scale</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">I manage the seamless deployment to production, set up monitoring, and ensure your system is robust and ready for growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CV Download Section -->
+            <section id="cv-download" class="py-24 text-center scroll-reveal">
+                 <h2 class="text-3xl font-bold text-zinc-100 mb-4">Want the Full Story?</h2>
+                 <p class="max-w-2xl mx-auto text-lg text-zinc-300 mb-8">Download my comprehensive CV to see a detailed breakdown of my skills, projects, and career achievements.</p>
+                 <a href="./Parth_Ravrani (1).pdf" download="Parth_Ravrani_CV.pdf" class="inline-block btn-gradient font-bold px-10 py-4 rounded-full shadow-lg text-lg text-white">
+                    <i class="fas fa-download mr-2"></i> Download My CV
+                </a>
+            </section>
+
+            <!-- Contact Section is now the Footer -->
+        </div>
+    </main>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-24 text-center scroll-reveal">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-zinc-100 mb-6">My Services & Engagement Models</h2>
+            <p class="text-lg text-zinc-300 mb-12">Choose the engagement model that best fits your needs and budget.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-wrench text-3xl text-orange-400 mr-3"></i>
+                        <h3 class="text-xl font-bold text-zinc-200">Technical Rescue Package</h3>
+                    </div>
+                    <p class="text-zinc-400 mb-4">Your application is slow or unreliable? I'll diagnose and fix critical performance bottlenecks within 7-14 days.</p>
+                    <ul class="text-sm text-zinc-300 space-y-1">
+                        <li>• Performance audit & bottleneck identification</li>
+                        <li>• Critical fixes & optimizations</li>
+                        <li>• Detailed improvement report</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-building text-3xl text-orange-400 mr-3"></i>
+                        <h3 class="text-xl font-bold text-zinc-200">System Modernization</h3>
+                    </div>
+                    <p class="text-zinc-400 mb-4">Move from legacy .NET to scalable microservices architecture. 8-12 week engagement with guaranteed performance improvements.</p>
+                    <ul class="text-sm text-zinc-300 space-y-1">
+                        <li>• Complete architecture redesign</li>
+                        <li>• Microservices implementation</li>
+                        <li>• Performance guarantees</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-chart-line text-3xl text-orange-400 mr-3"></i>
+                        <h3 class="text-xl font-bold text-zinc-200">Architecture Review</h3>
+                    </div>
+                    <p class="text-zinc-400 mb-4">Get a comprehensive assessment of your tech stack with actionable recommendations delivered in 2 weeks.</p>
+                    <ul class="text-sm text-zinc-300 space-y-1">
+                        <li>• Complete system analysis</li>
+                        <li>• Performance recommendations</li>
+                        <li>• Roadmap for improvements</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-user-tie text-3xl text-orange-400 mr-3"></i>
+                        <h3 class="text-xl font-bold text-zinc-200">Fractional Tech Lead</h3>
+                    </div>
+                    <p class="text-zinc-400 mb-4">Ongoing technical leadership and architecture guidance for your team (10-20 hours/week).</p>
+                    <ul class="text-sm text-zinc-300 space-y-1">
+                        <li>• Strategic technical guidance</li>
+                        <li>• Team mentoring & reviews</li>
+                        <li>• Architecture decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+
+
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-zinc-900/40 border-t border-zinc-800 py-24" role="contentinfo">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-zinc-100 mb-6">Ready to Get Started?</h2>
+            <p class="text-lg text-zinc-300 mb-8">Let's discuss your project and find the best engagement model for your needs.</p>
+            
+            <div class="mb-12">
+                <p class="text-lg text-zinc-300 mb-6">The best way to start a conversation is via email:</p>
+                <a href="mailto:parthravrani@hotmail.com" class="btn-gradient font-bold px-8 py-4 rounded-full shadow-lg text-lg text-white inline-block">
+                    <i class="fas fa-envelope mr-2"></i>parthravrani@hotmail.com
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center items-center flex-wrap gap-6" role="list" aria-label="Social media and contact links">
+                <a href="https://calendly.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Schedule a meeting on Calendly" role="listitem"><i class="fas fa-calendar-alt" aria-hidden="true"></i></a>
+                <a href="https://slack.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Connect on Slack" role="listitem"><i class="fab fa-slack" aria-hidden="true"></i></a>
+                <a href="https://discord.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Connect on Discord" role="listitem"><i class="fab fa-discord" aria-hidden="true"></i></a>
+                <a href="https://microsoft.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Microsoft profile" role="listitem"><i class="fab fa-microsoft" aria-hidden="true"></i></a>
+                <a href="mailto:parthravrani@hotmail.com" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Send email to parthravrani@hotmail.com" role="listitem"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://upwork.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="View Upwork profile" role="listitem"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></a>
+                <a href="https://zoom.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Video call on Zoom" role="listitem"><i class="fas fa-video" aria-hidden="true"></i></a>
+                <a href="https://wa.me/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Message on WhatsApp" role="listitem"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/in/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="Connect on LinkedIn" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/parthravrani" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors text-3xl" aria-label="View GitHub profile" role="listitem"><i class="fab fa-github" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="mt-24 pt-12 border-t border-zinc-800">
+                 <p class="text-zinc-500">&copy; 2025 Parth Ravrani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Project Data
+        const projects = [
+            { 
+                title: "Upvoit - Enterprise SaaS Platform Transformation", 
+                challenge: "An enterprise field management SaaS (Upvoit) was hitting a performance ceiling at 2,000 users, preventing market expansion and threatening customer retention.", 
+                role: "As Team Lead & Product Manager, I architected and led the migration from a monolithic system to a .NET Core microservices architecture, implemented real-time data sync protocols, and optimized the database.", 
+                impact: "Achieved a 5x scale-up, seamlessly supporting 10,000+ concurrent users. Slashed system latency by 40%, enhancing field team productivity. Reduced data conflicts for distributed teams by 30%, ensuring data integrity.", 
+                tech: [{ icon: 'fa-brands fa-microsoft', name: '.NET Core' }, { icon: 'fa-brands fa-angular', name: 'Angular' }, { icon: 'fa-solid fa-server', name: 'SQL Server' }], 
+                company: "Codzgarage", 
+                link: "#" 
+            },
+            { 
+                title: "Inventory & Demand Forecasting System", 
+                challenge: "An e-commerce client faced significant losses due to stockouts and overstocking of 10,000+ SKUs, leading to revenue loss and customer dissatisfaction.", 
+                role: "As Lead Data Engineer, I developed a Python-based predictive model and automated inventory analytics system with real-time demand forecasting capabilities.", 
+                impact: "Reduced inventory costs by 30% and stockouts by 40%. Implemented automated reorder triggers that saved 80% of manual inventory management time. Increased customer satisfaction scores by 25%.", 
+                tech: [{ icon: 'fa-brands fa-python', name: 'Python' }, { icon: 'fa-solid fa-database', name: 'SQL' }, { icon: 'fa-brands fa-microsoft', name: '.NET Core' }], 
+                company: "The Classy Home", 
+                link: "#" 
+            },
+            { 
+                title: "Customer Churn Prediction & Retention System", 
+                challenge: "A SaaS business needed to proactively identify customers at risk of churning to improve retention and reduce revenue loss from customer departures.", 
+                role: "As Data Science Lead, I built an ML pipeline using Python to analyze user behavior patterns, engagement metrics, and usage data to predict churn probability.", 
+                impact: "The model achieved 75% accuracy in identifying at-risk customers, enabling targeted retention campaigns. Reduced customer churn by 35% and increased customer lifetime value by 20%.", 
+                tech: [{ icon: 'fa-brands fa-python', name: 'Python' }, { name: 'Scikit-learn, Pandas' }], 
+                company: "Codzgarage", 
+                link: "#" 
+            },
+            { 
+                title: "Real-Time Safety Dispatch & Emergency Response App", 
+                challenge: "A public safety organization required instant, reliable communication and live location tracking across diverse mobile devices for emergency response coordination.", 
+                role: "As Lead Mobile Architect, I engineered a cross-platform solution using Flutter and Socket.IO for real-time data transfer, ensuring live tracking and background syncing for immediate alerts.", 
+                impact: "Enabled real-time coordination for 1,000+ emergency responders. Reduced response time by 45% through instant location sharing. Achieved 99.9% uptime during critical emergency situations.", 
+                tech: [{ isSvg: true, path: 'M14.314 0L2.3 12 6 15.7 21.684.013h-7.357L14.314 0zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z', color: '#027DFD' }, { icon: 'fa-solid fa-bolt', name: 'Socket.IO' }], 
+                company: "Tech Integrity Services", 
+                link: "#" 
+            },
+            { 
+                title: "Healthcare Data Analytics & Patient Insights Platform", 
+                challenge: "A regional hospital network needed to consolidate patient data from 15+ systems to improve care coordination and reduce readmission rates while maintaining HIPAA compliance.", 
+                role: "As Senior Solutions Architect, I designed and implemented a secure data lake architecture using Azure services, built ETL pipelines for real-time data processing, and created predictive models for patient risk assessment.", 
+                impact: "Reduced patient readmission rates by 28% through predictive analytics. Improved care coordination across departments by 40%. Achieved 100% HIPAA compliance while processing 2M+ patient records daily.", 
+                tech: [{ icon: 'fa-brands fa-microsoft', name: 'Azure' }, { icon: 'fa-brands fa-python', name: 'Python' }, { icon: 'fa-solid fa-database', name: 'SQL Server' }], 
+                company: "Regional Healthcare Network", 
+                link: "#" 
+            }
+        ];
+        
+        const projectsPerPage = 2;
+        let currentPage = 0;
+        const projectDisplay = document.getElementById('project-display');
+        const prevButton = document.getElementById('prev-project');
+        const nextButton = document.getElementById('next-project');
+        const pageIndicator = document.getElementById('page-indicator');
+
+        function renderProjects() {
+            projectDisplay.innerHTML = '';
+            const start = currentPage * projectsPerPage;
+            const end = start + projectsPerPage;
+            const paginatedProjects = projects.slice(start, end);
+
+            paginatedProjects.forEach(project => {
+                let techHtml = project.tech.map(t => {
+                    if (t.isSvg) { return `<svg class="w-5 h-5" fill="${t.color}" viewBox="0 0 24 24"><path d="${t.path}"/></svg>`; } 
+                    else if(t.icon) { 
+                        const colors = {
+                            'fa-brands fa-microsoft': '#512BD4',
+                            'fa-brands fa-angular': '#DD0031', 
+                            'fa-solid fa-server': '#CC2927',
+                            'fa-brands fa-python': '#3776AB',
+                            'fa-brands fa-microsoft': '#512BD4',
+                            'fa-solid fa-bolt': '#f97316'
+                        };
+                        const color = colors[t.icon] || '#f97316';
+                        return `<i class="${t.icon} text-lg" style="color: ${color};" title="${t.name}"></i>`; 
+                    }
+                    else { return `<span class="text-sm">${t.name}</span>`; }
+                }).join('');
+
+                const projectEl = document.createElement('div');
+                projectEl.className = 'glass-card p-6 rounded-xl block group';
+                projectEl.innerHTML = `
+                    <h3 class="text-xl font-bold text-zinc-200 group-hover:text-orange-400 transition-colors">${project.title}</h3>
+                    <p class="text-sm font-semibold text-orange-400 my-3">THE CLIENT'S CHALLENGE</p>
+                    <p class="text-zinc-400 mb-4">${project.challenge}</p>
+                    <p class="text-sm font-semibold text-orange-400 my-3">MY ROLE & SOLUTION</p>
+                    <p class="text-zinc-300 mb-4">${project.role}</p>
+                    <p class="text-sm font-semibold text-orange-400 my-3">THE BUSINESS IMPACT</p>
+                    <p class="text-zinc-300">${project.impact}</p>
+                    <div class="mt-6 border-t border-zinc-700 pt-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1"><p class="text-sm font-semibold text-zinc-400 mb-2">Tech Stack:</p><div class="flex items-center gap-3 text-zinc-300">${techHtml}</div></div>
+                            <div class="text-right"><p class="text-sm font-semibold text-zinc-400 mb-2">Company:</p><p class="text-zinc-200 font-medium">${project.company}</p></div>
+                        </div>
+                         <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-orange-400 font-semibold hover:text-orange-300">View Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                `;
+                projectDisplay.appendChild(projectEl);
+            });
+            pageIndicator.textContent = `Page ${currentPage + 1} of ${Math.ceil(projects.length / projectsPerPage)}`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentPage = (currentPage - 1 + Math.ceil(projects.length / projectsPerPage)) % Math.ceil(projects.length / projectsPerPage);
+            renderProjects();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentPage = (currentPage + 1) % Math.ceil(projects.length / projectsPerPage);
+            renderProjects();
+        });
+        
+        renderProjects();
+
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('#mobile-menu a, a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if(!mobileMenu.classList.contains('hidden')){
+                   mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Simple Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Simple Scroll Progress Indicator
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll Progress Indicator
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(90deg, #f97316, #ea580c);
+                z-index: 10000;
+                transition: width 0.1s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            ScrollTrigger.create({
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                onUpdate: self => {
+                    progressBar.style.width = `${self.progress * 100}%`;
+                }
+            });
+
+            // Simple Hero Scroll Animation
+            document.querySelector('.hero-section-1').classList.add('visible');
+            
+            // Create intersection observer for hero sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '0px 0px -100px 0px'
+            });
+            
+            // Observe hero sections
+            document.querySelectorAll('.hero-section-2, .hero-section-3').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Scroll Reveal Animation
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // Simple but Awesome Mouse Cursor Effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create cursor elements
+            const cursor = document.createElement('div');
+            const cursorDot = document.createElement('div');
+            
+            cursor.classList.add('custom-cursor');
+            cursorDot.classList.add('custom-cursor-dot');
+            
+            document.body.appendChild(cursor);
+            document.body.appendChild(cursorDot);
+
+            // Mouse tracking variables
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let cursorDotX = 0, cursorDotY = 0;
+
+            // Track mouse movement
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            // Smooth cursor animation
+            function animateCursor() {
+                // Main cursor with smooth follow
+                cursorX += (mouseX - cursorX) * 0.15;
+                cursorY += (mouseY - cursorY) * 0.15;
+                
+                // Dot cursor with faster follow
+                cursorDotX += (mouseX - cursorDotX) * 0.4;
+                cursorDotY += (mouseY - cursorDotY) * 0.4;
+
+                // Apply positions
+                cursor.style.left = cursorX - 12 + 'px';
+                cursor.style.top = cursorY - 12 + 'px';
+                
+                cursorDot.style.left = cursorDotX - 3 + 'px';
+                cursorDot.style.top = cursorDotY - 3 + 'px';
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Interactive elements (excluding navigation links to fix text visibility)
+            const interactiveElements = document.querySelectorAll('a:not(.nav-link), button, .btn-gradient, .glass-card, .tech-icon-card, .project-card, .testimonial-card');
+
+            // Hover effects
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    cursorDot.style.opacity = '0';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    cursorDot.style.opacity = '1';
+                });
+            });
+
+            // Click effects
+            document.addEventListener('mousedown', () => {
+                cursor.classList.add('click');
+                cursorDot.style.transform = 'scale(0.5)';
+            });
+            
+            document.addEventListener('mouseup', () => {
+                cursor.classList.remove('click');
+                cursorDot.style.transform = 'scale(1)';
+            });
+
+            // Magnetic effect for buttons only
+            document.querySelectorAll('.btn-gradient').forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    const distance = Math.sqrt(Math.pow(mouseX - centerX, 2) + Math.pow(mouseY - centerY, 2));
+                    
+                    if (distance < 80) {
+                        const force = (80 - distance) / 80;
+                        const angle = Math.atan2(mouseY - centerY, mouseX - centerX);
+                        const pullX = Math.cos(angle) * force * 15;
+                        const pullY = Math.sin(angle) * force * 15;
+                        
+                        cursor.style.transform = `translate(${pullX}px, ${pullY}px) scale(${1 + force * 0.3})`;
+                        cursor.classList.add('magnetic');
+                    } else {
+                        cursor.style.transform = 'translate(0, 0) scale(1)';
+                        cursor.classList.remove('magnetic');
+                    }
+                });
+                
+                btn.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'translate(0, 0) scale(1)';
+                    cursor.classList.remove('magnetic');
+                });
+            });
+
+            // Hide cursor when leaving window
+            document.addEventListener('mouseleave', () => {
+                cursor.style.opacity = '0';
+                cursorDot.style.opacity = '0';
+            });
+            
+            document.addEventListener('mouseenter', () => {
+                cursor.style.opacity = '1';
+                cursorDot.style.opacity = '1';
+            });
+
+            // Simple ripple effect on click
+            document.addEventListener('click', (e) => {
+                const ripple = document.createElement('div');
+                ripple.style.cssText = `
+                    position: fixed;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid rgba(249, 115, 22, 0.8);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9996;
+                    left: ${mouseX - 10}px;
+                    top: ${mouseY - 10}px;
+                    animation: ripple 0.6s ease-out;
+                `;
+                
+                document.body.appendChild(ripple);
+                
+                setTimeout(() => {
+                    if (ripple.parentNode) {
+                        ripple.parentNode.removeChild(ripple);
+                    }
+                }, 600);
+            });
+
+            // Add ripple animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple {
+                    0% {
+                        transform: scale(0);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+
+        // Tech Stack Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tech-tab');
+            const panels = document.querySelectorAll('.tab-panel');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and panels
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+
+                    // Show corresponding panel
+                    const targetPanel = document.getElementById(tab.dataset.tab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+
+
+
+
+
+
+
+
+        // Navigation Scroll Highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Section mapping for navigation
+            const sectionMap = {
+                'hero': 'expertise', // Map hero to expertise since there's no hero nav link
+                'expertise': 'expertise',
+                'projects': 'projects', 
+                'tech': 'tech',
+                'process': 'process',
+                'contact': 'contact'
+            };
+            
+            // Create intersection observer for navigation highlighting
+            const navObserver = new IntersectionObserver((entries) => {
+                let activeSection = null;
+                let maxIntersection = 0;
+                
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > maxIntersection) {
+                        maxIntersection = entry.intersectionRatio;
+                        activeSection = entry.target.id;
+                    }
+                });
+                
+                if (activeSection) {
+                    // Remove active class from all nav links
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-orange-500', 'border-orange-500');
+                        link.classList.add('text-white');
+                    });
+                    
+                    // Find the corresponding nav link
+                    const mappedSection = sectionMap[activeSection];
+                    if (mappedSection) {
+                        const activeLink = document.querySelector(`.nav-link[href="#${mappedSection}"]`);
+                        if (activeLink) {
+                            activeLink.classList.remove('text-white');
+                            activeLink.classList.add('text-orange-500', 'border-orange-500');
+                        }
+                    }
+                }
+            }, {
+                threshold: [0.1, 0.3, 0.5, 0.7, 0.9],
+                rootMargin: '-50px 0px -50px 0px'
+            });
+            
+            // Observe all sections
+            sections.forEach(section => {
+                navObserver.observe(section);
+            });
+            
+            // Set initial active state for hero section
+            const expertiseLink = document.querySelector('.nav-link[href="#expertise"]');
+            if (expertiseLink) {
+                expertiseLink.classList.add('text-orange-500', 'border-orange-500');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
