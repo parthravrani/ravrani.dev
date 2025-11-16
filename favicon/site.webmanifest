@@ -1,23 +1,22 @@
 {
-  "name": "Parth Ravrani - Senior Solutions Architect",
+  "name": "Parth Ravrani",
   "short_name": "Parth Ravrani",
-  "description": "Senior Solutions Architect & Technical Lead specializing in .NET, Cloud, and Data Engineering",
   "icons": [
     {
-      "src": "web-app-manifest-192x192.png",
+      "src": "/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "web-app-manifest-512x512.png",
+      "src": "/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#f97316",
-  "background_color": "#0f0f23",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
   "scope": "/"
