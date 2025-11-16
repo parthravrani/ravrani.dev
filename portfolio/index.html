@@ -432,18 +432,18 @@
     <header class="fixed top-0 left-0 right-0 z-50">
         <nav class="container mx-auto flex justify-between items-start at-top" role="navigation" aria-label="Main navigation">
             <div class="nav-logo-container">
-                <a href="../index-3.html" class="text-xl font-bold text-gray-900">Parth Ravrani</a>
+                <a href="../" class="text-xl font-bold text-gray-900">Parth Ravrani</a>
                 <p class="nav-tagline">Building Scalable Solutions</p>
             </div>
             <div class="hidden md:flex nav-links-columns" role="menubar">
-                <a href="../index-3.html#about" class="nav-link" role="menuitem">About</a>
-                <a href="../index-3.html#tech" class="nav-link" role="menuitem">Tech</a>
-                <a href="index2.html" class="nav-link active" role="menuitem">Portfolio</a>
-                <a href="../index-3.html#expertise" class="nav-link" role="menuitem">Expertise</a>
-                <a href="../index-3.html#contact" class="nav-link" role="menuitem">Contact</a>
+                <a href="../#about" class="nav-link" role="menuitem">About</a>
+                <a href="../#tech" class="nav-link" role="menuitem">Tech</a>
+                <a href="index.html" class="nav-link active" role="menuitem">Portfolio</a>
+                <a href="../#expertise" class="nav-link" role="menuitem">Expertise</a>
+                <a href="../#contact" class="nav-link" role="menuitem">Contact</a>
             </div>
             <div class="hidden md:flex items-center">
-                <a href="../index-3.html#contact" class="btn-primary-blue text-sm font-semibold hidden md:inline-flex">
+                <a href="../#contact" class="btn-primary-blue text-sm font-semibold hidden md:inline-flex">
                     <span>Get Started</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
@@ -453,12 +453,12 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 mx-4 rounded-2xl p-5 text-center space-y-3 border border-gray-200">
-             <a href="../index-3.html#about" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">About</a>
-             <a href="../index-3.html#tech" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Tech</a>
-             <a href="index2.html" class="block nav-link text-blue-600 font-medium hover:text-blue-600 transition-colors py-2.5">Portfolio</a>
-             <a href="../index-3.html#expertise" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Expertise</a>
-             <a href="../index-3.html#contact" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Contact</a>
-             <a href="../index-3.html#contact" class="block btn-primary-blue font-semibold px-5 py-2.5 rounded-lg mt-3 justify-center">Get Started</a>
+             <a href="../#about" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">About</a>
+             <a href="../#tech" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Tech</a>
+             <a href="index.html" class="block nav-link text-blue-600 font-medium hover:text-blue-600 transition-colors py-2.5">Portfolio</a>
+             <a href="../#expertise" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Expertise</a>
+             <a href="../#contact" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Contact</a>
+             <a href="../#contact" class="block btn-primary-blue font-semibold px-5 py-2.5 rounded-lg mt-3 justify-center">Get Started</a>
         </div>
     </header>
 
@@ -1121,7 +1121,7 @@
         // Navigation Scroll Highlighting
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
-            const portfolioLink = document.querySelector('.nav-link[href="index2.html"]');
+            const portfolioLink = document.querySelector('.nav-link[href="index.html"]');
             const nav = document.querySelector('nav');
             
             // This is the projects page, so permanently highlight the "Portfolio" link
