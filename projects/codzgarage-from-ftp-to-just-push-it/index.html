@@ -1,0 +1,603 @@
+---
+layout: null
+base_path: "../"
+active_page: "portfolio"
+slug: "codzgarage-from-ftp-to-just-push-it"
+title: "Case Study: Codzgarage - From FTP to 'Just Push It'"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codzgarage - Automated Deployment Pipeline | Parth Ravrani</title>
+    <meta name="description" content="Case study of Codzgarage - building a custom automated deployment pipeline to support 40-50 developers working across multiple projects. CI/CD automation solution.">
+    <meta name="keywords" content="CI/CD pipeline, automated deployment, DevOps, deployment automation, FTP migration, Git deployment, developer tools">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ravrani.dev/projects/codzgarage-from-ftp-to-just-push-it/">
+    <meta property="og:title" content="Codzgarage - Automated Deployment Pipeline | Parth Ravrani">
+    <meta property="og:description" content="Case study of Codzgarage - building a custom automated deployment pipeline to support 40-50 developers working across multiple projects.">
+    <meta property="og:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    <meta property="og:site_name" content="Parth Ravrani">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ravrani.dev/projects/codzgarage-from-ftp-to-just-push-it/">
+    <meta name="twitter:title" content="Codzgarage - Automated Deployment Pipeline | Parth Ravrani">
+    <meta name="twitter:description" content="Case study of Codzgarage - building a custom automated deployment pipeline to support 40-50 developers.">
+    <meta name="twitter:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ravrani.dev/projects/codzgarage-from-ftp-to-just-push-it/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "@id": "https://ravrani.dev/projects/codzgarage-from-ftp-to-just-push-it/",
+        "name": "Codzgarage - Automated Deployment Pipeline",
+        "description": "Case study of Codzgarage - building a custom automated deployment pipeline to support 40-50 developers working across multiple projects.",
+        "author": {
+            "@type": "Person",
+            "name": "Parth Ravrani",
+            "jobTitle": "Senior Solutions Architect",
+            "url": "https://ravrani.dev"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "CI/CD Pipeline",
+            "description": "Automated deployment pipeline for development teams"
+        },
+        "keywords": "CI/CD, automated deployment, DevOps, deployment automation, Git",
+        "inLanguage": "en"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/subnav/style.css">
+    <link rel="stylesheet" href="/assets/project-voila-cabs/style.css">
+    <link rel="stylesheet" href="/assets/portfolio-listing/style.css">
+    <style>
+        .person-name {
+            font-weight: 700;
+        }
+        .person-name a {
+            color: #2563eb;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .person-name a:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: underline;
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+
+<body class="text-gray-800" data-page="project-codzgarage">
+
+        {% include navbar.html base_path="../" active_page="portfolio" %}
+
+    <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+        <div class="subnav-content">
+            <div class="subnav-links">
+                <div class="subnav-label">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <a href="#overview" class="subnav-link" data-section="overview">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span>Overview</span>
+            </a>
+                <a href="#metrics" class="subnav-link" data-section="metrics">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <span>Metrics</span>
+            </a>
+                <a href="#challenge" class="subnav-link" data-section="challenge">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <span>Challenge</span>
+            </a>
+                <a href="#solution" class="subnav-link" data-section="solution">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <span>Solution</span>
+            </a>
+                <a href="#impact" class="subnav-link" data-section="impact">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <span>Impact</span>
+            </a>
+                <a href="#tech-stack" class="subnav-link" data-section="tech-stack">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span>Tech Stack</span>
+            </a>
+                <a href="#links" class="subnav-link" data-section="links">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-link"></i>
+                </div>
+                <span>Links</span>
+            </a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <main class="relative z-10 pt-40">
+
+        <!-- Breadcrumb Navigation -->
+        <section class="bg-white py-6 border-b border-gray-200">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
+                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    <span>/</span>
+                    <a href="/portfolio/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-folder text-xs"></i>
+                        <span>Portfolio</span>
+                    </a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
+                        <i class="fas fa-file-alt text-blue-600 text-xs"></i>
+                        <span>Codzgarage</span>
+                    </span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="overview" class="bg-white py-24 scroll-reveal relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+            </div>
+            
+            <!-- Container for content -->
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Project Badge -->
+                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
+                        <i class="fas fa-project-diagram text-blue-600"></i>
+                        <span class="text-blue-700 font-semibold text-sm">Case Study</span>
+                    </div>
+                    
+                    <!-- Project Title -->
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+                        Case Study: Codzgarage - From FTP to "Just Push It"
+                    </h1>
+                    
+                    <!-- Project Subtitle -->
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+                        Building a custom, automated deployment pipeline to stop the manual madness.
+                    </p>
+                    
+                    <!-- Project Meta Info -->
+                    <div class="flex flex-wrap justify-center items-center gap-6 mb-8 text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-building text-blue-600"></i>
+                            <span class="text-sm">Codzgarage Infotech Private Limited</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-calendar text-purple-600"></i>
+                            <span class="text-sm">2023</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-tag text-green-600"></i>
+                            <span class="text-sm">DevOps & Cloud</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Badges -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
+                            <i class="fas fa-users text-blue-600"></i>
+                            <span class="text-blue-700 font-medium text-sm">40-50 Developers</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
+                            <i class="fas fa-rocket text-yellow-600"></i>
+                            <span class="text-yellow-700 font-medium text-sm">Automated Pipeline</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <span class="text-green-700 font-medium text-sm">Zero Friction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics Section -->
+        <section id="metrics" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">What We Cared About (Key Metrics)</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        As the team grew, our old school ways were slowing us down. We needed metrics that reflected speed and sanity, not just server stats.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Deployment Speed</h3>
+                            <p class="text-gray-700 leading-relaxed">Moving from slow, manual uploads to seeing changes live in seconds.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Environment Flexibility</h3>
+                            <p class="text-gray-700 leading-relaxed">The ability to spin up Staging, QA, or Client Demo environments without a headache.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Scale</h3>
+                            <p class="text-gray-700 leading-relaxed">Supporting a team of 40-50 developers working across multiple projects simultaneously.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-yellow-500 bg-yellow-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Developer Experience</h3>
+                            <p class="text-gray-700 leading-relaxed">Drastic reduction in frustration. We wanted coding to be the hard part, not the deploying.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Reliability</h3>
+                            <p class="text-gray-700 leading-relaxed">Moving away from "oops, I overwrote a file" errors to a consistent, automated process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-exclamation-circle text-red-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Challenge</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Growth is great, but it breaks things. As Codzgarage expanded to a team of 40-50 people, the tools and processes we used for development just couldn't keep up.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        We were still relying on simple deployment techniques—think FTP and manual file transfers. When you have a small team, that works. But with nearly 50 people and multiple projects running continuously? It was a recipe for disaster.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        It was becoming frustrating to ensure the development cycle stayed updated across all these teams. Managing different environments for Staging, QA, and Client Demos manually was turning into a full-time job we didn't want. We knew this wasn't going to work anymore. We needed a change.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Solution</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        As usual, we started by checking out a bunch of existing tools to manage servers and deployments. But after looking around, we thought, "Let's build something of our own that fits us perfectly."
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        This wasn't a solo mission. I teamed up with <span class="person-name"><a href="https://www.linkedin.com/in/kevin-bhut-10a85764" target="_blank" rel="noopener noreferrer">Kevin Bhut</a></span>, our company director. He stepped in to help me make sure all the security-related things were locked down and handled the network configurations, while I focused on setting up the servers to be ready for automated deployments.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        We built a centralized pipeline connected to GitLab designed to handle the entire organization's load:
+                    </p>
+                    
+                    <!-- Solution Details -->
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-server text-blue-600"></i>
+                                Configured Runners
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">We configured runners to handle the heavy lifting for multiple concurrent projects without bottlenecks.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-layer-group text-green-600"></i>
+                                Distinct Environments
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">We set up distinct environments for Staging, QA, Demos, and Live for every single project.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-cogs text-purple-600"></i>
+                                Automated Migrations
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">We automated the database migrations and application configurations.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-orange-500 bg-orange-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-tools text-orange-600"></i>
+                                Continuous Improvement
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">It wasn't an overnight success. I'll be honest—it took some time to smooth out the rough edges and get the scripts working perfectly. But we kept tweaking it until it was stable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Impact Section -->
+        <section id="impact" class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Business Impact</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The difference is night and day.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Supporting the Crowd</h3>
+                            <p class="text-gray-700 leading-relaxed">We now successfully handle the workflow of 40-50 developers. No matter how many projects are active, the pipeline keeps moving without stepping on toes.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Simple Process</h3>
+                            <p class="text-gray-700 leading-relaxed">The process is now incredibly simple for everyone. You just push your code, and within a few seconds, you see it in action.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Zero Friction</h3>
+                            <p class="text-gray-700 leading-relaxed">No more connecting to FileZilla. No more wondering if the staging server is up to date. It just happens.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-yellow-500 bg-yellow-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Stable & Secure</h3>
+                            <p class="text-gray-700 leading-relaxed">Thanks to <span class="person-name"><a href="https://www.linkedin.com/in/kevin-bhut-10a85764" target="_blank" rel="noopener noreferrer">Kevin Bhut</a></span>'s help with the network and security, the setup is stable enough to handle our databases and apps without us constantly babysitting it.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-orange-500 bg-orange-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Real Talk</h3>
+                            <p class="text-gray-700 leading-relaxed">It's fast—yeah, only if the code is bug-free! But even when it breaks, it fails fast so we can fix it fast.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-5xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+                    <p class="text-gray-600">Technologies powering the platform</p>
+                </div>
+                <div class="case-study-card p-10 md:p-14">
+                    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-8">
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fab fa-gitlab text-xl" style="color: #FC6D26;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">GitLab</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fab fa-linux text-xl" style="color: #FCC624;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Linux</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fas fa-server text-xl" style="color: #2563eb;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Servers</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fas fa-code text-xl" style="color: #10B981;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Shell Scripts</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fas fa-network-wired text-xl" style="color: #8B5CF6;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Networking</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-3 text-gray-700">
+                        <p class="text-lg"><strong>Version Control & CI/CD:</strong> GitLab</p>
+                        <p class="text-lg"><strong>Infrastructure:</strong> Custom Linux Server Setup</p>
+                        <p class="text-lg"><strong>Networking & Security:</strong> Custom Configuration (Thanks <span class="person-name"><a href="https://www.linkedin.com/in/kevin-bhut-10a85764" target="_blank" rel="noopener noreferrer">Kevin Bhut</a></span>!)</p>
+                        <p class="text-lg"><strong>Deployment:</strong> Automated Shell Scripts & Pipelines</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Links Section -->
+        <section id="links" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Project Links</h2>
+                    <p class="text-gray-600">Want to see more? Check us out:</p>
+                </div>
+                <div class="grid md:grid-cols-1 gap-6">
+                    <a href="https://www.codzgarage.com" target="_blank" rel="noopener noreferrer" class="case-study-card p-6 group hover:border-blue-500 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                <i class="fas fa-globe text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">Company Website</h3>
+                                <p class="text-sm text-gray-600">https://www.codzgarage.com</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects Section -->
+        <section class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Explore Other Projects</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Discover more case studies and solutions</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Voila Cabs Project -->
+                    <a href="/projects/voila-cabs-scaling-tech-for-growth/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-blue">
+                                <i class="fas fa-taxi"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Case Study</p>
+                                <h3 class="project-card-title">Voila Cabs</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Taking backend from startup setup to high-availability platform. MySQL and MongoDB clustering with automatic failover on AWS for 99.9%+ uptime.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Tech Integrity Services</span>
+                            <span><i class="fas fa-calendar"></i>2019</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>AWS</span>
+                            <span>MySQL Cluster</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Upvoit Project -->
+                    <a href="/projects/upvoit-secret-re-architecture-mission/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-indigo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Platform Re-Architecture</p>
+                                <h3 class="project-card-title">Upvoit</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Complete architectural overhaul of a live SaaS platform in just 15 days. Clean Architecture, CQRS, and .NET best practices.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Excelhunter Technologies</span>
+                            <span><i class="fas fa-calendar"></i>2024</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>.NET Core</span>
+                            <span>Clean Architecture</span>
+                            <span>CQRS</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Social Media Engine Project -->
+                    <a href="/projects/unblockable-social-media-engine/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-purple">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Data Engineering</p>
+                                <h3 class="project-card-title">Social Media Engine</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">High-volume Facebook & Instagram scraper extracting millions of post details daily without getting banned by aggressive anti-bot algorithms.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Nextract Data Solutions</span>
+                            <span><i class="fas fa-calendar"></i>2025</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Anti-Bot</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio CTA -->
+        <section class="bg-gray-50 py-12 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="text-center">
+                    <a href="/portfolio/" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                        <i class="fas fa-arrow-left text-xs"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+            {% include footer.html base_path="../" %}
+
+    </main>
+
+    
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/subnav/script.js"></script>
+    <script src="/assets/project-voila-cabs/script.js"></script>
+</body>
+
+</html>
+

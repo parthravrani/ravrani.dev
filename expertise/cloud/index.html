@@ -1,0 +1,646 @@
+---
+layout: null
+base_path: "../"
+active_page: "expertise"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Expertise - AWS, Azure, GCP Solutions | Parth Ravrani</title>
+    <meta name="description" content="Expert cloud infrastructure services including AWS, Azure, GCP solutions for scalable, resilient cloud architecture and DevOps. Infrastructure as Code, CI/CD, and cloud migration expertise.">
+    <meta name="keywords" content="AWS expert, Azure expert, cloud architect, DevOps engineer, cloud infrastructure, AWS solutions, Azure solutions, GCP, cloud migration, Infrastructure as Code, CI/CD">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ravrani.dev/expertise/cloud/">
+    <meta property="og:title" content="Cloud Expertise - AWS, Azure, GCP Solutions | Parth Ravrani">
+    <meta property="og:description" content="Expert cloud infrastructure services including AWS, Azure, GCP solutions for scalable, resilient cloud architecture and DevOps.">
+    <meta property="og:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    <meta property="og:site_name" content="Parth Ravrani">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ravrani.dev/expertise/cloud/">
+    <meta name="twitter:title" content="Cloud Expertise - AWS, Azure, GCP Solutions | Parth Ravrani">
+    <meta name="twitter:description" content="Expert cloud infrastructure services including AWS, Azure, GCP solutions for scalable, resilient cloud architecture and DevOps.">
+    <meta name="twitter:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ravrani.dev/expertise/cloud/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Cloud Infrastructure Services",
+        "provider": {
+            "@type": "Person",
+            "name": "Parth Ravrani",
+            "jobTitle": "Senior Solutions Architect",
+            "url": "https://ravrani.dev"
+        },
+        "areaServed": "Worldwide",
+        "description": "Expert cloud infrastructure services including AWS, Azure, GCP solutions for scalable, resilient cloud architecture and DevOps.",
+        "offers": {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Cloud Architecture & DevOps",
+                "description": "AWS, Azure, GCP cloud solutions, Infrastructure as Code, CI/CD pipelines, cloud migration"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/subnav/style.css">
+    <link rel="stylesheet" href="/assets/expertise-cloud/style.css">
+</head>
+
+<body class="text-gray-800" data-page="expertise-cloud">
+
+        {% include navbar.html base_path="../" active_page="expertise" %}
+        
+        <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+            <div class="subnav-content">
+                <div class="subnav-links">
+                    <div class="subnav-label">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <a href="#services" class="subnav-link" data-section="services">
+                        <span>Services</span>
+                    </a>
+                    <a href="#technologies" class="subnav-link" data-section="technologies">
+                        <span>Technologies</span>
+                    </a>
+                    <a href="#achievements" class="subnav-link" data-section="achievements">
+                        <span>Achievements</span>
+                    </a>
+                    <a href="#why-choose" class="subnav-link" data-section="why-choose">
+                        <span>Why Choose Me</span>
+                    </a>
+                    <a href="#case-studies" class="subnav-link" data-section="case-studies">
+                        <span>Case Studies</span>
+                    </a>
+                    {% comment %}
+                    <a href="#blogs" class="subnav-link" data-section="blogs">
+                        <span>Blogs</span>
+                    </a>
+                    {% endcomment %}
+                </div>
+            </div>
+        </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-40">
+
+        <!-- Breadcrumb -->
+        <section class="bg-white py-6 border-b border-gray-200">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
+                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    <span>/</span>
+                    <a href="#" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-briefcase text-xs"></i>
+                        <span>Expertise</span>
+                    </a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
+                        <i class="fas fa-cloud text-orange-600 text-xs"></i>
+                        <span>Cloud</span>
+                    </span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="bg-white py-24 scroll-reveal relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 right-20 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-20 w-80 h-80 bg-yellow-500 rounded-full blur-3xl"></div>
+            </div>
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-orange-50 border border-orange-200 rounded-full">
+                        <i class="fas fa-cloud text-orange-600"></i>
+                        <span class="text-orange-700 font-semibold text-sm">Cloud Expertise</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+                        Cloud <span class="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">Infrastructure</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        Scalable, resilient cloud solutions on <span class="text-orange-600 font-semibold">AWS</span>, <span class="text-orange-600 font-semibold">Azure</span>, and <span class="text-orange-600 font-semibold">GCP</span> for modern applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-white py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive cloud infrastructure and DevOps services</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AWS Solutions</h3>
+                        <p class="text-gray-600 mb-4">
+                            Designing and implementing scalable AWS architectures using EC2, Lambda, S3, RDS, and other AWS services.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                EC2 & Auto Scaling
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Serverless (Lambda)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                S3 & CloudFront CDN
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Azure Services</h3>
+                        <p class="text-gray-600 mb-4">
+                            Building enterprise solutions on Microsoft Azure with App Services, Functions, and Azure SQL.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Azure App Services
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Azure Functions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Azure SQL Database
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Google Cloud Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Leveraging GCP services including Compute Engine, Cloud Functions, and BigQuery for data-driven solutions.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Compute Engine
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Cloud Functions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                BigQuery Analytics
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Infrastructure as Code</h3>
+                        <p class="text-gray-600 mb-4">
+                            Automating cloud infrastructure deployment using Terraform, CloudFormation, and ARM templates.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Terraform
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                CloudFormation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                ARM Templates
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">CI/CD Pipelines</h3>
+                        <p class="text-gray-600 mb-4">
+                            Setting up continuous integration and deployment pipelines using GitHub Actions, Azure DevOps, and Jenkins.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                GitHub Actions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Azure DevOps
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Jenkins & Docker
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-icon orange">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Security</h3>
+                        <p class="text-gray-600 mb-4">
+                            Implementing security best practices, IAM policies, encryption, and compliance standards across cloud platforms.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                IAM & Access Control
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Encryption at Rest/Transit
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-orange-600"></i>
+                                Security Monitoring
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="bg-gray-50 py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Cloud Technologies</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Technologies and platforms I work with</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <i class="fab fa-aws text-3xl text-orange-600 mb-2"></i>
+                        <div class="text-sm font-medium text-gray-700">AWS</div>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <i class="fab fa-microsoft text-3xl text-blue-600 mb-2"></i>
+                        <div class="text-sm font-medium text-gray-700">Azure</div>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <i class="fab fa-google text-3xl text-blue-500 mb-2"></i>
+                        <div class="text-sm font-medium text-gray-700">GCP</div>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <i class="fab fa-docker text-3xl text-blue-600 mb-2"></i>
+                        <div class="text-sm font-medium text-gray-700">Docker</div>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" width="32" height="32" class="mx-auto mb-2">
+                        <div class="text-sm font-medium text-gray-700">Kubernetes</div>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition-colors">
+                        <i class="fas fa-code text-3xl text-orange-600 mb-2"></i>
+                        <div class="text-sm font-medium text-gray-700">Terraform</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Achievements Section -->
+        <section id="achievements" class="bg-white py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Key Achievements</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Proven results in cloud infrastructure and DevOps</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="text-4xl font-bold text-orange-600 mb-2">99.9%</div>
+                        <div class="text-lg font-semibold text-gray-900 mb-2">Uptime</div>
+                        <p class="text-sm text-gray-600">Average uptime achieved for cloud-hosted applications</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="text-4xl font-bold text-orange-600 mb-2">40+</div>
+                        <div class="text-lg font-semibold text-gray-900 mb-2">DevOps Pipelines</div>
+                        <p class="text-sm text-gray-600">CI/CD pipelines set up for development teams</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
+                        <div class="text-4xl font-bold text-orange-600 mb-2">50%</div>
+                        <div class="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</div>
+                        <p class="text-sm text-gray-600">Average cost savings through cloud optimization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section -->
+        <section id="why-choose" class="bg-gray-50 py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Me</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">What sets my cloud expertise apart</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cloud text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Multi-Cloud Expertise</h3>
+                            <p class="text-gray-600 text-sm">Experience with AWS, Azure, and GCP for flexible cloud solutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Security First</h3>
+                            <p class="text-gray-600 text-sm">Implementing best practices for cloud security and compliance.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dollar-sign text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Cost Optimization</h3>
+                            <p class="text-gray-600 text-sm">Designing cost-effective solutions without compromising performance.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-sync-alt text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Automation Focus</h3>
+                            <p class="text-gray-600 text-sm">Infrastructure as Code and automated deployments for efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relevant Case Studies Section -->
+        <section id="case-studies" class="bg-white py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Relevant Case Studies</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Explore projects showcasing cloud infrastructure expertise</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="project-grid-card scroll-reveal">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-blue">
+                                <i class="fas fa-taxi"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Case Study</p>
+                                <h3 class="project-card-title">Voila Cabs</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Taking our backend from a startup setup to a high-availability platform ready for serious growth. Designed complete database & server architecture with 3-replica MySQL and MongoDB clusters, automatic failover, and sharding on AWS to ensure 99.9%+ uptime.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Tech Integrity Services</span>
+                            <span><i class="fas fa-star"></i>Featured on YourStory</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>AWS</span>
+                            <span>MySQL 3-Replica</span>
+                            <span>MongoDB Sharded</span>
+                            <span>High Availability</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <a href="/projects/voila-cabs-scaling-tech-for-growth/" class="project-card-link">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-grid-card scroll-reveal">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-orange">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">DevOps Enablement</p>
+                                <h3 class="project-card-title">Codzgarage · From FTP to "Just Push It"</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Building a custom, automated deployment pipeline to stop the manual madness. Created a centralized GitLab-based CI/CD system with configured runners, distinct environments (Staging, QA, Demos, Live), and automated migrations to support 40-50 developers working across multiple projects.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Codzgarage Infotech Private Limited</span>
+                            <span><i class="fas fa-users"></i>40-50 Developers</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>GitLab CI/CD</span>
+                            <span>Linux Servers</span>
+                            <span>Shell Scripts</span>
+                            <span>Networking</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">DevOps enablement</span>
+                            <a href="/projects/codzgarage-from-ftp-to-just-push-it/" class="project-card-link">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% comment %}
+        <!-- Relevant Blogs Section -->
+        <section id="blogs" class="bg-gray-50 py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Relevant Blogs</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Latest articles and tutorials on cloud infrastructure</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {% assign cloud_tags = 'AWS|Azure|Cloud|DevOps|CI/CD|Terraform|Infrastructure' | split: '|' %}
+                    {% assign post_count = 0 %}
+                    {% for post in site.posts %}
+                        {% if post_count >= 3 %}{% break %}{% endif %}
+                        {% assign is_relevant = false %}
+                        {% for tag in post.tags %}
+                            {% for cloud_tag in cloud_tags %}
+                                {% if tag == cloud_tag %}
+                                    {% assign is_relevant = true %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if is_relevant %}{% break %}{% endif %}
+                        {% endfor %}
+                        {% if is_relevant %}
+                            {% assign post_count = post_count | plus: 1 %}
+                    <article class="blog-card scroll-reveal p-6">
+                        <div class="mb-4">
+                            <span class="blog-category {{ post.category | default: 'tips' }}">{{ post.category | default: 'Tips' | capitalize }}</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                            <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
+                        </h2>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            {% if post.description %}
+                                {{ post.description | strip_html | truncate: 150 }}
+                            {% elsif post.excerpt %}
+                                {% assign clean_excerpt = post.excerpt | strip_html | remove: "## Introduction" | remove: "Introduction" | remove: "##" | strip %}
+                                {% if clean_excerpt == blank or clean_excerpt.size < 20 %}
+                                    {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 25 }}
+                                {% else %}
+                                    {{ clean_excerpt | truncate: 150 }}
+                                {% endif %}
+                            {% else %}
+                                {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 25 }}
+                            {% endif %}
+                        </p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <i class="far fa-calendar"></i>
+                                <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                            </div>
+                            <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                                Read More
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+                        {% endif %}
+                    {% endfor %}
+                    {% if post_count == 0 %}
+                    <div class="col-span-full text-center py-8">
+                        <p class="text-gray-500">No cloud-related blog posts yet. Check back soon!</p>
+                        <a href="/blog/" class="text-blue-600 hover:text-blue-700 font-medium text-sm mt-2 inline-block">View All Blogs</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        {% endcomment %}
+
+        <!-- CTA Section -->
+        <section id="contact" class="bg-gradient-to-br from-orange-50 via-white to-blue-50 py-20 relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 left-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-3xl p-10 md:p-16 border border-gray-200 shadow-xl relative overflow-hidden">
+                        <!-- Background pattern -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-orange-100/30 to-transparent rounded-full blur-2xl"></div>
+                        <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-2xl"></div>
+                        
+                        <div class="relative z-10 text-center">
+                            <!-- Icon Badge -->
+                            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl mb-6 shadow-lg">
+                                <i class="fas fa-cloud text-4xl text-white"></i>
+                            </div>
+                            
+                            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                                Ready to Scale Your <span class="bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">Cloud Infrastructure</span>?
+                            </h2>
+                            
+                            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                                Let's discuss how I can help you build resilient, scalable cloud solutions on AWS, Azure, or GCP that grow with your business.
+                            </p>
+                            
+                            <!-- CTA Buttons -->
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                <a href="#contact" class="group btn-primary-blue font-bold px-8 py-4 rounded-full shadow-xl text-lg hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                                    <span class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                    <span class="relative flex items-center gap-2">
+                                        <i class="fas fa-rocket"></i>
+                                        <span>Get Started</span>
+                                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                    </span>
+                                </a>
+                                <a href="/portfolio/" class="group flex items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold text-lg transition-colors">
+                                    <span>View My Work</span>
+                                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
+                            
+                            <!-- Trust Badges -->
+                            <div class="flex flex-wrap justify-center gap-4 mt-10 pt-8 border-t border-gray-200">
+                                <div class="flex items-center gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-green-600"></i>
+                                    <span>Free Consultation</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-bolt text-yellow-500"></i>
+                                    <span>Quick Response</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-shield-alt text-blue-600"></i>
+                                    <span>Production-Ready Code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        {% include footer.html base_path="../" %}
+
+    
+
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/subnav/script.js"></script>
+    <script src="/assets/expertise-cloud/script.js"></script>
+</body>
+</html>
+

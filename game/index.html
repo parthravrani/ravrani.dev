@@ -1,0 +1,674 @@
+---
+layout: null
+base_path: "../"
+active_page: "game"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Break - Parth Ravrani</title>
+    <meta name="description" content="Take a break and play the classic Snake game">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .game-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            padding-top: calc(80px + 2rem);
+            padding-bottom: calc(100px + 2rem);
+            min-height: calc(100vh - 80px);
+        }
+        
+        @media (max-width: 768px) {
+            .game-wrapper {
+                padding-top: calc(80px + 1rem);
+                padding-bottom: calc(90px + 1rem);
+            }
+        }
+        #gameCanvas {
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+            border: 3px solid #e5e7eb;
+        }
+        .mobile-controls-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 1) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 2px solid #e5e7eb;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            z-index: 100;
+            display: none;
+        }
+        @media (max-width: 1024px) {
+            .mobile-controls-footer {
+                display: block;
+            }
+        }
+        .game-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .control-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid #cbd5e1;
+            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 4px 12px rgba(0, 0, 0, 0.1),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+            color: #475569;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            flex-shrink: 0;
+        }
+        .control-btn:active {
+            transform: scale(0.90);
+            box-shadow: 
+                0 2px 6px rgba(0, 0, 0, 0.15),
+                inset 0 3px 6px rgba(0, 0, 0, 0.1);
+            border-color: #22c55e;
+            background: linear-gradient(145deg, #dcfce7 0%, #bbf7d0 100%);
+            color: #16a34a;
+        }
+        .control-btn i {
+            pointer-events: none;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+        }
+        @media (max-width: 640px) {
+            .control-btn {
+                width: 65px;
+                height: 65px;
+                font-size: 22px;
+            }
+            .game-controls {
+                gap: 0.75rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .control-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+            .game-controls {
+                gap: 0.5rem;
+            }
+        }
+        .score-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .score-card.highlight {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+            transform: scale(1.05);
+        }
+        .btn-modern {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .btn-modern:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .btn-modern:hover {
+            transform: translateY(-2px);
+        }
+        .game-over-overlay {
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50" data-page="game">
+    {% include navbar.html base_path="../" active_page="game" %}
+
+    <div class="game-wrapper">
+        <div class="w-full max-w-5xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-lg rounded-full shadow-lg border border-gray-200 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center relative">
+                        <img src="/assets/navbar/image.png" alt="Snake" class="w-full h-full object-cover rounded-lg" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;" />
+                        <i class="fas fa-gamepad text-white text-xs absolute -bottom-0.5 -right-0.5 bg-blue-500 rounded-full w-5 h-5 flex items-center justify-center z-10"></i>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                        Snake Break
+                    </h1>
+                </div>
+                <p class="text-gray-500 text-sm font-medium">Classic Snake - Use Arrow Keys or Buttons</p>
+            </div>
+
+            <!-- Game Container -->
+            <div class="bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 p-6 md:p-8">
+                <div class="grid lg:grid-cols-12 gap-6 items-start">
+                    
+                    <!-- Left: Score & Controls -->
+                    <div class="lg:col-span-3 space-y-5">
+                        <!-- Score Card -->
+                        <div id="score-card" class="score-card rounded-2xl p-5">
+                            <div class="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Score</div>
+                            <div id="score" class="text-4xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">0</div>
+                            <div class="mt-3 pt-3 border-t border-gray-200">
+                                <div class="text-xs font-semibold text-gray-500 mb-1">High Score</div>
+                                <div id="high-score" class="text-xl font-bold text-gray-700">0</div>
+                            </div>
+                        </div>
+
+                        <!-- Game Status -->
+                        <div id="game-status" class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-4 border-2 border-blue-200">
+                            <div class="text-xs font-semibold text-gray-600 mb-1 uppercase tracking-wider">Status</div>
+                            <div id="status-text" class="text-lg font-bold text-blue-600">Ready</div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="space-y-3">
+                            <button id="start-btn" class="btn-modern w-full px-5 py-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold rounded-xl shadow-lg relative">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    <i class="fas fa-play"></i>
+                                    <span>Start Game</span>
+                                </span>
+                            </button>
+                            <button id="pause-btn" class="btn-modern w-full px-5 py-3.5 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-lg relative hidden">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    <i class="fas fa-pause"></i>
+                                    <span>Pause</span>
+                                </span>
+                            </button>
+                            <button id="reset-btn" class="btn-modern w-full px-5 py-3.5 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl shadow-md border-2 border-gray-200 relative">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    <i class="fas fa-redo"></i>
+                                    <span>Reset</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Center: Game Canvas -->
+                    <div class="lg:col-span-6 flex flex-col items-center justify-center">
+                        <div class="relative w-full flex flex-col items-center">
+                            <div id="canvas-container" class="relative">
+                                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                                
+                                <!-- Game Over Overlay -->
+                                <div id="game-over-overlay" class="game-over-overlay hidden absolute inset-0 bg-black/80 backdrop-blur-sm rounded-16 flex items-center justify-center flex-col text-white">
+                                    <div class="text-4xl font-black mb-4">Game Over!</div>
+                                    <div class="text-xl mb-6">Final Score: <span id="final-score" class="font-bold text-green-400">0</span></div>
+                                    <button id="play-again-btn" class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-bold transition-all">
+                                        Play Again
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Instructions -->
+                    <div class="lg:col-span-3 space-y-5">
+                        <!-- Controls Info -->
+                        <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                            <div class="text-xs font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                                <i class="fas fa-keyboard text-gray-500"></i>
+                                Controls
+                            </div>
+                            <div class="text-xs text-gray-600 space-y-1">
+                                <div>↑ ↓ ← → Arrow Keys</div>
+                                <div>or use buttons below</div>
+                            </div>
+                        </div>
+                        
+                        <!-- How to Play -->
+                        <div class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border-2 border-gray-200 shadow-lg">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-info-circle text-white"></i>
+                                </div>
+                                <h3 class="text-gray-900 font-bold text-lg">How to Play</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-gray-700 text-sm leading-relaxed">Use arrow keys to control the snake</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-gray-700 text-sm leading-relaxed">Eat the red food to grow and score</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-gray-700 text-sm leading-relaxed">Avoid hitting walls or yourself</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                    <span class="text-gray-700 text-sm leading-relaxed">Longer snake = Higher score!</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Controls Footer -->
+    <div class="mobile-controls-footer">
+        <div class="game-controls">
+            <button class="control-btn left" data-direction="left" aria-label="Move Left">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="control-btn up" data-direction="up" aria-label="Move Up">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button class="control-btn down" data-direction="down" aria-label="Move Down">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="control-btn right" data-direction="right" aria-label="Move Right">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    {% include footer.html base_path="../" %}
+
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    
+    <script>
+        // Game variables
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const gridSize = 20;
+        let tileCount = canvas.width / gridSize;
+
+        let snake = [{ x: 10, y: 10 }];
+        let food = {};
+        let dx = 0;
+        let dy = 0;
+        let score = 0;
+        let highScore = parseInt(localStorage.getItem('snakeHighScore')) || 0;
+        let gameRunning = false;
+        let gameLoop = null;
+
+        // Initialize
+        function init() {
+            updateHighScore();
+            generateFood();
+            draw();
+        }
+
+        // Generate food at random position
+        function generateFood() {
+            food = {
+                x: Math.floor(Math.random() * tileCount),
+                y: Math.floor(Math.random() * tileCount)
+            };
+            // Make sure food doesn't spawn on snake
+            for (let segment of snake) {
+                if (segment.x === food.x && segment.y === food.y) {
+                    generateFood();
+                    return;
+                }
+            }
+        }
+
+        // Draw everything
+        function draw() {
+            // Clear canvas
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw grid
+            ctx.strokeStyle = '#f3f4f6';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= tileCount; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * gridSize, 0);
+                ctx.lineTo(i * gridSize, canvas.height);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(0, i * gridSize);
+                ctx.lineTo(canvas.width, i * gridSize);
+                ctx.stroke();
+            }
+
+            // Draw snake
+            ctx.fillStyle = '#10b981';
+            snake.forEach((segment, index) => {
+                if (index === 0) {
+                    // Head with gradient
+                    const gradient = ctx.createLinearGradient(
+                        segment.x * gridSize,
+                        segment.y * gridSize,
+                        segment.x * gridSize + gridSize,
+                        segment.y * gridSize + gridSize
+                    );
+                    gradient.addColorStop(0, '#10b981');
+                    gradient.addColorStop(1, '#059669');
+                    ctx.fillStyle = gradient;
+                } else {
+                    ctx.fillStyle = '#10b981';
+                }
+                ctx.fillRect(segment.x * gridSize + 2, segment.y * gridSize + 2, gridSize - 4, gridSize - 4);
+                
+                // Rounded corners effect
+                ctx.beginPath();
+                ctx.roundRect(segment.x * gridSize + 2, segment.y * gridSize + 2, gridSize - 4, gridSize - 4, 4);
+                ctx.fill();
+            });
+
+            // Draw food
+            ctx.fillStyle = '#ef4444';
+            ctx.beginPath();
+            ctx.arc(
+                food.x * gridSize + gridSize / 2,
+                food.y * gridSize + gridSize / 2,
+                gridSize / 2 - 2,
+                0,
+                2 * Math.PI
+            );
+            ctx.fill();
+            
+            // Food glow effect
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#ef4444';
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+
+        // Move snake
+        function moveSnake() {
+            // Don't move if no direction set
+            if (dx === 0 && dy === 0) {
+                return;
+            }
+
+            const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+            // Check wall collision
+            if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+                gameOver();
+                return;
+            }
+
+            // Check self collision (skip head itself)
+            for (let i = 1; i < snake.length; i++) {
+                if (head.x === snake[i].x && head.y === snake[i].y) {
+                    gameOver();
+                    return;
+                }
+            }
+
+            snake.unshift(head);
+
+            // Check food collision
+            if (head.x === food.x && head.y === food.y) {
+                score += 10;
+                updateScore();
+                generateFood();
+                
+                // Highlight score card
+                document.getElementById('score-card').classList.add('highlight');
+                setTimeout(() => {
+                    document.getElementById('score-card').classList.remove('highlight');
+                }, 300);
+            } else {
+                snake.pop();
+            }
+
+            draw();
+        }
+
+        // Update score
+        function updateScore() {
+            document.getElementById('score').textContent = score;
+            if (score > highScore) {
+                highScore = score;
+                updateHighScore();
+                localStorage.setItem('snakeHighScore', highScore);
+            }
+        }
+
+        // Update high score
+        function updateHighScore() {
+            document.getElementById('high-score').textContent = highScore;
+        }
+
+        // Change direction
+        function changeDirection(newDx, newDy) {
+            // If game not running, start it first
+            if (!gameRunning) {
+                startGame();
+            }
+            
+            // Prevent reversing into itself (only if snake is moving)
+            if ((dx !== 0 || dy !== 0) && dx === -newDx && dy === -newDy) {
+                return;
+            }
+            
+            dx = newDx;
+            dy = newDy;
+            
+            // Start game loop if not already running
+            if (gameRunning && !gameLoop) {
+                document.getElementById('status-text').textContent = 'Playing';
+                document.getElementById('status-text').className = 'text-lg font-bold text-green-600';
+                gameLoop = setInterval(moveSnake, 150);
+            }
+        }
+
+        // Start game
+        function startGame() {
+            if (gameRunning) return;
+            
+            // Reset game state
+            snake = [{ x: 10, y: 10 }];
+            dx = 0;
+            dy = 0;
+            score = 0;
+            updateScore();
+            generateFood();
+            draw();
+            
+            gameRunning = true;
+            document.getElementById('start-btn').classList.add('hidden');
+            document.getElementById('pause-btn').classList.remove('hidden');
+            document.getElementById('status-text').textContent = 'Press Arrow to Start';
+            document.getElementById('status-text').className = 'text-lg font-bold text-blue-600';
+            document.getElementById('game-over-overlay').classList.add('hidden');
+            
+            // Don't start moving until player presses a direction
+            // Game loop will start when first direction is set
+        }
+
+        // Pause game
+        function pauseGame() {
+            if (!gameRunning || !gameLoop) return;
+            
+            clearInterval(gameLoop);
+            gameLoop = null;
+            document.getElementById('pause-btn').classList.add('hidden');
+            document.getElementById('start-btn').classList.remove('hidden');
+            document.getElementById('status-text').textContent = 'Paused';
+            document.getElementById('status-text').className = 'text-lg font-bold text-yellow-600';
+        }
+
+        // Reset game
+        function resetGame() {
+            if (gameLoop) {
+                clearInterval(gameLoop);
+                gameLoop = null;
+            }
+            gameRunning = false;
+            snake = [{ x: 10, y: 10 }];
+            dx = 0;
+            dy = 0;
+            score = 0;
+            updateScore();
+            generateFood();
+            draw();
+            
+            document.getElementById('start-btn').classList.remove('hidden');
+            document.getElementById('pause-btn').classList.add('hidden');
+            document.getElementById('status-text').textContent = 'Ready';
+            document.getElementById('status-text').className = 'text-lg font-bold text-blue-600';
+            document.getElementById('game-over-overlay').classList.add('hidden');
+        }
+
+        // Game over
+        function gameOver() {
+            if (gameLoop) {
+                clearInterval(gameLoop);
+                gameLoop = null;
+            }
+            gameRunning = false;
+            dx = 0;
+            dy = 0;
+            document.getElementById('pause-btn').classList.add('hidden');
+            document.getElementById('start-btn').classList.remove('hidden');
+            document.getElementById('status-text').textContent = 'Game Over';
+            document.getElementById('status-text').className = 'text-lg font-bold text-red-600';
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('game-over-overlay').classList.remove('hidden');
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowUp':
+                    e.preventDefault();
+                    changeDirection(0, -1);
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    changeDirection(0, 1);
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    changeDirection(-1, 0);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    changeDirection(1, 0);
+                    break;
+                case ' ':
+                    e.preventDefault();
+                    if (gameRunning) {
+                        pauseGame();
+                    } else {
+                        startGame();
+                    }
+                    break;
+            }
+        });
+
+        // Touch controls
+        document.querySelectorAll('.control-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const direction = btn.dataset.direction;
+                switch(direction) {
+                    case 'up': changeDirection(0, -1); break;
+                    case 'down': changeDirection(0, 1); break;
+                    case 'left': changeDirection(-1, 0); break;
+                    case 'right': changeDirection(1, 0); break;
+                }
+            });
+        });
+
+        // Button event listeners
+        document.getElementById('start-btn').addEventListener('click', () => {
+            startGame();
+            document.getElementById('status-text').textContent = 'Press Arrow to Start';
+        });
+        document.getElementById('pause-btn').addEventListener('click', pauseGame);
+        document.getElementById('reset-btn').addEventListener('click', resetGame);
+        document.getElementById('play-again-btn').addEventListener('click', () => {
+            resetGame();
+        });
+
+        // Initialize game
+        init();
+    </script>
+</body>
+</html>
+

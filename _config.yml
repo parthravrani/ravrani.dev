@@ -1,0 +1,53 @@
+# Minimal Jekyll Configuration
+# Only for reusing navbar and footer components
+
+# Site settings
+title: "Parth Ravrani"
+description: "Senior Solutions Architect | .NET, Python & Cloud Specialist"
+url: "https://ravrani.dev"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+  toc_levels: 2..3
+permalink: pretty
+highlighter: rouge
+
+# Blog settings - DISABLED
+# Posts will be in _posts directory
+# Custom permalink for posts: /blog/slug/ (no dates, using slug from front matter)
+# Blog is currently hidden - uncomment to enable
+# defaults:
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       permalink: /blog/:slug/
+#       output: true
+
+# Disable Sass processing (we don't use it)
+sass:
+  style: compressed
+
+# Exclude files from processing (keep everything as static)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - blog
+  - _posts
+
+# Minimal plugins (none needed for includes)
+plugins: []
+
+# Keep all files (don't exclude HTML)
+include:
+  - "*.html"
+  - "**/*.html"
+  # - "_posts"  # Blog posts excluded - uncomment to enable

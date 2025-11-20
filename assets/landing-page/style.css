@@ -1,0 +1,357 @@
+body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937; /* Gray 800 */
+            overflow-x: hidden;
+            background-color: #ffffff; /* Default background */
+        }
+
+        /* CARD STYLES for light sections (used for inner cards) */
+        .light-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* rounded-3xl */
+            /* Removed shadow for Apple theme */
+        }
+
+        /* CARD STYLES for dark sections (used for inner cards) */
+        .dark-card {
+            background-color: #111827; /* Gray 900 */
+            border-radius: 1.5rem; /* rounded-3xl */
+        }
+        .dark-card h2, .dark-card h3, .dark-card p {
+            color: #f9fafb; /* gray-50 */
+        }
+        .dark-card .text-gray-700 { color: #d1d5db; } /* Adjust for footer text */
+        .dark-card .text-gray-500 { color: #9ca3af; }
+        .dark-card .border-gray-700 { border-color: #374151; } /* Darker border */
+        /* End dark card styles */
+
+        /* Inner card for tech stack on GREY bg */
+         .inner-grey-card {
+            background: #ffffff; /* White card on grey bg */
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+        /* Inner card for tech stack on WHITE bg */
+         .inner-white-card {
+            background: #f3f4f6; /* gray-100 card on white bg */
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+
+        /* Project card style */
+        .project-grid-card {
+            background: #ffffff;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            height: 100%; 
+            border-radius: 1.5rem; /* rounded-3xl */
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e5e7eb; /* Gray 200 border */
+        }
+        .project-grid-card:hover {
+            border-color: rgba(59, 130, 246, 0.4); /* Blue 500 */
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.05);
+        }
+        
+        /* Smooth fade-in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Trust badge hover effect */
+        .trust-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .trust-badge:hover {
+            transform: translateY(-2px);
+            color: #2563eb;
+        }
+        .project-grid-card .text-xs {
+            font-size: 0.8rem;
+            color: #059669; /* Green 600 - changed from orange */
+        }
+        .project-grid-card h3 {
+             color: #111827; /* Gray 900 */
+        }
+        .project-grid-card p {
+             color: #374151; /* Gray 700 */
+        }
+
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Orange CTA Button - Opalhaus Style */
+        .btn-primary-blue {
+            background: #f97316 !important;
+            color: #ffffff !important;
+            border: none !important;
+            padding: 10px 20px !important;
+            border-radius: 8px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: none;
+        }
+        
+        .btn-primary-blue:hover {
+            background: #ea580c !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+        
+        .btn-primary-blue i {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            color: #000000;
+            font-weight: 900;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        
+        /* Apple-style Text Link Button */
+        .btn-link-blue {
+            color: #2563eb; /* blue-600 */
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-link-blue:hover {
+            color: #1d4ed8; /* blue-700 */
+            text-decoration: underline;
+        }
+        
+        /* Removed .text-gradient */
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Floating Tech Icons */
+        .floating-tech-icon {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            z-index: 1;
+            opacity: 0.9;
+            will-change: transform;
+        }
+        
+        .floating-tech-icon:hover {
+            transform: scale(1.15) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+        
+        .floating-tech-icon i {
+            font-size: 24px;
+        }
+        
+        /* Keep icons away from center content area */
+        #floating-tech-icons {
+            pointer-events: auto; /* Enable for click detection */
+        }
+        
+        /* Splash effect */
+        .splash-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%);
+            pointer-events: none;
+            z-index: 10;
+            transform: translate(-50%, -50%) scale(0);
+            animation: splash-expand 0.6s ease-out forwards;
+        }
+        
+        @keyframes splash-expand {
+            to {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive: hide icons on small screens to avoid clutter */
+        @media (max-width: 768px) {
+            .floating-tech-icon {
+                display: none;
+            }
+        }
+
+        /* Tech Tab styles for light bg */
+        .tech-tab-light {
+            background: rgba(229, 231, 235, 0.5); /* gray-200 */
+            border: 1px solid rgba(209, 213, 225, 0.5); /* gray-300 */
+            color: #4b5563; 
+        }
+        .tech-tab-light:hover {
+            background: rgba(209, 213, 225, 0.8); 
+            color: #111827; 
+        }
+        .tech-tab-light.active {
+            background: #ffffff; 
+            border-color: #ffffff;
+            color: #1d4ed8; /* blue 700 */
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+        /* Tech Tab styles for GREY bg */
+        .tech-tab-grey {
+            background: rgba(255, 255, 255, 0.5); 
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            color: #4b5563; 
+        }
+        .tech-tab-grey:hover {
+            background: rgba(255, 255, 255, 0.8);
+            color: #111827; 
+        }
+        .tech-tab-grey.active {
+            background: #ffffff; 
+            border-color: #ffffff;
+            color: #1d4ed8; /* blue 700 */
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-tab {
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .tech-tab:hover {
+             transform: translateY(-2px);
+        }
+
+        .tech-tab-content {
+            position: relative;
+            min-height: 300px;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+        
+        /* Tech Card styles for light bg */
+        .tech-card-light {
+            background: #fff; /* gray-100 */
+            border: 1px solid #f3f4f6; /* gray-100 */
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-card-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .tech-card-light:hover::before {
+            left: 100%;
+        }
+        .tech-card-light:hover {
+            background: #f9fafb; /* gray-50 */
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        /* Tech Card styles for GREY bg */
+        .tech-card-grey {
+            background: #ffffff; /* Solid white */
+            border: 1px solid #ffffff; 
+        }
+        .tech-card-grey:hover {
+            background: #f9fafb; /* gray-50 */
+            border-color: rgba(59, 130, 246, 0.4); 
+        }
+
+        .tech-card {
+            border-radius: 12px;
+            padding: 14px 20px;
+            text-align: left;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: default;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            min-height: auto;
+        }
+        .tech-card:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+        .tech-card i {
+            transition: transform 0.3s ease;
+        }
+        .tech-card:hover i {
+            transform: scale(1.2);
+        }
+        .tech-card span {
+            color: #1f2937; 
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .tech-card:hover span {
+            color: #111827;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

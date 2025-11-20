@@ -1,0 +1,650 @@
+---
+layout: null
+base_path: "../"
+active_page: "portfolio"
+slug: "voila-cabs-scaling-tech-for-growth"
+title: "Case Study: The Voila Cabs Story - Scaling Our Tech for Growth"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voila Cabs - High-Availability Ride-Hailing Platform | Parth Ravrani</title>
+    <meta name="description" content="Case study of Voila Cabs - a high-availability ride-hailing platform with 99.9%+ uptime, handling thousands of concurrent users with MySQL/MongoDB clustering and server clustering.">
+    <meta name="keywords" content="ride-hailing platform, high availability, scalability, MySQL clustering, MongoDB, microservices, Uber clone, taxi app architecture">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ravrani.dev/projects/voila-cabs-scaling-tech-for-growth/">
+    <meta property="og:title" content="Voila Cabs - High-Availability Ride-Hailing Platform | Parth Ravrani">
+    <meta property="og:description" content="Case study of Voila Cabs - a high-availability ride-hailing platform with 99.9%+ uptime, handling thousands of concurrent users.">
+    <meta property="og:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    <meta property="og:site_name" content="Parth Ravrani">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ravrani.dev/projects/voila-cabs-scaling-tech-for-growth/">
+    <meta name="twitter:title" content="Voila Cabs - High-Availability Ride-Hailing Platform | Parth Ravrani">
+    <meta name="twitter:description" content="Case study of Voila Cabs - a high-availability ride-hailing platform with 99.9%+ uptime, handling thousands of concurrent users.">
+    <meta name="twitter:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    <meta name="twitter:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ravrani.dev/projects/voila-cabs-scaling-tech-for-growth/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "@id": "https://ravrani.dev/projects/voila-cabs-scaling-tech-for-growth/",
+        "name": "Voila Cabs - High-Availability Ride-Hailing Platform",
+        "description": "Case study of Voila Cabs - a high-availability ride-hailing platform with 99.9%+ uptime, handling thousands of concurrent users with MySQL/MongoDB clustering and server clustering.",
+        "author": {
+            "@type": "Person",
+            "name": "Parth Ravrani",
+            "jobTitle": "Senior Solutions Architect",
+            "url": "https://ravrani.dev"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "Ride-Hailing Platform",
+            "description": "High-availability ride-hailing platform with scalable architecture"
+        },
+        "keywords": "ride-hailing, high availability, scalability, MySQL clustering, MongoDB, microservices",
+        "inLanguage": "en"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/subnav/style.css">
+    <link rel="stylesheet" href="/assets/project-voila-cabs/style.css">
+    <link rel="stylesheet" href="/assets/portfolio-listing/style.css">
+</head>
+
+<body class="text-gray-800" data-page="project-voila-cabs">
+
+        {% include navbar.html base_path="../" active_page="portfolio" %}
+
+    <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+        <div class="subnav-content">
+            <div class="subnav-links">
+                <div class="subnav-label">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <a href="#overview" class="subnav-link" data-section="overview">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span>Overview</span>
+            </a>
+                <a href="#metrics" class="subnav-link" data-section="metrics">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <span>Metrics</span>
+            </a>
+                <a href="#challenge" class="subnav-link" data-section="challenge">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <span>Challenge</span>
+            </a>
+                <a href="#solution" class="subnav-link" data-section="solution">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <span>Solution</span>
+            </a>
+                <a href="#impact" class="subnav-link" data-section="impact">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <span>Impact</span>
+            </a>
+                <a href="#tech-stack" class="subnav-link" data-section="tech-stack">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span>Tech Stack</span>
+            </a>
+                <a href="#links" class="subnav-link" data-section="links">
+                    <div class="subnav-icon-wrapper">
+                    <i class="fas fa-link"></i>
+                </div>
+                <span>Links</span>
+            </a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <main class="relative z-10 pt-40">
+
+        <!-- Breadcrumb Navigation -->
+        <section class="bg-white py-6 border-b border-gray-200">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
+                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    <span>/</span>
+                    <a href="/portfolio/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-folder text-xs"></i>
+                        <span>Portfolio</span>
+                    </a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
+                        <i class="fas fa-file-alt text-blue-600 text-xs"></i>
+                        <span>Voila Cabs</span>
+                    </span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="overview" class="bg-white py-24 scroll-reveal relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+            </div>
+            
+            <!-- Container for content -->
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Project Badge -->
+                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
+                        <i class="fas fa-project-diagram text-blue-600"></i>
+                        <span class="text-blue-700 font-semibold text-sm">Case Study</span>
+                    </div>
+                    
+                    <!-- Project Title -->
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+                        Case Study: The Voila Cabs Story - Scaling Our Tech for Growth
+                    </h1>
+                    
+                    <!-- Project Subtitle -->
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+                        Taking our backend from a startup setup to a high-availability platform ready for serious growth.
+                    </p>
+                    
+                    <!-- Project Meta Info -->
+                    <div class="flex flex-wrap justify-center items-center gap-6 mb-8 text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-building text-blue-600"></i>
+                            <span class="text-sm">Tech Integrity Services</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-calendar text-purple-600"></i>
+                            <span class="text-sm">2019</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-tag text-green-600"></i>
+                            <span class="text-sm">Ride-Hailing Platform</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Badges -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
+                            <i class="fas fa-star text-blue-600"></i>
+                            <span class="text-blue-700 font-medium text-sm">Featured on YourStory</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
+                            <i class="fas fa-trophy text-yellow-600"></i>
+                            <span class="text-yellow-700 font-medium text-sm">Enterprise Scale</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                            <span class="text-green-700 font-medium text-sm">99.9%+ Uptime</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics Section -->
+        <section id="metrics" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">What We Cared About (Key Metrics)</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        When you're running a cab platform, the tech has to work. For this project, we knew 'success' wasn't just about code, it was about real-world results. We boiled it down to a few key things:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Platform Uptime</h3>
+                            <p class="text-gray-700 leading-relaxed">We wanted to get as close to 100% uptime as possible. No more crashes during peak hours.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">App Speed</h3>
+                            <p class="text-gray-700 leading-relaxed">Making sure the app felt fast and responsive for users, even when it was super busy.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Peace of Mind (Our Data)</h3>
+                            <p class="text-gray-700 leading-relaxed">Knowing our data was safe, backed up, and we wouldn't lose bookings if a server went down.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-yellow-500 bg-yellow-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Room to Grow</h3>
+                            <p class="text-gray-700 leading-relaxed">Being able to handle 5x or 10x more users without the system breaking a sweat.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Less Risk</h3>
+                            <p class="text-gray-700 leading-relaxed">Simply put, we wanted to sleep at night, not worrying about a server failing and taking the business offline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-exclamation-circle text-red-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Challenge</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        We had a good problem: Voila Cabs was getting popular, fast.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        But our tech was starting to creak under the pressure. The platform—which included our mobile apps, the website, and the admin panel for tracking drivers—was running on a backend that just wasn't built for that kind of traffic.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The main issue was our databases. We were running single instances of MySQL and MongoDB. This was fine when we started, but it was becoming a huge risk. We were staring down a few big problems:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Spotty Reliability</h3>
+                            <p class="text-gray-700 leading-relaxed">The app would get sluggish or even fail during the busiest times (like a Friday night!).</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Major Data Risk</h3>
+                            <p class="text-gray-700 leading-relaxed">If that one server died, we could lose everything—bookings, driver info, user accounts. It was a classic "single point of failure."</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Downtime Nightmares</h3>
+                            <p class="text-gray-700 leading-relaxed">If we needed to do maintenance or an update, the whole platform had to go offline.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-red-500 bg-red-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Hitting a Wall</h3>
+                            <p class="text-gray-700 leading-relaxed">We couldn't just 'add more users.' We were stuck and couldn't scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Solution</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        I was actually working on the iOS app at first, but it became crystal clear that the real fire was in our backend. A great app doesn't matter if the servers behind it are down.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        So, we made the call to pivot and focus on re-architecting our core infrastructure on AWS. Here's what we did, in simple terms:
+                    </p>
+                    
+                    <!-- Solution Details -->
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-database text-blue-600"></i>
+                                No More Single Points of Failure
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">Instead of one database server for each, we set up a 3-replica cluster for both MongoDB and MySQL. Think of it like having a main server and two "hot" backups ready to take over instantly.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-sync-alt text-green-600"></i>
+                                Automatic Failover
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">With this new setup, if the main database (the 'primary') failed, one of the 'secondary' replicas would automatically get promoted to be the new primary. The app would keep running, and users would never even know anything happened.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fas fa-server text-purple-600"></i>
+                                Spreading the Load (Sharding)
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">For MongoDB especially, we used sharding. This is a fancy way of saying we split our data across multiple servers. Instead of one server trying to handle all the requests, the load was distributed, making everything much, much faster.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-orange-500 bg-orange-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                <i class="fab fa-aws text-orange-600"></i>
+                                Building on AWS
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">We did all of this on Amazon Web Services (AWS), which gave us the powerful tools we needed to build and manage this new, resilient setup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Impact Section -->
+        <section id="impact" class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="case-study-card p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Business Impact</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        So, what did all this tech work actually mean for the business? It was a game-changer.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-6 border-l-4 border-green-500 bg-green-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">The App Just Worked</h3>
+                            <p class="text-gray-700 leading-relaxed">Uptime went way up. The platform became the reliable service we always wanted it to be, and we crushed the downtime issues that were hurting our reputation.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Our Data Was Safe</h3>
+                            <p class="text-gray-700 leading-relaxed">We stopped worrying about data loss. The new system was redundant and backed up, protecting our most valuable assets.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-purple-500 bg-purple-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Happier Customers</h3>
+                            <p class="text-gray-700 leading-relaxed">The app felt faster and more stable. This built trust. When a user needed a cab, they knew Voila would work.</p>
+                        </div>
+                        <div class="p-6 border-l-4 border-yellow-500 bg-yellow-50/50 rounded-xl">
+                            <h3 class="font-semibold text-gray-900 mb-2">Ready for the Future</h3>
+                            <p class="text-gray-700 leading-relaxed">We finally had a strong foundation. We could confidently run marketing campaigns and push for more growth, knowing the tech could easily handle it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-5xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+                    <p class="text-gray-600">Technologies powering the platform</p>
+                </div>
+                <div class="case-study-card p-10 md:p-14">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Here's a peek at the key technologies that were running the show:
+                    </p>
+                    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-node-js text-xl" style="color: #68A063;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Express.js</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-php text-xl" style="color: #777BB4;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">PHP</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-solid fa-database text-xl" style="color: #4479A1;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">MySQL</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-solid fa-database text-xl" style="color: #4DB33D;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">MongoDB</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-solid fa-bolt text-xl" style="color: #2563eb;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Socket.io</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-solid fa-fire text-xl" style="color: #FFCA28;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Firebase</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-html5 text-xl" style="color: #E34F26;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">HTML</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-css3-alt text-xl" style="color: #1572B6;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">CSS</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-js text-xl" style="color: #F7DF1E;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">JavaScript</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-apple text-xl" style="color: #999999;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">iOS</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-android text-xl" style="color: #3DDC84;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">Android</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="tech-icon-clean mx-auto mb-3">
+                                <i class="fa-brands fa-aws text-xl" style="color: #FF9900;"></i>
+                            </div>
+                            <p class="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">AWS</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-200 space-y-3 text-gray-700">
+                        <p class="text-lg"><strong>Backend Services:</strong> Express.js, PHP (for APIs)</p>
+                        <p class="text-lg"><strong>Databases:</strong> MySQL (3-Replica Cluster), MongoDB (3-Replica Cluster, Sharded)</p>
+                        <p class="text-lg"><strong>Real-time & Config:</strong> Socket.io (for live driver/booking updates), Firebase (for app configurations)</p>
+                        <p class="text-lg"><strong>Frontend (Web):</strong> HTML/CSS/JavaScript</p>
+                        <p class="text-lg"><strong>Mobile:</strong> Native iOS (Swift/Objective-C), Native Android (Java/Kotlin)</p>
+                        <p class="text-lg"><strong>Infrastructure:</strong> Amazon Web Services (AWS)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Links Section -->
+        <section id="links" class="bg-gray-100 py-20 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Project Links</h2>
+                    <p class="text-gray-600">Want to see more? Check us out:</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="https://voilacabs.com/" target="_blank" rel="noopener noreferrer" class="case-study-card p-6 group hover:border-blue-500 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                <i class="fas fa-globe text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">Company Website</h3>
+                                <p class="text-sm text-gray-600">https://voilacabs.com/</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://yourstory.com/mystory/beep-beep" target="_blank" rel="noopener noreferrer" class="case-study-card p-6 group hover:border-purple-500 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                                <i class="fas fa-newspaper text-purple-600 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">Featured Story</h3>
+                                <p class="text-sm text-gray-600">https://yourstory.com/mystory/beep-beep</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects Section -->
+        <section class="bg-white py-20 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Explore Other Projects</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Discover more case studies and solutions</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Upvoit Project -->
+                    <a href="/projects/upvoit-secret-re-architecture-mission/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-indigo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Platform Re-Architecture</p>
+                                <h3 class="project-card-title">Upvoit</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Complete architectural overhaul of a live SaaS platform in just 15 days. Clean Architecture, CQRS, and .NET best practices.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Excelhunter Technologies</span>
+                            <span><i class="fas fa-calendar"></i>2024</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>.NET Core</span>
+                            <span>Clean Architecture</span>
+                            <span>CQRS</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Social Media Engine Project -->
+                    <a href="/projects/unblockable-social-media-engine/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-purple">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">Data Engineering</p>
+                                <h3 class="project-card-title">Social Media Engine</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">High-volume Facebook & Instagram scraper extracting millions of post details daily without getting banned by aggressive anti-bot algorithms.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Nextract Data Solutions</span>
+                            <span><i class="fas fa-calendar"></i>2025</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Anti-Bot</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Codzgarage Project -->
+                    <a href="/projects/codzgarage-from-ftp-to-just-push-it/" class="project-grid-card scroll-reveal group hover:scale-105 transition-transform">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-orange">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <p class="project-card-badge">DevOps Enablement</p>
+                                <h3 class="project-card-title">Codzgarage</h3>
+                            </div>
+                        </div>
+                        <p class="project-card-description">Building a custom automated deployment pipeline to support 40-50 developers. GitLab CI/CD with distinct environments and automated migrations.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Codzgarage Infotech</span>
+                            <span><i class="fas fa-calendar"></i>2023</span>
+                        </div>
+                        <div class="project-card-tags">
+                            <span>GitLab CI/CD</span>
+                            <span>Linux Servers</span>
+                            <span>Automation</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <span class="project-card-link group-hover:translate-x-1 transition-transform">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio CTA -->
+        <section class="bg-gray-50 py-12 scroll-reveal">
+            <div class="container mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="text-center">
+                    <a href="/portfolio/" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+                        <i class="fas fa-arrow-left text-xs"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+            {% include footer.html base_path="../" %}
+
+    </main>
+
+    
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/subnav/script.js"></script>
+    <script src="/assets/project-voila-cabs/script.js"></script>
+</body>
+
+</html>
+

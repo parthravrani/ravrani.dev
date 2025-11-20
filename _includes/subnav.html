@@ -1,0 +1,18 @@
+{% if include.nav_items %}
+<nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+    <div class="subnav-content">
+        <div class="subnav-links">
+            {% assign items = include.nav_items | split: "|" %}
+            {% for item in items %}
+                {% assign parts = item | split: ":" %}
+                {% if parts.size == 2 %}
+                <a href="#{{ parts[1] }}" class="subnav-link" data-section="{{ parts[1] }}">
+                    <span>{{ parts[0] }}</span>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</nav>
+{% endif %}
+

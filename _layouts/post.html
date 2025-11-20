@@ -1,0 +1,385 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Parth Ravrani</title>
+    <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }} - Parth Ravrani">
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} - Parth Ravrani">
+    <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/subnav/style.css">
+    <link rel="stylesheet" href="/assets/blog-detail/style.css">
+</head>
+
+<body class="text-gray-800" data-page="blog-post-template">
+
+    {% include navbar.html base_path="../" active_page="blog" %}
+    
+    <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+        <div class="subnav-content">
+            <div class="subnav-links">
+                <div class="subnav-label">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <a href="#content" class="subnav-link" data-section="content">
+                    <span>Content</span>
+                </a>
+                <a href="#related-posts" class="subnav-link" data-section="related-posts">
+                    <span>Related Posts</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-40">
+
+        <!-- Breadcrumb -->
+        <section class="bg-white py-6 border-b border-gray-200">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
+                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    {% comment %}
+                    <span>/</span>
+                    <a href="/blog/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-blog text-xs"></i>
+                        <span>Blog</span>
+                    </a>
+                    {% endcomment %}
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
+                        <i class="fas fa-file-alt text-blue-600 text-xs"></i>
+                        <span>{{ page.title }}</span>
+                    </span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Blog Post Header -->
+        <section class="bg-white py-16">
+            <div class="w-full px-6 lg:px-12 xl:px-16 2xl:px-20">
+                <div class="blog-content">
+                    <div class="mb-6">
+                        <span class="blog-category {{ page.category | default: 'tips' }}">{{ page.category | default: 'Tips' | capitalize }}</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        {{ page.title }}
+                    </h1>
+                    <div class="flex items-center gap-6 text-gray-600 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-calendar"></i>
+                            <span>{{ page.date | date: "%B %d, %Y" }}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-clock"></i>
+                            <span>{{ page.read_time | default: '5' }} min read</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-user"></i>
+                            <span>Parth Ravrani</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section id="content" class="bg-white pb-16">
+            <div class="w-full px-6 lg:px-12 xl:px-16 2xl:px-20">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
+                    
+                    <!-- Left Sidebar - Table of Contents -->
+                    <aside class="lg:col-span-3 hidden lg:block">
+                        <div class="sidebar">
+                            <div class="sidebar-card">
+                                <h3 class="text-base">Table of Contents</h3>
+                                <nav class="toc-nav" id="toc-nav">
+                                    <!-- Table of contents will be generated by JavaScript -->
+                                </nav>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="{% if page.tags %}lg:col-span-7{% else %}lg:col-span-9{% endif %} blog-content">
+                        {{ content }}
+                    </article>
+
+                    <!-- Right Sidebar - Only Tags -->
+                    {% if page.tags %}
+                    <aside class="lg:col-span-2 hidden lg:block">
+                        <div class="sidebar">
+                            <!-- Tags -->
+                            <div class="sidebar-card">
+                                <h3 class="text-base">Tags</h3>
+                                <div class="flex flex-wrap">
+                                    {% for tag in page.tags %}
+                                    <span class="tag">{{ tag }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    {% endif %}
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        {% assign all_posts = site.posts | where_exp:"post","post.url != page.url" %}
+        {% assign related_posts = all_posts | sample: 4 %}
+        <section id="related-posts" class="bg-gray-50 py-16">
+            <div class="w-full px-6 lg:px-12 xl:px-16 2xl:px-20">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Related Posts</h2>
+                {% if related_posts.size > 0 %}
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {% for post in related_posts %}
+                    <article class="blog-post-card scroll-reveal p-6">
+                        <div class="mb-4">
+                            <span class="blog-category {{ post.category | default: 'tips' }}">{{ post.category | default: 'Tips' | capitalize }}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            {% if post.description %}
+                                {{ post.description | strip_html | truncate: 120 }}
+                            {% elsif post.excerpt %}
+                                {% assign clean_excerpt = post.excerpt | strip_html | remove: "## Introduction" | remove: "Introduction" | remove: "##" | strip %}
+                                {% if clean_excerpt == blank or clean_excerpt.size < 20 %}
+                                    {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 20 }}
+                                {% else %}
+                                    {{ clean_excerpt | truncate: 120 }}
+                                {% endif %}
+                            {% else %}
+                                {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 20 }}
+                            {% endif %}
+                        </p>
+                        <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                            Read More
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </article>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center py-12">
+                    <i class="fas fa-newspaper text-4xl text-gray-300 mb-4"></i>
+                    <p class="text-gray-500 text-lg">No related posts yet. Check back soon for more content!</p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+    </main>
+
+    {% include footer.html base_path="../" %}
+
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/subnav/script.js"></script>
+    <script src="/assets/blog-detail/script.js"></script>
+    
+    <!-- Table of Contents Generator and Highlighting -->
+    <script>
+        (function() {
+            function initTOC() {
+                const tocNav = document.getElementById('toc-nav');
+                if (!tocNav) return;
+
+                const headings = document.querySelectorAll('article h2, article h3');
+                if (headings.length === 0) {
+                    tocNav.innerHTML = '<p class="text-sm text-gray-500">No headings found</p>';
+                    return;
+                }
+
+                // Clear existing TOC
+                tocNav.innerHTML = '';
+
+                // Generate TOC links
+                const tocMap = [];
+                headings.forEach((heading) => {
+                    // Get or generate ID
+                    let id = heading.id;
+                    if (!id || id === '') {
+                        id = heading.textContent
+                            .toLowerCase()
+                            .trim()
+                            .replace(/[^\w\s-]/g, '')
+                            .replace(/\s+/g, '-')
+                            .replace(/-+/g, '-')
+                            .replace(/^-|-$/g, '');
+                        
+                        // Ensure unique
+                        let uniqueId = id;
+                        let counter = 1;
+                        while (document.getElementById(uniqueId)) {
+                            uniqueId = id + '-' + counter;
+                            counter++;
+                        }
+                        id = uniqueId;
+                        heading.id = id;
+                    }
+                    
+                    const link = document.createElement('a');
+                    link.href = '#' + id;
+                    link.className = 'toc-link';
+                    link.textContent = heading.textContent.trim();
+                    
+                    // Add smooth scroll on click
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetElement = document.getElementById(id);
+                        if (targetElement) {
+                            const headerOffset = 100;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update active state immediately
+                            tocMap.forEach(({ link: l }) => l.classList.remove('active'));
+                            link.classList.add('active');
+                        }
+                    });
+                    
+                    tocNav.appendChild(link);
+                    
+                    tocMap.push({ link, target: heading, id: id });
+                });
+
+                if (tocMap.length === 0) return;
+
+                // Function to update active TOC link
+                function updateActiveTOC() {
+                    const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+                    const viewportTop = scrollPos + 200; // Offset for header
+                    let activeId = null;
+                    let closestHeading = null;
+                    let closestDistance = Infinity;
+
+                    // Find the heading closest to the top of viewport
+                    tocMap.forEach(({ target, id }) => {
+                        const rect = target.getBoundingClientRect();
+                        const headingTop = rect.top + scrollPos;
+                        const headingBottom = headingTop + rect.height;
+                        
+                        // Check if heading is in viewport or just passed
+                        if (headingTop <= viewportTop) {
+                            const distance = viewportTop - headingTop;
+                            if (distance < closestDistance) {
+                                closestDistance = distance;
+                                closestHeading = { id, target };
+                            }
+                        }
+                    });
+
+                    // If we found a heading, use it
+                    if (closestHeading) {
+                        activeId = '#' + closestHeading.id;
+                    } else if (scrollPos < 150 && tocMap.length > 0) {
+                        // At the very top, highlight first heading
+                        activeId = '#' + tocMap[0].id;
+                    }
+
+                    // Update active classes
+                    tocMap.forEach(({ link, id }) => {
+                        if (link.getAttribute('href') === activeId) {
+                            link.classList.add('active');
+                            
+                            // Auto-scroll TOC to keep active item visible
+                            const tocNav = document.getElementById('toc-nav');
+                            if (tocNav) {
+                                const linkRect = link.getBoundingClientRect();
+                                const navRect = tocNav.getBoundingClientRect();
+                                
+                                // Check if link is outside visible area
+                                if (linkRect.top < navRect.top) {
+                                    // Scroll up to show the link
+                                    tocNav.scrollTop -= (navRect.top - linkRect.top + 20);
+                                } else if (linkRect.bottom > navRect.bottom) {
+                                    // Scroll down to show the link
+                                    tocNav.scrollTop += (linkRect.bottom - navRect.bottom + 20);
+                                }
+                            }
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Scroll handler
+                let ticking = false;
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            updateActiveTOC();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+
+                // Initial update
+                updateActiveTOC();
+                
+                // Update after a short delay to ensure everything is rendered
+                setTimeout(updateActiveTOC, 500);
+            }
+
+            // Run when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initTOC);
+            } else {
+                initTOC();
+            }
+        })();
+    </script>
+</body>
+</html>
+

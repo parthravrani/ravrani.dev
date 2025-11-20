@@ -1,0 +1,320 @@
+---
+layout: null
+base_path: "../"
+active_page: "portfolio"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Parth Ravrani</title>
+    <meta name="description" content="Detailed case study of [Project Name] - showcasing technical expertise and business impact.">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ravrani.dev/projects/project-template/">
+    <meta property="og:title" content="Project Name - Parth Ravrani">
+    <meta property="og:description" content="Detailed case study of [Project Name] - showcasing technical expertise and business impact.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://ravrani.dev/projects/project-template/">
+    <meta name="twitter:title" content="Project Name - Parth Ravrani">
+    <meta name="twitter:description" content="Detailed case study of [Project Name] - showcasing technical expertise and business impact.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ravrani.dev/projects/project-template/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/project-template/style.css">
+</head>
+
+<body class="text-gray-800" data-page="project-template">
+
+        {% include navbar.html base_path="../" active_page="portfolio" %}
+
+    <!-- Main content container -->
+    <main class="relative z-10 pt-32">
+
+        <!-- Breadcrumb Navigation -->
+        <section class="bg-white py-6">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center space-x-2 text-sm text-gray-600" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <a href="/portfolio/" class="hover:text-blue-600 transition-colors">Portfolio</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-gray-900 font-medium">Project Name</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Project Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
+                        <i class="fas fa-project-diagram text-blue-600"></i>
+                        <span class="text-sm font-semibold text-blue-700">Case Study</span>
+                    </div>
+
+                    <!-- Project Title -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900 mb-6">
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Project Name</span>
+                    </h1>
+
+                    <!-- Project Subtitle/Tagline -->
+                    <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
+                        A brief description of what this project is about and its main purpose.
+                    </p>
+
+                    <!-- Project Meta Info -->
+                    <div class="flex flex-wrap items-center gap-6 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-building text-gray-500"></i>
+                            <span class="text-gray-700 font-medium">Company Name</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-calendar text-gray-500"></i>
+                            <span class="text-gray-700 font-medium">2024</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-tag text-gray-500"></i>
+                            <span class="text-gray-700 font-medium">Category</span>
+                        </div>
+                    </div>
+
+                    <!-- Featured Badges -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="highlight-badge"><i class="fas fa-star mr-2"></i>Featured Project</span>
+                        <span class="highlight-badge"><i class="fas fa-trophy mr-2"></i>Award Winner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Hero Image (Optional) -->
+        <section class="bg-gray-100 py-12 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-5xl mx-auto">
+                    <div class="project-hero-image bg-gradient-to-br from-blue-100 to-purple-100 aspect-video flex items-center justify-center rounded-2xl">
+                        <p class="text-gray-500 text-lg">Project Hero Image Placeholder</p>
+                        <!-- Replace with actual image: <img src="../images/project-hero.jpg" alt="Project Name" class="w-full h-full object-cover rounded-2xl"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics Section -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Key Metrics & Impact</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="metric-card text-center">
+                            <div class="text-4xl font-black text-blue-600 mb-2">99.9%+</div>
+                            <div class="text-sm text-gray-600 font-medium">Uptime</div>
+                        </div>
+                        <div class="metric-card text-center">
+                            <div class="text-4xl font-black text-purple-600 mb-2">1000s</div>
+                            <div class="text-sm text-gray-600 font-medium">Users</div>
+                        </div>
+                        <div class="metric-card text-center">
+                            <div class="text-4xl font-black text-blue-600 mb-2">5x</div>
+                            <div class="text-sm text-gray-600 font-medium">Performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section class="bg-gray-100 py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto inner-grey-card-solid p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-exclamation-circle text-red-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">The Challenge</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Describe the problem or challenge that this project addressed. What were the pain points? What constraints existed? What were the business or technical requirements?
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                        <li>Challenge point 1</li>
+                        <li>Challenge point 2</li>
+                        <li>Challenge point 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto inner-grey-card-solid p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">My Role & Solution</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Describe your role in the project and the solution you implemented. What was your approach? What technologies did you use? What architectural decisions did you make?
+                    </p>
+                    
+                    <!-- Solution Details -->
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Architecture & Design</h3>
+                            <p class="text-gray-700">Describe the architecture and design decisions made for this project.</p>
+                        </div>
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Implementation Approach</h3>
+                            <p class="text-gray-700">Explain how the solution was implemented, including key phases or milestones.</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">Key Features</h3>
+                            <p class="text-gray-700">Highlight the main features or capabilities of the solution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Impact Section -->
+        <section class="bg-gray-100 py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto inner-grey-card-solid p-8 md:p-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900">Business Impact</h2>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Describe the results and impact of the project. What were the measurable outcomes? How did it benefit the business or users?
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <h4 class="font-semibold text-blue-900 mb-2">Performance Improvements</h4>
+                            <p class="text-sm text-gray-700">Specific performance metrics and improvements achieved.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h4 class="font-semibold text-green-900 mb-2">Business Value</h4>
+                            <p class="text-sm text-gray-700">How the project delivered value to the business or users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Technology Stack</h2>
+                    <div class="inner-grey-card-solid p-8 md:p-12">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <!-- Tech Stack Items -->
+                            <div class="text-center">
+                                <div class="tech-icon mx-auto mb-3">
+                                    <i class="fa-brands fa-microsoft text-2xl" style="color: #512BD4;"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">.NET Core</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="tech-icon mx-auto mb-3">
+                                    <i class="fa-solid fa-database text-2xl" style="color: #4479A1;"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">MySQL</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="tech-icon mx-auto mb-3">
+                                    <i class="fa-brands fa-aws text-2xl" style="color: #FF9900;"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">AWS</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="tech-icon mx-auto mb-3">
+                                    <i class="fa-brands fa-python text-2xl" style="color: #3776AB;"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Python</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Links Section -->
+        <section class="bg-gray-100 py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto inner-grey-card-solid p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Project Links & Resources</h2>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-blue text-center justify-center">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-blue text-center justify-center">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repository</span>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-blue text-center justify-center">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Case Study PDF</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio CTA -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore More Projects</h2>
+                    <p class="text-lg text-gray-700 mb-8">Check out other projects in my portfolio</p>
+                    <a href="/portfolio/" class="btn-primary-blue inline-flex">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+            {% include footer.html base_path="../" %}
+
+    </main>
+
+    
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/project-template/script.js"></script>
+</body>
+
+</html>
+

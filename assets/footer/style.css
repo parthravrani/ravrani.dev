@@ -1,0 +1,56 @@
+/* Footer styles - mostly uses Tailwind classes */
+        /* Dark card styles for footer */
+        .dark-card {
+            background-color: #111827; /* Gray 900 */
+            border-radius: 1.5rem; /* rounded-3xl */
+        }
+        .dark-card h2, .dark-card h3, .dark-card p {
+            color: #f9fafb; /* gray-50 */
+        }
+        .dark-card .text-gray-700 { 
+            color: #d1d5db; /* Adjust for footer text */
+        }
+        .dark-card .text-gray-500 { 
+            color: #9ca3af; 
+        }
+        .dark-card .border-gray-700 { 
+            border-color: #374151; /* Darker border */
+        }
+
+        /* Orange CTA Button - Opalhaus Style */
+        .btn-primary-blue {
+            background: #f97316 !important;
+            color: #ffffff !important;
+            border: none !important;
+            padding: 10px 20px !important;
+            border-radius: 8px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: none;
+        }
+        
+        .btn-primary-blue:hover {
+            background: #ea580c !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+        }
+        
+        .btn-primary-blue i {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            color: #000000;
+            font-weight: 900;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+            line-height: 1;
+        }
+

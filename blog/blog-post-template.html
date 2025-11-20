@@ -1,0 +1,312 @@
+---
+layout: null
+base_path: "../"
+active_page: "blog"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title - Parth Ravrani</title>
+    <meta name="description" content="Blog post description here">
+    <meta name="author" content="Parth Ravrani">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ravrani.dev/blog/blog-post-template.html">
+    <meta property="og:title" content="Blog Post Title - Parth Ravrani">
+    <meta property="og:description" content="Blog post description here">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Post Title - Parth Ravrani">
+    <meta name="twitter:description" content="Blog post description here">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/footer/style.css">
+    <link rel="stylesheet" href="/assets/blog-detail/style.css">
+</head>
+
+<body class="text-gray-800" data-page="blog-post-template">
+
+        {% include navbar.html base_path="../" active_page="blog" %}
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-32">
+
+        <!-- Breadcrumb -->
+        <section class="bg-white py-6 border-b border-gray-200">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
+                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home text-xs"></i>
+                        <span>Home</span>
+                    </a>
+                    <span>/</span>
+                    <a href="/blog/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-blog text-xs"></i>
+                        <span>Blog</span>
+                    </a>
+                    <span>/</span>
+                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
+                        <i class="fas fa-file-alt text-blue-600 text-xs"></i>
+                        <span>Blog Post Title</span>
+                    </span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Blog Post Header -->
+        <section class="bg-white py-16 scroll-reveal">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="blog-content">
+                    <div class="mb-6">
+                        <span class="blog-category tips">Tips</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Blog Post Title Goes Here
+                    </h1>
+                    <div class="flex items-center gap-6 text-gray-600 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-calendar"></i>
+                            <span>January 15, 2024</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-clock"></i>
+                            <span>5 min read</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="far fa-user"></i>
+                            <span>Parth Ravrani</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section class="bg-white pb-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-6xl mx-auto">
+                    
+                    <!-- Left Sidebar - Table of Contents -->
+                    <aside class="lg:col-span-2 hidden lg:block">
+                        <div class="sidebar">
+                            <div class="sidebar-card">
+                                <h3 class="text-base">Table of Contents</h3>
+                                <nav class="toc-nav">
+                                    <a href="#introduction" class="toc-link">Introduction</a>
+                                    <a href="#main-section" class="toc-link">Main Section</a>
+                                    <a href="#key-points" class="toc-link">5 Key Points</a>
+                                    <a href="#considerations" class="toc-link">Considerations</a>
+                                    <a href="#conclusion" class="toc-link">Conclusion</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="lg:col-span-7 blog-content scroll-reveal">
+                    
+                    <!-- Introduction -->
+                    <p id="introduction" class="text-xl text-gray-700 font-medium mb-6">
+                        This is the introduction paragraph. It should provide a brief overview of what the blog post is about and why the reader should care.
+                    </p>
+
+                    <h2 id="main-section">Main Section Heading</h2>
+                    <p>
+                        Here's where your main content goes. You can write detailed explanations, share insights, and provide valuable information to your readers. Make sure to keep paragraphs concise and well-structured.
+                    </p>
+
+                    <h3>Subsection Heading</h3>
+                    <p>
+                        This is a subsection that goes deeper into a specific topic. You can use subsections to break down complex topics into more digestible pieces.
+                    </p>
+
+                    <!-- Example: Numbered List -->
+                    <h2 id="key-points">5 Key Points to Remember</h2>
+                    <ol>
+                        <li><strong>First Point:</strong> Explain the first important point in detail. Make sure it's clear and actionable.</li>
+                        <li><strong>Second Point:</strong> Continue with the second point, providing examples or use cases where applicable.</li>
+                        <li><strong>Third Point:</strong> Add more context and details to help readers understand the concept better.</li>
+                        <li><strong>Fourth Point:</strong> Include practical tips or best practices that readers can implement.</li>
+                        <li><strong>Fifth Point:</strong> Conclude with a final important point that ties everything together.</li>
+                    </ol>
+
+                    <!-- Example: Code Block -->
+                    <h3>Code Example</h3>
+                    <p>Here's an example of how to include code in your blog post:</p>
+                    <pre><code>// Example code snippet
+public class Example
+{
+    public void DoSomething()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+
+                    <!-- Example: Bullet Points -->
+                    <h2 id="considerations">Important Considerations</h2>
+                    <ul>
+                        <li>Consideration one with detailed explanation</li>
+                        <li>Consideration two with practical examples</li>
+                        <li>Consideration three with best practices</li>
+                        <li>Consideration four with common pitfalls to avoid</li>
+                    </ul>
+
+                    <!-- Example: Blockquote -->
+                    <blockquote>
+                        "This is an important quote or insight that you want to highlight in your blog post. It can be from an expert, a key takeaway, or a memorable statement."
+                    </blockquote>
+
+                    <h2 id="conclusion">Conclusion</h2>
+                    <p>
+                        Wrap up your blog post with a strong conclusion that summarizes the key points and provides a clear call-to-action or next steps for your readers. Make sure they know what to do next or what to think about after reading.
+                    </p>
+
+                    <p>
+                        Thank you for reading! If you found this helpful, feel free to share it with others who might benefit from it.
+                    </p>
+
+                    </article>
+
+                    <!-- Right Sidebar -->
+                    <aside class="lg:col-span-3 hidden lg:block">
+                        <div class="sidebar">
+                            <!-- Author Card -->
+                            <div class="sidebar-card">
+                                <h3 class="text-base">About Author</h3>
+                                <div class="author-card">
+                                    <div class="author-avatar">PR</div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900 text-sm">Parth Ravrani</div>
+                                        <div class="text-xs text-gray-600">Senior Solutions Architect</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="sidebar-card">
+                                <h3 class="text-base">Tags</h3>
+                                <div class="flex flex-wrap">
+                                    <span class="tag">.NET</span>
+                                    <span class="tag">Performance</span>
+                                    <span class="tag">Optimization</span>
+                                    <span class="tag">Best Practices</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">ASP.NET Core</span>
+                                </div>
+                            </div>
+
+                            <!-- Share -->
+                            <div class="sidebar-card">
+                                <h3 class="text-base">Share</h3>
+                                <div class="flex flex-col gap-2">
+                                    <a href="#" class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                        <i class="fab fa-twitter text-blue-400"></i>
+                                        <span class="text-sm">Twitter</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                        <i class="fab fa-linkedin text-blue-600"></i>
+                                        <span class="text-sm">LinkedIn</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                        <i class="fab fa-facebook text-blue-700"></i>
+                                        <span class="text-sm">Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Related Posts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <article class="blog-post-card scroll-reveal p-6">
+                        <div class="mb-4">
+                            <span class="blog-category tutorial">Tutorial</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors">Related Blog Post Title</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            Brief description of the related blog post that might interest the reader.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                            Read More
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </article>
+
+                    <article class="blog-post-card scroll-reveal p-6">
+                        <div class="mb-4">
+                            <span class="blog-category libraries">Libraries</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors">Another Related Post</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            Another brief description that provides context about this related post.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                            Read More
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </article>
+
+                    <article class="blog-post-card scroll-reveal p-6">
+                        <div class="mb-4">
+                            <span class="blog-category tips">Tips</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-600 transition-colors">Third Related Post</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            One more related post that complements the current article's topic.
+                        </p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                            Read More
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        {% include footer.html base_path="../" %}
+
+    
+
+    <script src="/assets/navbar/script.js"></script>
+    <script src="/assets/footer/script.js"></script>
+    <script src="/assets/blog-detail/script.js"></script>
+</body>
+</html>
+

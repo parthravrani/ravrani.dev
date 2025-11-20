@@ -1,3 +1,9 @@
+---
+layout: null
+base_path: ""
+active_page: "home"
+---
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -133,610 +139,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1f2937; /* Gray 800 */
-            overflow-x: hidden;
-            background-color: #ffffff; /* Default background */
-        }
-
-        /* CARD STYLES for light sections (used for inner cards) */
-        .light-card {
-            background-color: #ffffff;
-            border-radius: 1.5rem; /* rounded-3xl */
-            /* Removed shadow for Apple theme */
-        }
-
-        /* CARD STYLES for dark sections (used for inner cards) */
-        .dark-card {
-            background-color: #111827; /* Gray 900 */
-            border-radius: 1.5rem; /* rounded-3xl */
-        }
-        .dark-card h2, .dark-card h3, .dark-card p {
-            color: #f9fafb; /* gray-50 */
-        }
-        .dark-card .text-gray-700 { color: #d1d5db; } /* Adjust for footer text */
-        .dark-card .text-gray-500 { color: #9ca3af; }
-        .dark-card .border-gray-700 { border-color: #374151; } /* Darker border */
-        /* End dark card styles */
-
-        /* Inner card for tech stack on GREY bg */
-         .inner-grey-card {
-            background: #ffffff; /* White card on grey bg */
-            border-radius: 1.5rem;
-            padding: 2rem;
-        }
-        /* Inner card for tech stack on WHITE bg */
-         .inner-white-card {
-            background: #f3f4f6; /* gray-100 card on white bg */
-            border-radius: 1.5rem;
-            padding: 2rem;
-        }
-
-        /* Project card style */
-        .project-grid-card {
-            background: #ffffff;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            height: 100%; 
-            border-radius: 1.5rem; /* rounded-3xl */
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e5e7eb; /* Gray 200 border */
-        }
-        .project-grid-card:hover {
-            border-color: rgba(59, 130, 246, 0.4); /* Blue 500 */
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.05);
-        }
-        
-        /* Smooth fade-in animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        /* Trust badge hover effect */
-        .trust-badge {
-            transition: all 0.3s ease;
-        }
-        
-        .trust-badge:hover {
-            transform: translateY(-2px);
-            color: #2563eb;
-        }
-        .project-grid-card .text-xs {
-            font-size: 0.8rem;
-            color: #059669; /* Green 600 - changed from orange */
-        }
-        .project-grid-card h3 {
-             color: #111827; /* Gray 900 */
-        }
-        .project-grid-card p {
-             color: #374151; /* Gray 700 */
-        }
-
-
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-        .scroll-reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .nav-link {
-            transition: color 0.3s ease, letter-spacing 0.3s ease;
-            color: #374151; /* gray 700 */
-        }
-        .nav-link:hover {
-            color: #2563eb; /* blue 600 */
-        }
-        .nav-link.active {
-            color: #1d4ed8; /* blue 700 */
-            font-weight: 600;
-        }
-        
-        /* Nav text color */
-        .nav-text-dark {
-             color: #111827; /* gray 900 */
-        }
-
-        /* Apple-style Blue Button */
-        .btn-primary-blue {
-            background-color: #2563eb; /* blue-600 */
-            color: #ffffff;
-            font-weight: 500;
-            border-radius: 9999px;
-            transition: all 0.3s ease;
-        }
-        .btn-primary-blue:hover {
-            transform: scale(1.05);
-            background-color: #1d4ed8; /* blue-700 */
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-        }
-        
-        /* Apple-style Text Link Button */
-        .btn-link-blue {
-            color: #2563eb; /* blue-600 */
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .btn-link-blue:hover {
-            color: #1d4ed8; /* blue-700 */
-            text-decoration: underline;
-        }
-        
-        /* Removed .text-gradient */
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Floating Tech Icons */
-        .floating-tech-icon {
-            position: absolute;
-            width: 55px;
-            height: 55px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(12px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-            z-index: 1;
-            opacity: 0.9;
-            will-change: transform;
-        }
-        
-        .floating-tech-icon:hover {
-            transform: scale(1.15) !important;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            opacity: 1;
-        }
-        
-        .floating-tech-icon i {
-            font-size: 24px;
-        }
-        
-        /* Keep icons away from center content area */
-        #floating-tech-icons {
-            pointer-events: auto; /* Enable for click detection */
-        }
-        
-        /* Splash effect */
-        .splash-effect {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%);
-            pointer-events: none;
-            z-index: 10;
-            transform: translate(-50%, -50%) scale(0);
-            animation: splash-expand 0.6s ease-out forwards;
-        }
-        
-        @keyframes splash-expand {
-            to {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0;
-            }
-        }
-        
-        /* Responsive: hide icons on small screens to avoid clutter */
-        @media (max-width: 768px) {
-            .floating-tech-icon {
-                display: none;
-            }
-        }
-
-        /* Tech Tab styles for light bg */
-        .tech-tab-light {
-            background: rgba(229, 231, 235, 0.5); /* gray-200 */
-            border: 1px solid rgba(209, 213, 225, 0.5); /* gray-300 */
-            color: #4b5563; 
-        }
-        .tech-tab-light:hover {
-            background: rgba(209, 213, 225, 0.8); 
-            color: #111827; 
-        }
-        .tech-tab-light.active {
-            background: #ffffff; 
-            border-color: #ffffff;
-            color: #1d4ed8; /* blue 700 */
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-        }
-        /* Tech Tab styles for GREY bg */
-        .tech-tab-grey {
-            background: rgba(255, 255, 255, 0.5); 
-            border: 1px solid rgba(226, 232, 240, 0.5);
-            color: #4b5563; 
-        }
-        .tech-tab-grey:hover {
-            background: rgba(255, 255, 255, 0.8);
-            color: #111827; 
-        }
-        .tech-tab-grey.active {
-            background: #ffffff; 
-            border-color: #ffffff;
-            color: #1d4ed8; /* blue 700 */
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-        }
-
-        .tech-tab {
-            padding: 12px 20px;
-            border-radius: 12px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-        }
-        .tech-tab:hover {
-             transform: translateY(-2px);
-        }
-
-        .tech-tab-content {
-            position: relative;
-            min-height: 300px;
-        }
-
-        .tab-panel {
-            display: none;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-        
-        /* Tech Card styles for light bg */
-        .tech-card-light {
-            background: #fff; /* gray-100 */
-            border: 1px solid #f3f4f6; /* gray-100 */
-            position: relative;
-            overflow: hidden;
-        }
-        .tech-card-light::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        .tech-card-light:hover::before {
-            left: 100%;
-        }
-        .tech-card-light:hover {
-            background: #f9fafb; /* gray-50 */
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
-        }
-        /* Tech Card styles for GREY bg */
-        .tech-card-grey {
-            background: #ffffff; /* Solid white */
-            border: 1px solid #ffffff; 
-        }
-        .tech-card-grey:hover {
-            background: #f9fafb; /* gray-50 */
-            border-color: rgba(59, 130, 246, 0.4); 
-        }
-
-        .tech-card {
-            border-radius: 12px;
-            padding: 14px 20px;
-            text-align: left;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            cursor: default;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 16px;
-            min-height: auto;
-        }
-        .tech-card:hover {
-            transform: translateY(-4px) scale(1.02);
-        }
-        .tech-card i {
-            transition: transform 0.3s ease;
-        }
-        .tech-card:hover i {
-            transform: scale(1.2);
-        }
-        .tech-card span {
-            color: #1f2937; 
-            font-weight: 500;
-            font-size: 14px;
-        }
-        .tech-card:hover span {
-            color: #111827;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* OPALHAUS STYLE NAV - Glass Effect */
-        #main-nav {
-            background: rgba(255, 255, 255, 0.7) !important;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-top: 1rem;
-            padding: 1.25rem 1.5rem !important;
-            border-radius: 0;
-            width: 100%;
-            max-width: 100%;
-        }
-        
-        /* Scrolled state - Bubble effect with glass */
-        #main-nav.scrolled {
-            background: rgba(255, 255, 255, 0.8) !important;
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.4) !important;
-            margin-top: 1rem;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1280px;
-            border-radius: 1rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
-            padding: 1rem 1.5rem !important;
-        }
-        
-        /* At top - Full width attached with glass */
-        #main-nav.at-top {
-            background: rgba(255, 255, 255, 0.6) !important;
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.25) !important;
-            margin-top: 0;
-            margin-left: 0;
-            margin-right: 0;
-            max-width: 100%;
-            border-radius: 0;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-        }
-        
-        /* Logo Container */
-        .nav-logo-container {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        
-        #nav-title {
-            font-weight: 700;
-            color: #111827 !important;
-            font-size: 1.25rem;
-            line-height: 1.2;
-        }
-        
-        .nav-tagline {
-            font-size: 0.75rem;
-            color: #6b7280;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-        
-        /* Nav Links Container - Two Columns */
-        .nav-links-columns {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            gap: 8px 24px;
-            align-items: start;
-        }
-        
-        /* Nav Link with Oval Indicator */
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 12px;
-            color: #111827 !important;
-            font-weight: 500;
-            font-size: 0.9375rem;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            border-radius: 6px;
-            position: relative;
-        }
-        
-        .nav-link::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: #4b5563;
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: block;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            transform: scale(1);
-            will-change: transform, background-color;
-        }
-        
-        .nav-link:hover {
-            color: #111827 !important;
-            background: rgba(0, 0, 0, 0.04) !important;
-        }
-        
-        .nav-link:hover::before {
-            background: #111827;
-            transform: scale(1.2);
-        }
-        
-        .nav-link.active {
-            color: #111827 !important;
-            font-weight: 600;
-            background: rgba(0, 0, 0, 0.06) !important;
-        }
-        
-        /* Animation for when active class is added */
-        @keyframes dotExpand {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.8);
-            }
-            100% {
-                transform: scale(1.6);
-            }
-        }
-        
-        .nav-link.active::before {
-            background: #f97316; /* Orange 500 */
-            transform: scale(1.6);
-            box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
-            animation: dotExpand 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        
-        /* Remove underline animation */
-        .nav-link::after {
-            display: none;
-        }
-        
-        /* Orange CTA Button - Opalhaus Style */
-        .btn-primary-blue {
-            background: #f97316 !important;
-            color: #ffffff !important;
-            border: none !important;
-            padding: 10px 20px !important;
-            border-radius: 8px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s ease;
-            box-shadow: none;
-        }
-        
-        .btn-primary-blue:hover {
-            background: #ea580c !important;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
-        }
-        
-        .btn-primary-blue i {
-            width: 24px;
-            height: 24px;
-            background: #ffffff;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.875rem;
-            color: #000000;
-            font-weight: 900;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0;
-            line-height: 1;
-        }
-        
-        /* Mobile Menu - Clean White Style */
-        #mobile-menu {
-            background: rgba(255, 255, 255, 0.98) !important;
-            backdrop-filter: blur(20px) saturate(180%) !important;
-            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-            border: 1px solid rgba(0, 0, 0, 0.08) !important;
-            box-shadow: 
-                0 8px 32px 0 rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(0, 0, 0, 0.02) inset;
-            animation: slideDown 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px) scale(0.98);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-        
-        #mobile-menu a {
-            transition: all 0.2s ease;
-            border-radius: 8px;
-        }
-        
-        #mobile-menu a:hover {
-            background: rgba(59, 130, 246, 0.1);
-        }
-
-    </style>
+    
+    <link rel="stylesheet" href="assets/navbar/style.css">
+    <link rel="stylesheet" href="assets/footer/style.css">
+    <link rel="stylesheet" href="assets/subnav/style.css">
+    <link rel="stylesheet" href="assets/landing-page/style.css">
+    <link rel="stylesheet" href="assets/portfolio-listing/style.css">
 </head>
 
-    <body class="text-gray-800" itemscope itemtype="https://schema.org/Person">
+    <body class="text-gray-800" itemscope itemtype="https://schema.org/Person" data-page="home">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50">
-        <nav id="main-nav" class="container mx-auto flex justify-between items-start at-top" role="navigation" aria-label="Main navigation">
-            <div class="nav-logo-container">
-                <a href="#" id="nav-title" class="text-xl font-bold text-gray-900" itemprop="name">Parth Ravrani</a>
-                <p class="nav-tagline">Building Scalable Solutions</p>
-            </div>
-            <div id="nav-links" class="hidden md:flex nav-links-columns light-nav" role="menubar">
-                <a href="#about" class="nav-link active" role="menuitem" aria-label="View about section">About</a>
-                <a href="#tech" class="nav-link" role="menuitem" aria-label="View technology stack">Tech</a>
-                <a href="portfolio/" class="nav-link" role="menuitem" aria-label="View portfolio projects">Portfolio</a>
-                <a href="#expertise" class="nav-link" role="menuitem" aria-label="View expertise section">Expertise</a>
-                <a href="#contact" class="nav-link" role="menuitem" aria-label="Contact information">Contact</a>
-            </div>
-            <div class="hidden md:flex items-center">
-                <a href="#contact" class="btn-primary-blue text-sm font-semibold hidden md:inline-flex">
-                    <span>Get Started</span>
-                    <i class="fas fa-arrow-right"></i>
+    {% include navbar.html base_path="" active_page="home" %}
+
+    <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
+        <div class="subnav-content">
+            <div class="subnav-links">
+                <div class="subnav-label">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <a href="#about" class="subnav-link" data-section="about">
+                    <span>About</span>
+                </a>
+                <a href="#expertise" class="subnav-link" data-section="expertise">
+                    <span>Expertise</span>
+                </a>
+                <a href="#featured-projects" class="subnav-link" data-section="featured-projects">
+                    <span>Projects</span>
+                </a>
+                <a href="#tech" class="subnav-link" data-section="tech">
+                    <span>Tech Stack</span>
+                </a>
+                <a href="#certifications" class="subnav-link" data-section="certifications">
+                    <span>Certifications</span>
+                </a>
+                <a href="#process" class="subnav-link" data-section="process">
+                    <span>Process</span>
                 </a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-600 hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-gray-100">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 mx-4 rounded-2xl p-5 text-center space-y-3 border border-gray-200">
-             <a href="#about" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">About</a>
-             <a href="#tech" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Tech</a>
-             <a href="portfolio/" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Portfolio</a>
-             <a href="#expertise" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Expertise</a>
-             <a href="#contact" class="block nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors py-2.5">Contact</a>
-             <a href="#contact" class="block btn-primary-blue font-semibold px-5 py-2.5 rounded-lg mt-3 justify-center">Get Started</a>
         </div>
-    </header>
+    </nav>
 
-    <main class="relative z-10">
+    <main class="relative z-10 pt-0">
 
         <!-- 1. HERO SECTION (WHITE) -->
         <section id="hero" class="scroll-reveal bg-white pt-48 pb-32 relative overflow-visible">
@@ -940,68 +383,63 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Real-world solutions that delivered measurable business impact</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 gap-8">
                     
-                    <div class="project-grid-card p-6 group">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Voila Cabs</h3>
-                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Featured</span>
+                    <div class="project-grid-card scroll-reveal">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-blue">
+                                <i class="fas fa-taxi"></i>
                         </div>
-                        <p class="text-gray-700 text-sm flex-grow mb-4">Led the database architecture for a high-availability ride-hailing app. Implemented MySQL and MongoDB clustering to ensure 99.9%+ uptime for thousands of concurrent users.</p>
-                        <div class="space-y-2 mb-4">
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                <span>99.9%+ Uptime Achieved</span>
+                            <div>
+                                <p class="project-card-badge">Case Study</p>
+                                <h3 class="project-card-title">Voila Cabs</h3>
                             </div>
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-users text-blue-500 mr-2"></i>
-                                <span>Thousands of Concurrent Users</span>
                             </div>
+                        <p class="project-card-description">Taking our backend from a startup setup to a high-availability platform ready for serious growth. Designed complete database & server architecture with MySQL and MongoDB clustering to ensure 99.9%+ uptime for thousands of concurrent users.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Tech Integrity Services</span>
+                            <span><i class="fas fa-star"></i>Featured on YourStory</span>
                         </div>
-                        <div class="mt-4 border-t border-gray-200 pt-4">
-                            <span class="text-xs font-semibold text-blue-600">Tech: MySQL, MongoDB, AWS, Node.js</span>
+                        <div class="project-card-tags">
+                            <span>MySQL Cluster</span>
+                            <span>MongoDB Cluster</span>
+                            <span>AWS</span>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
+                            <a href="projects/voila-cabs-scaling-tech-for-growth/" class="project-card-link">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="project-grid-card p-6 group">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Upvoit SaaS</h3>
-                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">4.7★ Rating</span>
+                    <div class="project-grid-card scroll-reveal">
+                        <div class="project-card-header">
+                            <div class="project-card-icon icon-indigo">
+                                <i class="fas fa-building"></i>
                         </div>
-                        <p class="text-gray-700 text-sm flex-grow mb-4">Key member of the team that re-architected a .NET monolith into a scalable SaaS platform using CQRS, RabbitMQ, and a hybrid MSSQL/MongoDB database.</p>
-                        <div class="space-y-2 mb-4">
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-star text-yellow-500 mr-2"></i>
-                                <span>4.7/5 on G2 & Capterra</span>
+                            <div>
+                                <p class="project-card-badge">Platform Re-Architecture</p>
+                                <h3 class="project-card-title">Upvoit SaaS</h3>
                             </div>
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-chart-line text-blue-500 mr-2"></i>
-                                <span>Massive Scalability Achieved</span>
                             </div>
+                        <p class="project-card-description">A complete architectural overhaul of a live SaaS platform in just 15 days. Re-architected a .NET monolith into a scalable Field Management SaaS using Clean Architecture, CQRS, and multiple databases.</p>
+                        <div class="project-card-meta">
+                            <span><i class="far fa-building"></i>Upvoit</span>
+                            <span><i class="fas fa-clock"></i>15-Day Sprint</span>
                         </div>
-                        <div class="mt-4 border-t border-gray-200 pt-4">
-                            <span class="text-xs font-semibold text-blue-600">Tech: .NET Core, CQRS, RabbitMQ, Microservices</span>
+                        <div class="project-card-tags">
+                            <span>.NET Core</span>
+                            <span>Clean Architecture</span>
+                            <span>CQRS</span>
+                            <span>SQL Server</span>
                         </div>
-                    </div>
-
-                    <div class="project-grid-card p-6 group">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Facebook Scraper</h3>
-                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">High-Scale</span>
-                        </div>
-                        <p class="text-gray-700 text-sm flex-grow mb-4">Built a high-concurrency Python scraper to collect millions of data points from Facebook, using advanced proxy/VPN switching to evade detection.</p>
-                        <div class="space-y-2 mb-4">
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-database text-blue-500 mr-2"></i>
-                                <span>Millions of Data Points</span>
-                            </div>
-                            <div class="flex items-center text-xs text-gray-600">
-                                <i class="fas fa-clock text-green-500 mr-2"></i>
-                                <span>24/7 Operation</span>
-                            </div>
-                        </div>
-                        <div class="mt-4 border-t border-gray-200 pt-4">
-                            <span class="text-xs font-semibold text-blue-600">Tech: Python, Web Scraping, Concurrency</span>
+                        <div class="project-card-footer">
+                            <span class="text-xs text-gray-500 uppercase tracking-wide">Platform re-architecture</span>
+                            <a href="projects/upvoit-secret-re-architecture-mission/" class="project-card-link">
+                                Read story <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -1433,8 +871,8 @@
                                     <div class="text-3xl text-blue-400 group-hover:text-blue-300 transition-colors"><i class="fas fa-code"></i></div>
                                 </div>
                                 <div class="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">3</div>
-                                <h3 class="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">Execute & Lead</h3>
-                                <p class="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">I either lead your existing team or build a dedicated pod to execute the build, ensuring best practices in code quality and Agile delivery.</p>
+                                <h3 class="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">Develop & Deliver</h3>
+                                <p class="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">I build scalable solutions from the ground up, working with your team or independently to deliver production-ready code with best practices, clean architecture, and Agile methodologies.</p>
                             </div>
                         </div>
                         <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 text-center group hover:from-gray-800 hover:to-gray-700 transition-all duration-300 border border-gray-700 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 relative overflow-hidden">
@@ -1456,619 +894,14 @@
     </main>
     
     <!-- 9. FOOTER (DARK) -->
-    <footer id="contact" class="bg-gradient-to-b from-black to-gray-900 text-gray-400 py-24 relative overflow-hidden" role="contentinfo">
-        <!-- Decorative background elements -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
-        </div>
-        
-         <!-- Container for content -->
-        <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
-            <div class="max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Let's discuss how I can help transform your technical challenges into scalable solutions.</p>
-                
-                <!-- Trust indicators with enhanced styling -->
-                <div class="flex flex-wrap justify-center gap-6 mb-12">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-check-circle text-green-400"></i>
-                        <span class="text-sm text-gray-300 font-medium">Free Consultation</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-bolt text-yellow-400"></i>
-                        <span class="text-sm text-gray-300 font-medium">Quick Response</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700/50 hover:border-green-500/50 transition-colors">
-                        <i class="fas fa-shield-alt text-blue-400"></i>
-                        <span class="text-sm text-gray-300 font-medium">Transparent Process</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Email CTA with enhanced styling -->
-            <div class="mb-16">
-                <p class="text-lg text-gray-300 mb-6">The best way to start a conversation is via email:</p>
-                <a href="mailto:parthravrani@hotmail.com" class="group btn-primary-blue font-bold px-8 py-4 rounded-full shadow-xl text-lg text-white inline-block hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden">
-                    <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    <span class="relative flex items-center justify-center gap-2">
-                        <i class="fas fa-envelope"></i>
-                        <span>parthravrani@hotmail.com</span>
-                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </a>
-            </div>
-            
-            <!-- Social links with enhanced styling -->
-            <div class="mb-16">
-                <p class="text-sm text-gray-500 mb-6 uppercase tracking-wider">Connect With Me</p>
-                <div class="flex justify-center items-center flex-wrap gap-6" role="list" aria-label="Social media and contact links">
-                    <a href="https://calendly.com/parthravrani/30min" target="_blank" rel="noopener noreferrer" class="group w-14 h-14 bg-gray-800/50 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20" aria-label="Schedule a meeting on Calendly" role="listitem">
-                        <i class="fas fa-calendar-alt text-xl" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://parthravrani.slack.com/team/U09M638041K" target="_blank" rel="noopener noreferrer" class="group w-14 h-14 bg-gray-800/50 rounded-full flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700/50 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20" aria-label="Connect on Slack" role="listitem">
-                        <i class="fab fa-slack text-xl" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://discord.com/users/ravranidev" target="_blank" rel="noopener noreferrer" class="group w-14 h-14 bg-gray-800/50 rounded-full flex items-center justify-center text-gray-400 hover:text-indigo-400 hover:bg-gray-700/50 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/20" aria-label="Connect on Discord" role="listitem">
-                        <i class="fab fa-discord text-xl" aria-hidden="true"></i>
-                    </a>
-                    <a href="mailto:parthravrani@hotmail.com" class="group w-14 h-14 bg-gray-800/50 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20" aria-label="Send email to parthravrani@hotmail.com" role="listitem">
-                        <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Copyright with enhanced styling -->
-            <div class="pt-12 border-t border-gray-800">
-                 <p class="text-gray-500 text-sm">&copy; 2025 Parth Ravrani. All rights reserved.</p>
-                 <p class="text-gray-600 text-xs mt-2">Built with passion for scalable solutions</p>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html base_path="" %}
 
 
-    <script>
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        document.querySelectorAll('#mobile-menu a, a[href^="#"]').forEach(link => {
-            if (link.getAttribute('href').startsWith('#')) {
-                link.addEventListener('click', () => {
-                    if(!mobileMenu.classList.contains('hidden')){
-                       mobileMenu.classList.add('hidden');
-                    }
-                });
-            }
-        });
-        
-        // Smooth nav link click animation (only for same-page links)
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                // Only handle same-page anchor links (not external links)
-                if (href && href.startsWith('#')) {
-                    // Remove active from all links
-                    document.querySelectorAll('.nav-link').forEach(l => {
-                        l.classList.remove('active');
-                    });
-                    
-                    // Force animation replay by removing and re-adding class
-                    this.classList.remove('active');
-                    void this.offsetWidth; // Trigger reflow
-                    this.classList.add('active');
-                    
-                    // Allow default scroll behavior to happen
-                }
-            });
-        });
-
-        // Simple Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Initialize Lucide icons
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
-
-        // Simple Scroll Progress Indicator
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            gsap.registerPlugin(ScrollTrigger); 
-            
-            // ===== FLOATING TECH ICONS WITH PARALLAX =====
-            const floatingIconsContainer = document.getElementById('floating-tech-icons');
-            const heroSectionEl = document.getElementById('hero');
-            const aboutSectionEl = document.getElementById('about');
-            
-            if (floatingIconsContainer && heroSectionEl) {
-                // Set container height to ONLY cover hero section (not about section)
-                const updateContainerHeight = () => {
-                    const heroHeight = heroSectionEl.offsetHeight;
-                    floatingIconsContainer.style.height = `${heroHeight}px`;
-                };
-                
-                // Initial height set
-                setTimeout(updateContainerHeight, 100);
-                
-                // Update on resize
-                window.addEventListener('resize', updateContainerHeight);
-                // Tech icons matching your tech toolbox - using actual technologies you know
-                const allTechIcons = [
-                    { icon: 'fa-brands fa-microsoft', color: '#512BD4', name: '.NET', type: 'fontawesome' },
-                    { icon: 'fa-brands fa-python', color: '#3776AB', name: 'Python', type: 'fontawesome' },
-                    { icon: 'https://cdn.simpleicons.org/django/092E20', color: '#092E20', name: 'Django', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/fastapi/009688', color: '#009688', name: 'FastAPI', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/postgresql/4169E1', color: '#4169E1', name: 'PostgreSQL', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/mysql/4479A1', color: '#4479A1', name: 'MySQL', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/mongodb/47A248', color: '#47A248', name: 'MongoDB', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/redis/DC382D', color: '#DC382D', name: 'Redis', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/elasticsearch/005571', color: '#005571', name: 'Elasticsearch', type: 'image' },
-                    { icon: 'fa-brands fa-aws', color: '#FF9900', name: 'AWS', type: 'fontawesome' },
-                    { icon: 'fa-brands fa-microsoft', color: '#0078D4', name: 'Azure', type: 'fontawesome' },
-                    { icon: 'fa-brands fa-docker', color: '#2496ED', name: 'Docker', type: 'fontawesome' },
-                    { icon: 'https://cdn.simpleicons.org/kubernetes/326CE5', color: '#326CE5', name: 'Kubernetes', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/terraform/7B42BC', color: '#7B42BC', name: 'Terraform', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/githubactions/2088FF', color: '#2088FF', name: 'GitHub Actions', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/nginx/009639', color: '#009639', name: 'Nginx', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/pandas/150458', color: '#150458', name: 'Pandas', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/numpy/013243', color: '#013243', name: 'NumPy', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/apachespark/E25A1C', color: '#E25A1C', name: 'Apache Spark', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/apacheairflow/017CEE', color: '#017CEE', name: 'Airflow', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/graphql/E10098', color: '#E10098', name: 'GraphQL', type: 'image' }
-                ];
-                
-                // Randomly select 18 icons from the full list (increased for better visibility)
-                const shuffledAll = allTechIcons.sort(() => Math.random() - 0.5);
-                const techIcons = shuffledAll.slice(0, 12);
-                
-                // Shuffle the selected icons for random positioning
-                const shuffledIcons = techIcons.sort(() => Math.random() - 0.5);
-                
-                console.log(`Creating ${shuffledIcons.length} floating tech icons`);
-                
-                // Store all icon elements for splash effect
-                const iconElements = [];
-                
-                shuffledIcons.forEach((tech, index) => {
-                    const iconElement = document.createElement('div');
-                    iconElement.className = 'floating-tech-icon';
-                    iconElement.setAttribute('data-tech', tech.name);
-                    
-                    // Better positioning - distribute evenly across all areas
-                    let left, top;
-                    const positionType = Math.random();
-                    
-                    // Distribute icons more evenly - 40% left, 40% right, 10% top corners, 10% bottom corners
-                    if (positionType < 0.4) {
-                        // Left side (0-30% from left) - more spread out
-                        left = 2 + Math.random() * 28;
-                        top = 15 + Math.random() * 70;
-                    } else if (positionType < 0.8) {
-                        // Right side (70-98% from left) - more spread out
-                        left = 70 + Math.random() * 28;
-                        top = 15 + Math.random() * 70;
-                    } else if (positionType < 0.9) {
-                        // Top corners
-                        if (Math.random() < 0.5) {
-                            left = 3 + Math.random() * 20; // Top left
-                        } else {
-                            left = 77 + Math.random() * 20; // Top right
-                        }
-                        top = 5 + Math.random() * 20;
-                    } else {
-                        // Bottom corners
-                        if (Math.random() < 0.5) {
-                            left = 3 + Math.random() * 20; // Bottom left
-                        } else {
-                            left = 77 + Math.random() * 20; // Bottom right
-                        }
-                        top = 75 + Math.random() * 20;
-                    }
-                    
-                    // Create icon based on type
-                    if (tech.type === 'image') {
-                        const iconImg = document.createElement('img');
-                        iconImg.src = tech.icon;
-                        iconImg.alt = tech.name;
-                        iconImg.style.width = '28px';
-                        iconImg.style.height = '28px';
-                        iconImg.style.objectFit = 'contain';
-                        iconElement.appendChild(iconImg);
-                    } else {
-                        const icon = document.createElement('i');
-                        icon.className = tech.icon;
-                        icon.style.color = tech.color;
-                        iconElement.appendChild(icon);
-                    }
-                    
-                    iconElements.push(iconElement);
-                    
-                    // Store initial position for calculations
-                    iconElement._initialLeft = left;
-                    iconElement._initialTop = top;
-                    
-                    // Store floating animation values - random directions and speeds for each icon
-                    // Random direction angle (0 to 360 degrees)
-                    const directionAngle = Math.random() * 360;
-                    // Random movement distance
-                    const movementDistance = 15 + Math.random() * 25; // 15-40px
-                    // Calculate X and Y based on direction
-                    const floatX = Math.cos(directionAngle * Math.PI / 180) * movementDistance;
-                    const floatY = Math.sin(directionAngle * Math.PI / 180) * movementDistance;
-                    // Random rotation direction and speed
-                    const rotationDirection = Math.random() < 0.5 ? 1 : -1; // Random clockwise or counterclockwise
-                    const floatRotate = rotationDirection * (5 + Math.random() * 15); // 5-20 degrees
-                    const floatDuration = 2 + Math.random() * 3; // 2-5 seconds - different speeds for each
-                    
-                    // Parallax values
-                    const parallaxY = 100 + (Math.random() * 100); // 100 to 200px movement
-                    const parallaxX = (Math.random() * 80 - 40); // -40 to +40px
-                    const parallaxRotate = (Math.random() * 360 - 180); // -180 to +180 degrees
-                    const scrubSpeed = 0.5 + Math.random() * 1.5; // 0.5 to 2 for smoother parallax
-                    
-                    // Move icon to container first, then wrap it
-                    const parallaxWrapper = document.createElement('div');
-                    parallaxWrapper.style.position = 'absolute';
-                    parallaxWrapper.style.left = `${left}%`;
-                    parallaxWrapper.style.top = `${top}%`;
-                    parallaxWrapper.style.width = '55px';
-                    parallaxWrapper.style.height = '55px';
-                    iconElement.style.position = 'absolute';
-                    iconElement.style.left = '0';
-                    iconElement.style.top = '0';
-                    parallaxWrapper.appendChild(iconElement);
-                    floatingIconsContainer.appendChild(parallaxWrapper);
-                    
-                    // Debug: log icon creation
-                    console.log(`Created icon: ${tech.name} at ${left}%, ${top}%`);
-                    
-                    // Continuous smooth floating animation - random direction for each icon
-                    gsap.to(iconElement, {
-                        x: floatX,
-                        y: floatY,
-                        duration: floatDuration,
-                        ease: "sine.inOut", // Smooth floating motion
-                        repeat: -1,
-                        yoyo: true,
-                        delay: Math.random() * 2 // Random start delay
-                    });
-                    
-                    // Independent continuous rotation - random speed and direction for each icon
-                    const rotationSpeed = 15 + Math.random() * 25; // 15-40 seconds for full rotation (random speed)
-                    const rotationDir = Math.random() < 0.5 ? 360 : -360; // Random clockwise or counterclockwise
-                    gsap.to(iconElement, {
-                        rotation: `+=${rotationDir}`,
-                        duration: rotationSpeed,
-                        ease: "none", // Constant rotation speed
-                        repeat: -1
-                    });
-                    
-                    // Parallax on scroll - extends from hero to about section
-                    gsap.to(parallaxWrapper, {
-                        y: parallaxY,
-                        x: parallaxX,
-                        rotation: parallaxRotate,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: '#hero',
-                            start: 'top top',
-                            end: 'bottom top',
-                            scrub: scrubSpeed,
-                            invalidateOnRefresh: true
-                        }
-                    });
-                });
-                
-                // Click splash effect - ONLY in hero section
-                if (heroSectionEl) {
-                    heroSectionEl.addEventListener('click', (e) => {
-                        // Don't trigger on buttons or links
-                        if (e.target.closest('a, button')) return;
-                        
-                        const clickX = e.clientX;
-                        const clickY = e.clientY;
-                        
-                        // Create splash effect
-                        const splash = document.createElement('div');
-                        splash.className = 'splash-effect';
-                        splash.style.left = `${clickX}px`;
-                        splash.style.top = `${clickY}px`;
-                        floatingIconsContainer.appendChild(splash);
-                        
-                        // Remove splash after animation
-                        setTimeout(() => splash.remove(), 600);
-                        
-                        // Push nearby icons away
-                        iconElements.forEach(icon => {
-                            const iconRect = icon.getBoundingClientRect();
-                            const iconCenterX = iconRect.left + iconRect.width / 2;
-                            const iconCenterY = iconRect.top + iconRect.height / 2;
-                            
-                            const distance = Math.sqrt(
-                                Math.pow(clickX - iconCenterX, 2) + 
-                                Math.pow(clickY - iconCenterY, 2)
-                            );
-                            
-                            // Only affect icons within 250px
-                            if (distance < 250 && distance > 0) {
-                                const angle = Math.atan2(iconCenterY - clickY, iconCenterX - clickX);
-                                const pushDistance = (250 - distance) / 3; // Stronger push for closer icons
-                                const pushX = Math.cos(angle) * pushDistance;
-                                const pushY = Math.sin(angle) * pushDistance;
-                                
-                                // Find the wrapper for this icon
-                                const wrapper = icon.parentElement;
-                                
-                                // Get current GSAP values
-                                const currentIconX = gsap.getProperty(icon, "x") || 0;
-                                const currentIconY = gsap.getProperty(icon, "y") || 0;
-                                const currentWrapperX = gsap.getProperty(wrapper, "x") || 0;
-                                const currentWrapperY = gsap.getProperty(wrapper, "y") || 0;
-                                
-                                // Kill any existing animations
-                                gsap.killTweensOf(icon);
-                                gsap.killTweensOf(wrapper);
-                                
-                                // Push wrapper away with bounce effect
-                                gsap.to(wrapper, {
-                                    x: currentWrapperX + pushX,
-                                    y: currentWrapperY + pushY,
-                                    rotation: (Math.random() * 30 - 15),
-                                    duration: 0.6,
-                                    ease: "back.out(1.7)",
-                                    onComplete: () => {
-                                        // Return wrapper to normal (parallax will handle it)
-                                        gsap.to(wrapper, {
-                                            x: 0,
-                                            y: 0,
-                                            rotation: 0,
-                                            duration: 1,
-                                            ease: "power2.out"
-                                        });
-                                        
-                                        // Restart continuous floating animation with new random direction
-                                        const newDirectionAngle = Math.random() * 360;
-                                        const newMovementDistance = 15 + Math.random() * 25;
-                                        const newFloatX = Math.cos(newDirectionAngle * Math.PI / 180) * newMovementDistance;
-                                        const newFloatY = Math.sin(newDirectionAngle * Math.PI / 180) * newMovementDistance;
-                                        const newFloatDuration = 2 + Math.random() * 3;
-                                        
-                                        gsap.to(icon, {
-                                            x: newFloatX,
-                                            y: newFloatY,
-                                            duration: newFloatDuration,
-                                            ease: "sine.inOut",
-                                            repeat: -1,
-                                            yoyo: true
-                                        });
-                                        
-                                        // Restart continuous rotation with new random speed and direction
-                                        const newRotationSpeed = 15 + Math.random() * 25;
-                                        const newRotationDir = Math.random() < 0.5 ? 360 : -360;
-                                        gsap.to(icon, {
-                                            rotation: `+=${newRotationDir}`,
-                                            duration: newRotationSpeed,
-                                            ease: "none",
-                                            repeat: -1
-                                        });
-                                    }
-                                });
-                            }
-                        });
-                    });
-                }
-                
-                // Refresh ScrollTrigger after icons are created
-                ScrollTrigger.refresh();
-                
-                // Debug: verify icons were created
-                const createdIcons = floatingIconsContainer.querySelectorAll('.floating-tech-icon');
-                const createdWrappers = floatingIconsContainer.querySelectorAll('[style*="position: absolute"]');
-                console.log(`Total icons created: ${createdIcons.length}`);
-                console.log(`Total wrappers created: ${createdWrappers.length}`);
-                console.log('Floating icons container:', floatingIconsContainer);
-            } else {
-                console.error('Floating icons container not found!');
-            } 
-
-            const progressBar = document.createElement('div');
-            progressBar.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 0%;
-                height: 3px;
-                background-color: #2563eb; /* blue-600 */
-                z-index: 10000;
-                transition: width 0.1s ease;
-            `;
-            document.body.appendChild(progressBar);
-
-            ScrollTrigger.create({
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                onUpdate: self => {
-                    progressBar.style.width = `${self.progress * 100}%`;
-                }
-            });
-        });
-
-        // Tech Stack Tab Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.tech-tab');
-            const panels = document.querySelectorAll('.tab-panel');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    panels.forEach(p => p.classList.remove('active'));
-                    tab.classList.add('active');
-                    const targetPanel = document.getElementById(tab.dataset.tab);
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
-                    }
-                });
-            });
-        });
-
-        // Navigation Scroll Highlighting & Styling
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const nav = document.getElementById('main-nav');
-            const navTitle = document.getElementById('nav-title');
-            const navLinksContainer = document.getElementById('nav-links');
-            const mobileBtnIcon = mobileMenuBtn.querySelector('i');
-            
-            const sectionMap = {
-                'hero': 'about', 
-                'about': 'about',
-                'expertise': 'expertise',
-                'featured-projects': 'portfolio',
-                'tech': 'tech',
-                'process': 'contact', // No 'process' link, map to 'contact'
-                'certifications': 'certifications', // Don't map to expertise to avoid double highlighting
-                'cv-download': 'contact',
-                'contact': 'contact'
-            };
-            
-            const navObserver = new IntersectionObserver((entries) => {
-                let activeSection = 'hero'; // Default to hero
-                let maxIntersection = 0;
-                const visibleSections = [];
-                
-                // Collect all visible sections
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        visibleSections.push(entry.target.id);
-                    }
-                });
-                
-                // Prioritize expertise over certifications if both are visible
-                if (visibleSections.includes('expertise') && visibleSections.includes('certifications')) {
-                    activeSection = 'expertise';
-                } else if (visibleSections.length > 0) {
-                // Find the top-most visible section
-                for (let i = 0; i < entries.length; i++) {
-                    const entry = entries[i];
-                    if (entry.isIntersecting) {
-                        activeSection = entry.target.id;
-                        break; // Found the first one, break
-                        }
-                    }
-                }
-
-                // Highlight active nav link with smooth animation
-                const mappedSection = sectionMap[activeSection] || null;
-                
-                // Find current active link before removing
-                const currentActiveLink = document.querySelector('.nav-link.active');
-                
-                // Remove active class from all links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-                
-                if (mappedSection) {
-                    let targetLink = null;
-                    
-                    // Special case for portfolio page
-                    if (window.location.pathname.includes('portfolio')) {
-                        targetLink = document.querySelector('.nav-link[href*="portfolio"]');
-                    } else {
-                         // Special case for portfolio link
-                         if (activeSection === 'featured-projects') {
-                             targetLink = document.querySelector('.nav-link[href*="portfolio"]');
-                         } 
-                         // Special case for tech link
-                         else if (mappedSection === 'tech') {
-                             targetLink = document.querySelector('.nav-link[href*="#tech"]');
-                             if (!targetLink) {
-                                 // Fallback: try to find any link containing "tech"
-                                 targetLink = Array.from(navLinks).find(link => link.getAttribute('href') && link.getAttribute('href').includes('tech'));
-                             }
-                         }
-                         // Special case for certifications - don't highlight anything (or map to a different section)
-                         else if (mappedSection === 'certifications') {
-                             // Don't highlight anything for certifications section
-                             targetLink = null;
-                         }
-                         // Default: look for exact href match
-                         else {
-                             const activeLink = document.querySelector(`.nav-link[href="#${mappedSection}"]`);
-                             if (activeLink) {
-                                targetLink = activeLink;
-                             }
-                         }
-                    }
-                    
-                    if (targetLink) {
-                        // Only animate if switching to a different link
-                        if (currentActiveLink !== targetLink) {
-                            // Force animation replay by removing and re-adding class
-                            targetLink.classList.remove('active');
-                            void targetLink.offsetWidth; // Trigger reflow
-                        }
-                        targetLink.classList.add('active');
-                    }
-                }
-
-            }, {
-                threshold: 0.1,
-                rootMargin: '-80px 0px -75% 0px' // Triggers when top of section is 80px from top of viewport
-            });
-            
-            sections.forEach(section => {
-                navObserver.observe(section);
-            });
-
-             // Set initial state for nav (Always light)
-            nav.classList.add('light-nav');
-            navTitle.classList.add('nav-text-dark');
-            navLinksContainer.classList.add('light-nav');
-            mobileBtnIcon.classList.add('text-gray-600');
-            
-            // Set initial active link
-            const firstLink = document.querySelector('.nav-link[href="#about"]');
-            if (firstLink) firstLink.classList.add('active');
-            
-            // Scroll-based nav styling - Bubble effect
-            let lastScroll = 0;
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 50) {
-                    nav.classList.remove('at-top');
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                    nav.classList.add('at-top');
-                }
-                
-                lastScroll = currentScroll;
-            });
-        });
-
-    </script>
+    
+    <script src="assets/navbar/script.js"></script>
+    <script src="assets/footer/script.js"></script>
+    <script src="assets/subnav/script.js"></script>
+    <script src="assets/landing-page/script.js"></script>
 </body>
 
 </html>

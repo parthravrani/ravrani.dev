@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /game/
+Disallow: /_site/
+Disallow: /vendor/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://ravrani.dev/sitemap.xml
+
