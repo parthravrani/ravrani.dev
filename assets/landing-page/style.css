@@ -189,7 +189,7 @@ body {
         
         /* Keep icons away from center content area */
         #floating-tech-icons {
-            pointer-events: auto; /* Enable for click detection */
+            display: none;
         }
         
         /* Splash effect */
@@ -210,6 +210,7 @@ body {
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 0;
             }
+
         }
         
         /* Responsive: hide icons on small screens to avoid clutter */
@@ -354,4 +355,5 @@ body {
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
         }
