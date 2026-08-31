@@ -71,17 +71,10 @@ title: "Case Study: The Voila Cabs Story - Scaling Our Tech for Growth"
     <link rel="manifest" href="/favicon/site.webmanifest" />
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
-    <link rel="stylesheet" href="/assets/project-voila-cabs/style.css">
-</head>
+    {% include site-head.html base_path="../../" %}
+    </head>
 
-<body class="text-gray-800" data-page="project-voila-cabs">
+<body class="inner-page" data-page="project-voila-cabs">
 
         {% include navbar.html base_path="../" active_page="portfolio" %}
 

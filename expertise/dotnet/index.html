@@ -1,639 +1,121 @@
 ---
 layout: null
-base_path: "../"
+base_path: "../../"
 active_page: "expertise"
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.NET Expertise - Enterprise Solutions | Parth Ravrani</title>
-    <meta name="description" content="Expert .NET development services including C#, ASP.NET Core, microservices architecture, and enterprise application development.">
+    <title>.NET Expertise — Parth Ravrani</title>
+    <meta name="description" content="Senior .NET Developer — legacy modernization, enterprise SaaS, and API architecture. ASP.NET Core, Clean Architecture, CQRS, MSSQL.">
     <meta name="author" content="Parth Ravrani">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://ravrani.dev/expertise/dotnet/">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ravrani.dev/expertise/dotnet/">
-    <meta property="og:title" content=".NET Expertise - Enterprise Solutions | Parth Ravrani">
-    <meta property="og:description" content="Expert .NET development services including C#, ASP.NET Core, microservices architecture, and enterprise application development.">
-    <meta property="og:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
-    <meta property="og:site_name" content="Parth Ravrani">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://ravrani.dev/expertise/dotnet/">
-    <meta name="twitter:title" content=".NET Expertise - Enterprise Solutions | Parth Ravrani">
-    <meta name="twitter:description" content="Expert .NET development services including C#, ASP.NET Core, microservices architecture, and enterprise application development.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://ravrani.dev/expertise/dotnet/">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": ".NET Development Services",
-        "provider": {
-            "@type": "Person",
-            "name": "Parth Ravrani",
-            "jobTitle": "Senior Solutions Architect",
-            "url": "https://ravrani.dev"
-        },
-        "areaServed": "Worldwide",
-        "description": "Expert .NET development services including C#, ASP.NET Core, microservices architecture, and enterprise application development.",
-        "offers": {
-            "@type": "Offer",
-            "itemOffered": {
-                "@type": "Service",
-                "name": ".NET Development",
-                "description": "Enterprise .NET solutions, microservices architecture, ASP.NET Core applications"
-            }
-        }
-    }
-    </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
-    <link rel="stylesheet" href="/assets/subnav/style.css">
-    <link rel="stylesheet" href="/assets/expertise-dotnet/style.css">
+    <meta property="og:title" content=".NET Expertise — Parth Ravrani">
+    <meta property="og:description" content="Legacy modernization, enterprise SaaS, and API architecture with ASP.NET Core and Clean Architecture.">
+
+    {% include site-head.html base_path="../" %}
 </head>
+<body data-page="expertise">
 
-<body class="text-gray-800" data-page="expertise-dotnet">
+    {% include navbar.html base_path="../" active_page="expertise" %}
 
-        {% include navbar.html base_path="../" active_page="expertise" %}
-        
-        <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
-            <div class="subnav-content">
-                <div class="subnav-links">
-                    <div class="subnav-label">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    <a href="#services" class="subnav-link" data-section="services">
-                        <span>Services</span>
-                    </a>
-                    <a href="#technologies" class="subnav-link" data-section="technologies">
-                        <span>Technologies</span>
-                    </a>
-                    <a href="#achievements" class="subnav-link" data-section="achievements">
-                        <span>Achievements</span>
-                    </a>
-                    <a href="#why-choose" class="subnav-link" data-section="why-choose">
-                        <span>Why Choose Me</span>
-                    </a>
-                    <a href="#case-studies" class="subnav-link" data-section="case-studies">
-                        <span>Case Studies</span>
-                    </a>
-                    {% comment %}
-                    <a href="#blogs" class="subnav-link" data-section="blogs">
-                        <span>Blogs</span>
-                    </a>
-                    {% endcomment %}
+    <main class="page-main">
+
+        <section class="section scroll-reveal page-intro">
+            <div class="site-wrap">
+                <div class="section-header">
+                    <p class="section-label">Expertise</p>
+                    <h1 class="section-title">Where I operate best.</h1>
+                    <p class="section-desc">Seven years and 26+ production projects — from monolith migrations to multi-tenant SaaS backends across healthcare, logistics, and enterprise platforms.</p>
                 </div>
-            </div>
-        </nav>
 
-    <!-- Main Content -->
-    <main class="relative z-10 pt-40">
-
-        <!-- Breadcrumb -->
-        <section class="bg-white py-6 border-b border-gray-200">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
-                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-home text-xs"></i>
-                        <span>Home</span>
-                    </a>
-                    <span>/</span>
-                    <a href="#" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-briefcase text-xs"></i>
-                        <span>Expertise</span>
-                    </a>
-                    <span>/</span>
-                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
-                        <i class="fab fa-microsoft text-blue-600 text-xs"></i>
-                        <span>.NET</span>
-                    </span>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Hero Section -->
-        <section class="bg-white py-24 scroll-reveal relative overflow-hidden">
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
-            </div>
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-4xl mx-auto">
-                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
-                        <i class="fab fa-microsoft text-blue-600"></i>
-                        <span class="text-blue-700 font-semibold text-sm">.NET Expertise</span>
+                <div class="page-intro__content">
+                    <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <h3>Legacy Modernization</h3>
+                        <p>Migrating .NET Framework monoliths to .NET 8 with zero downtime. Replacing tightly-coupled codebases with modular, testable architectures while the platform stays live.</p>
+                        <span class="expertise-metric">5× throughput · 40% latency reduction</span>
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-                        Enterprise <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">.NET Solutions</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
-                        Building scalable, high-performance applications with <span class="text-blue-600 font-semibold">C#</span>, <span class="text-blue-600 font-semibold">ASP.NET Core</span>, and the modern <span class="text-blue-600 font-semibold">.NET ecosystem</span>.
-                    </p>
+                    <div class="expertise-card">
+                        <h3>Enterprise SaaS</h3>
+                        <p>Multi-tenant backends with Clean Architecture and CQRS. Field-force management, health booking platforms, and employee engagement systems at enterprise scale.</p>
+                        <span class="expertise-metric">Upvoit · pVani · Care Plus</span>
+                    </div>
+                    <div class="expertise-card">
+                        <h3>API &amp; Data Layer</h3>
+                        <p>ASP.NET Core API design, EF Core, Dapper, and MSSQL optimization. Stored procedures, indexing, schema design — the layer most teams neglect until it hurts.</p>
+                        <span class="expertise-metric">3 days → under 1 day processing</span>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="bg-white py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive .NET development services for enterprise applications</p>
+        <section class="section scroll-reveal page-intro">
+            <div class="site-wrap">
+                <div class="section-header">
+                    <p class="section-label">Selected work</p>
+                    <h2 class="section-title">Production projects.</h2>
+                    <p class="section-desc">Outcome, scope, and technical stack — aligned with the full portfolio.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">ASP.NET Core Development</h3>
-                        <p class="text-gray-600 mb-4">
-                            Building modern, cross-platform web applications and APIs using ASP.NET Core with best practices in performance and security.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                RESTful API Design
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Microservices Architecture
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Authentication & Authorization
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fas fa-code"></i>
+                <div class="page-intro__content">
+                    <div class="portfolio-featured">
+                    <a href="/projects/voila-cabs-scaling-tech-for-growth/" class="project-card project-card--featured">
+                        <span class="project-card-tag">Mobility · Web · Mobile</span>
+                        <h3>Voila Cabs</h3>
+                        <p>99.9%+ uptime · 3-replica MySQL/MongoDB clusters on AWS. Backend owner — failover architecture on live ride-hailing traffic.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric"><strong>99.9%+</strong><span>Uptime</span></div>
+                            <div class="project-metric"><strong>1000s</strong><span>Concurrent users</span></div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">C# Application Development</h3>
-                        <p class="text-gray-600 mb-4">
-                            Enterprise-grade desktop and console applications using modern C# features, async/await patterns, and LINQ.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Modern C# Features
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Async/Await Patterns
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Performance Optimization
-                            </li>
-                        </ul>
-                    </div>
+                        <div class="project-tags"><span>MySQL Cluster</span><span>MongoDB</span><span>AWS</span></div>
+                        <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
+                    </a>
 
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fas fa-sitemap"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">System Architecture</h3>
-                        <p class="text-gray-600 mb-4">
-                            Designing scalable, maintainable architectures for .NET applications, including microservices and distributed systems.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Microservices Design
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Clean Architecture
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Domain-Driven Design
-                            </li>
-                        </ul>
-                    </div>
+                    <a href="/projects/upvoit-secret-re-architecture-mission/" class="project-card">
+                        <span class="project-card-tag">SaaS · Web</span>
+                        <h3>Upvoit SaaS</h3>
+                        <p>5× throughput · 40% latency cut · 0 downtime. Clean Architecture + CQRS cutover in 15 days on live field-management SaaS.</p>
+                        <div class="project-tags"><span>.NET 8</span><span>CQRS</span><span>Angular</span></div>
+                        <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
+                    </a>
 
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Database Integration</h3>
-                        <p class="text-gray-600 mb-4">
-                            Seamless integration with SQL Server, PostgreSQL, and Entity Framework Core for efficient data access.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Entity Framework Core
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                SQL Server Optimization
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Database Migrations
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Performance Optimization</h3>
-                        <p class="text-gray-600 mb-4">
-                            Optimizing .NET applications for maximum performance, including caching strategies and async patterns.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Caching Strategies
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Memory Management
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Profiling & Debugging
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card scroll-reveal">
-                        <div class="expertise-icon blue">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Legacy Modernization</h3>
-                        <p class="text-gray-600 mb-4">
-                            Migrating legacy .NET Framework applications to .NET Core/.NET 6+ for better performance and cross-platform support.
-                        </p>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Framework Migration
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Code Refactoring
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check text-blue-600"></i>
-                                Zero-Downtime Upgrades
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Section -->
-        <section id="technologies" class="bg-gray-50 py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Technologies & Tools</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Technologies I work with in the .NET ecosystem</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <div class="text-3xl mb-2 text-blue-600">C#</div>
-                        <div class="text-sm font-medium text-gray-700">C#</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <i class="fab fa-microsoft text-3xl text-blue-600 mb-2"></i>
-                        <div class="text-sm font-medium text-gray-700">ASP.NET Core</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <i class="fas fa-database text-3xl text-blue-600 mb-2"></i>
-                        <div class="text-sm font-medium text-gray-700">Entity Framework</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <i class="fas fa-server text-3xl text-blue-600 mb-2"></i>
-                        <div class="text-sm font-medium text-gray-700">SQL Server</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <i class="fas fa-cube text-3xl text-blue-600 mb-2"></i>
-                        <div class="text-sm font-medium text-gray-700">.NET 6/7/8</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-colors">
-                        <i class="fas fa-project-diagram text-3xl text-blue-600 mb-2"></i>
-                        <div class="text-sm font-medium text-gray-700">Microservices</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Achievements Section -->
-        <section id="achievements" class="bg-white py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Key Achievements</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Proven results and measurable impact in .NET development</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">60%</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Performance Gains</div>
-                        <p class="text-sm text-gray-600">Average performance improvement in optimized .NET applications</p>
-                    </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Projects Delivered</div>
-                        <p class="text-sm text-gray-600">Enterprise-grade .NET applications across various industries</p>
-                    </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-200">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">8+</div>
-                        <div class="text-lg font-semibold text-gray-900 mb-2">Years Experience</div>
-                        <p class="text-sm text-gray-600">Building and scaling .NET solutions for enterprise clients</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Me Section -->
-        <section id="why-choose" class="bg-gray-50 py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Me</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">What sets my .NET expertise apart</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-rocket text-blue-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Fast Delivery</h3>
-                            <p class="text-gray-600 text-sm">Efficient development process with rapid iteration and quick turnaround times.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-shield-alt text-blue-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Production-Ready Code</h3>
-                            <p class="text-gray-600 text-sm">Clean, maintainable code following best practices and industry standards.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-chart-line text-blue-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Scalable Architecture</h3>
-                            <p class="text-gray-600 text-sm">Designing systems that grow with your business needs and user base.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-headset text-blue-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Ongoing Support</h3>
-                            <p class="text-gray-600 text-sm">Continuous support and maintenance to ensure your application runs smoothly.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Relevant Case Studies Section -->
-        <section id="case-studies" class="bg-white py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Relevant Case Studies</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Explore projects showcasing .NET expertise and solutions</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-indigo">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Platform Re-Architecture</p>
-                                <h3 class="project-card-title">Upvoit · The "Secret" Re-Architecture Mission</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">A complete architectural overhaul of a live Field Management SaaS platform in just 15 days. Re-architected a .NET monolith into a scalable system using Clean Architecture, CQRS, and multiple databases.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>Upvoit</span>
-                            <span><i class="fas fa-clock"></i>15-Day Sprint</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET Core</span>
-                            <span>Clean Architecture</span>
-                            <span>CQRS</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
-                            <a href="/projects/upvoit-secret-re-architecture-mission/" class="project-card-link">
-                                Read story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-blue">
-                                <i class="fas fa-box"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Case Study</p>
-                                <h3 class="project-card-title">E-Commerce Inventory Management</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">.NET background service for auto-processing supplier files (CSV, XLSX) and inventory management with AWS integration.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>The Classy Home</span>
-                            <span><i class="far fa-clock"></i>Automated supply ops</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET</span>
-                            <span>AWS</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {% comment %}
-        <!-- Relevant Blogs Section -->
-        <section id="blogs" class="bg-gray-50 py-16">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Relevant Blogs</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Latest articles and tutorials on .NET development</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {% assign dotnet_tags = '.NET|C#|ASP.NET Core|Performance|Optimization' | split: '|' %}
-                    {% assign post_count = 0 %}
-                    {% for post in site.posts %}
-                        {% if post_count >= 3 %}{% break %}{% endif %}
-                        {% assign is_relevant = false %}
-                        {% for tag in post.tags %}
-                            {% for dotnet_tag in dotnet_tags %}
-                                {% if tag == dotnet_tag %}
-                                    {% assign is_relevant = true %}
-                                    {% break %}
-                                {% endif %}
-                            {% endfor %}
-                            {% if is_relevant %}{% break %}{% endif %}
-                        {% endfor %}
-                        {% if is_relevant %}
-                            {% assign post_count = post_count | plus: 1 %}
-                    <article class="blog-card scroll-reveal p-6">
-                        <div class="mb-4">
-                            <span class="blog-category {{ post.category | default: 'tips' }}">{{ post.category | default: 'Tips' | capitalize }}</span>
-                        </div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-3">
-                            <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
-                        </h2>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            {% if post.description %}
-                                {{ post.description | strip_html | truncate: 150 }}
-                            {% elsif post.excerpt %}
-                                {% assign clean_excerpt = post.excerpt | strip_html | remove: "## Introduction" | remove: "Introduction" | remove: "##" | strip %}
-                                {% if clean_excerpt == blank or clean_excerpt.size < 20 %}
-                                    {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 25 }}
-                                {% else %}
-                                    {{ clean_excerpt | truncate: 150 }}
-                                {% endif %}
-                            {% else %}
-                                {{ post.content | strip_html | remove_first: "## Introduction" | remove_first: "Introduction" | remove_first: "##" | strip | truncatewords: 25 }}
-                            {% endif %}
-                        </p>
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-2 text-sm text-gray-500">
-                                <i class="far fa-calendar"></i>
-                                <span>{{ post.date | date: "%B %d, %Y" }}</span>
-                            </div>
-                            <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
-                                Read More
-                                <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
+                    <article class="project-card">
+                        <span class="project-card-tag">CRM · Web</span>
+                        <h3>pVani CRM</h3>
+                        <p>Multi-tenant CRM with CQRS, Azure, and integrations — QuickBooks, Google Classroom, Sage 50, D2L, DocuSign.</p>
+                        <div class="project-tags"><span>.NET 10</span><span>MediatR</span><span>React</span></div>
                     </article>
-                        {% endif %}
-                    {% endfor %}
-                    {% if post_count == 0 %}
-                    <div class="col-span-full text-center py-8">
-                        <p class="text-gray-500">No .NET-related blog posts yet. Check back soon!</p>
-                        <a href="/blog/" class="text-blue-600 hover:text-blue-700 font-medium text-sm mt-2 inline-block">View All Blogs</a>
-                        </div>
-                    {% endif %}
+                </div>
+
+                <div class="section-cta">
+                    <a href="/portfolio/" class="btn-ghost">View full portfolio <i class="fas fa-arrow-right"></i></a>
+                </div>
                 </div>
             </div>
         </section>
-        {% endcomment %}
 
-        <!-- CTA Section -->
-        <section id="contact" class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 relative overflow-hidden">
-            <!-- Decorative elements -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute top-10 right-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-10 left-20 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
-            </div>
-            
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-white rounded-3xl p-10 md:p-16 border border-gray-200 shadow-xl relative overflow-hidden">
-                        <!-- Background pattern -->
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-2xl"></div>
-                        <div class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-purple-100/30 to-transparent rounded-full blur-2xl"></div>
-                        
-                        <div class="relative z-10 text-center">
-                            <!-- Icon Badge -->
-                            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mb-6 shadow-lg">
-                                <i class="fab fa-microsoft text-4xl text-white"></i>
-                            </div>
-                            
-                            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                                Ready to Build Your <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">.NET Solution</span>?
-                            </h2>
-                            
-                            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                                Let's discuss how I can help you build scalable, high-performance .NET applications that drive business value and scale with your growth.
-                            </p>
-                            
-                            <!-- CTA Buttons -->
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                                <a href="#contact" class="group btn-primary-blue font-bold px-8 py-4 rounded-full shadow-xl text-lg hover:scale-105 transition-all duration-300 relative overflow-hidden">
-                                    <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                                    <span class="relative flex items-center gap-2">
-                                        <i class="fas fa-rocket"></i>
-                                        <span>Get Started</span>
-                                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                                    </span>
-                                </a>
-                                <a href="/portfolio/" class="group flex items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold text-lg transition-colors">
-                                    <span>View My Work</span>
-                                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                                </a>
-                            </div>
-                            
-                            <!-- Trust Badges -->
-                            <div class="flex flex-wrap justify-center gap-4 mt-10 pt-8 border-t border-gray-200">
-                                <div class="flex items-center gap-2 text-sm text-gray-600">
-                                    <i class="fas fa-check-circle text-green-600"></i>
-                                    <span>Free Consultation</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-gray-600">
-                                    <i class="fas fa-bolt text-yellow-500"></i>
-                                    <span>Quick Response</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-gray-600">
-                                    <i class="fas fa-shield-alt text-blue-600"></i>
-                                    <span>Production-Ready Code</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="section tech-section scroll-reveal">
+            <div class="site-wrap">
+                <p class="section-label">Stack</p>
+                <h2 class="section-title">Tools of the trade.</h2>
+                {% include tech-stack.html %}
             </div>
         </section>
 
     </main>
 
-        {% include footer.html base_path="../" %}
-
-    
+    {% include footer.html base_path="../" %}
 
     <script src="/assets/navbar/script.js"></script>
-    <script src="/assets/footer/script.js"></script>
-    <script src="/assets/subnav/script.js"></script>
-    <script src="/assets/expertise-dotnet/script.js"></script>
+    <script src="/assets/landing-page/script.js"></script>
 </body>
 </html>
-

@@ -8,7 +8,9 @@
 
     // DOM Elements
     const navbar = document.getElementById('navbar');
-    const navbarContainer = navbar?.querySelector('.navbar-container');
+    const navbarContainer = navbar?.classList.contains('navbar-container')
+        ? navbar
+        : navbar?.querySelector('.navbar-container');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const navbarLinks = document.querySelectorAll('.navbar-link, .navbar-mobile-link');
@@ -282,47 +284,61 @@
      * Highlight Active Page
      */
     function highlightActivePage() {
-        const currentPath = window.location.pathname;
-        const currentPage = currentPath.split('/').filter(Boolean).pop() || 'index.html';
+        const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+        const dataPage = document.body.getAttribute('data-page') || '';
+
+        const navSection = getNavSection(currentPath, dataPage);
 
         navbarLinks.forEach(link => {
-            // Skip dropdown toggles and dropdown items - they're handled by Liquid template
-            if (link.classList.contains('navbar-dropdown-toggle') || 
+            if (link.classList.contains('navbar-dropdown-toggle') ||
                 link.classList.contains('navbar-mobile-dropdown-toggle') ||
                 link.closest('.navbar-dropdown-menu') ||
                 link.closest('.navbar-mobile-dropdown-menu')) {
-                return; // Don't modify dropdown items, they're set by Liquid
+                return;
             }
 
-            const linkHref = link.getAttribute('href');
-            const linkPage = link.getAttribute('data-page');
-
-            // Remove active class
             link.classList.remove('active');
 
-            // Check if link matches current page
-            if (linkPage && document.body.getAttribute('data-page') === linkPage) {
-                link.classList.add('active');
-            } else if (linkHref && (
-                (currentPage === 'index.html' && linkHref.includes('index.html')) ||
-                (currentPage === 'portfolio' && linkHref.includes('portfolio')) ||
-                (currentPage === 'blog' && linkHref.includes('blog'))
-            )) {
+            const linkHref = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
+            const linkSection = getLinkSection(linkHref);
+
+            if (navSection && linkSection === navSection) {
                 link.classList.add('active');
             }
         });
+    }
 
-        // Handle Expertise dropdown toggle - check if we're on an expertise page
-        const expertiseToggle = document.querySelector('.navbar-dropdown-toggle');
-        const mobileExpertiseToggle = document.querySelector('.navbar-mobile-dropdown-toggle');
-        const isExpertisePage = currentPath.includes('/expertise/');
+    function getNavSection(path, dataPage) {
+        if (dataPage === 'home' || path === '/' || path === '/index.html') {
+            return 'home';
+        }
+        if (dataPage === 'portfolio' || dataPage === 'case-study' || dataPage.startsWith('project-') ||
+            path === '/portfolio' || path.startsWith('/portfolio/') || path.startsWith('/projects/')) {
+            return 'portfolio';
+        }
+        if (dataPage === 'expertise' || dataPage.startsWith('expertise-') || path.startsWith('/expertise/')) {
+            return 'expertise';
+        }
+        if (dataPage === 'blog' || dataPage === 'blog-post-template' || path === '/blog' || path.startsWith('/blog/')) {
+            return 'blog';
+        }
+        return '';
+    }
 
-        if (expertiseToggle && isExpertisePage) {
-            expertiseToggle.classList.add('active');
+    function getLinkSection(href) {
+        if (href === '/' || href === '/index.html') {
+            return 'home';
         }
-        if (mobileExpertiseToggle && isExpertisePage) {
-            mobileExpertiseToggle.classList.add('active');
+        if (href === '/portfolio' || href.startsWith('/portfolio/')) {
+            return 'portfolio';
         }
+        if (href.startsWith('/expertise/')) {
+            return 'expertise';
+        }
+        if (href === '/blog' || href.startsWith('/blog/')) {
+            return 'blog';
+        }
+        return '';
     }
 
     /**

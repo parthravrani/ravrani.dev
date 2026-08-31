@@ -19,30 +19,18 @@ active_page: "game"
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
+    {% include site-head.html %}
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
     
     <style>
         * {
-            font-family: 'Inter', sans-serif;
+            font-family: 'DM Sans', system-ui, sans-serif;
         }
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: #fafaf9;
         }
         .game-wrapper {
             flex: 1;
@@ -50,7 +38,7 @@ active_page: "game"
             align-items: center;
             justify-content: center;
             padding: 2rem 1rem;
-            padding-top: calc(80px + 2rem);
+            padding-top: calc(72px + 2rem);
             padding-bottom: calc(100px + 2rem);
             min-height: calc(100vh - 80px);
         }
@@ -193,7 +181,7 @@ active_page: "game"
     </style>
 </head>
 
-<body class="bg-gray-50" data-page="game">
+<body class="inner-page" data-page="game">
     {% include navbar.html base_path="../" active_page="game" %}
 
     <div class="game-wrapper">

@@ -6,688 +6,245 @@ active_page: "portfolio"
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio - Enterprise Solutions & Case Studies | Parth Ravrani</title>
-    <meta name="description" content="Explore Parth Ravrani's portfolio of enterprise software projects including ride-hailing platforms, social media engines, and scalable cloud solutions. Real-world case studies with technical details.">
-    <meta name="keywords" content="software portfolio, case studies, enterprise projects, .NET projects, Python projects, cloud solutions, ride-hailing platform, scalable architecture">
-    <meta name="author" content="Parth Ravrani">
-    <meta name="application-name" content="Parth Ravrani">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ravrani.dev/portfolio/">
-    <meta property="og:title" content="Project Portfolio - Enterprise Solutions & Case Studies | Parth Ravrani">
-    <meta property="og:description" content="Explore enterprise software projects including ride-hailing platforms, social media engines, and scalable cloud solutions with detailed case studies.">
-    <meta property="og:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
-    <meta property="og:site_name" content="Parth Ravrani">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://ravrani.dev/portfolio/">
-    <meta name="twitter:title" content="Project Portfolio - Enterprise Solutions & Case Studies | Parth Ravrani">
-    <meta name="twitter:description" content="Explore enterprise software projects including ride-hailing platforms, social media engines, and scalable cloud solutions with detailed case studies.">
-    <meta name="twitter:image" content="https://ravrani.dev/images/AEC4B719-8A02-4D2F-B14B-C6718A45BA3F.GIF">
-    
-    <!-- Canonical URL -->
+    <title>Work — Parth Ravrani</title>
+    <meta name="description" content="Project portfolio: SaaS re-architecture, ride platforms, CI/CD, health tech, enterprise APIs, and more.">
     <link rel="canonical" href="https://ravrani.dev/portfolio/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Parth Ravrani" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Project Portfolio - Enterprise Solutions & Case Studies",
-        "description": "Explore enterprise software projects including ride-hailing platforms, social media engines, and scalable cloud solutions with detailed case studies.",
-        "url": "https://ravrani.dev/portfolio/",
-        "mainEntity": {
-            "@type": "Person",
-            "name": "Parth Ravrani",
-            "jobTitle": "Senior Solutions Architect",
-            "url": "https://ravrani.dev"
-        },
-        "publisher": {
-            "@type": "Person",
-            "name": "Parth Ravrani",
-            "jobTitle": "Senior Solutions Architect"
-        }
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
-    <link rel="stylesheet" href="/assets/subnav/style.css">
-    <link rel="stylesheet" href="/assets/portfolio-listing/style.css">
+    {% include site-head.html base_path="../" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+<body data-page="portfolio">
 
-<body class="text-gray-800" data-page="portfolio">
+    {% include navbar.html base_path="../" active_page="portfolio" %}
 
-        {% include navbar.html base_path="../" active_page="portfolio" %}
-        
-    <nav id="subnav" class="subnav-container" role="navigation" aria-label="Page sections">
-        <div class="subnav-content">
-            <div class="subnav-links">
-                <div class="subnav-label">
-                    <i class="fas fa-chevron-right"></i>
+    <main class="page-main">
+
+        <section class="section scroll-reveal page-intro">
+            <div class="site-wrap">
+                <div class="section-header">
+                    <p class="section-label">Portfolio</p>
+                    <h1 class="section-title">All projects.</h1>
+                    <p class="section-desc">Production work with measurable outcomes — scope, constraints, and results.</p>
                 </div>
-                <a href="#core-showcase" class="subnav-link" data-section="core-showcase">
-                    <span>Core Showcase</span>
-                </a>
-                    <a href="#additional-projects" class="subnav-link" data-section="additional-projects">
-                        <span>Additional Projects</span>
+
+                <div class="page-intro__content">
+                    <div class="portfolio-featured">
+                    <a href="/projects/voila-cabs-scaling-tech-for-growth/" class="project-card project-card--featured">
+                        <span class="project-card-tag">Mobility · Web · Mobile</span>
+                        <h3>Voila Cabs</h3>
+                        <p>99.9%+ uptime · 3-replica MySQL/MongoDB clusters on AWS. Backend owner — failover architecture on live ride-hailing traffic.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric"><strong>99.9%+</strong><span>Uptime</span></div>
+                            <div class="project-metric"><strong>1000s</strong><span>Concurrent users</span></div>
+                        </div>
+                        <div class="project-tags"><span>MySQL Cluster</span><span>MongoDB</span><span>AWS</span></div>
+                        <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="/projects/upvoit-secret-re-architecture-mission/" class="project-card">
+                        <span class="project-card-tag">SaaS · Web</span>
+                        <h3>Upvoit SaaS</h3>
+                        <p>5× throughput · 40% latency cut · 0 downtime. Clean Architecture + CQRS cutover in 15 days on live field-management SaaS.</p>
+                        <div class="project-tags"><span>.NET 8</span><span>CQRS</span><span>Angular</span></div>
+                        <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <article class="project-card">
+                        <span class="project-card-tag">CRM · Web</span>
+                        <h3>pVani CRM</h3>
+                        <p>Multi-tenant CRM with CQRS, Azure, and integrations — QuickBooks, Google Classroom, Sage 50, D2L, DocuSign.</p>
+                        <div class="project-tags"><span>.NET 10</span><span>MediatR</span><span>React</span></div>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-card-tag">E-Commerce · Web</span>
+                        <h3>Classy Home Inventory</h3>
+                        <p>~8s → ~800ms on modernized flows. Supplier automation, AWS inventory sync, and Web Forms → .NET Core migration.</p>
+                        <div class="project-tags"><span>.NET Core</span><span>AWS</span><span>MSSQL</span></div>
+                    </article>
+
+                    <a href="/projects/codzgarage-from-ftp-to-just-push-it/" class="project-card">
+                        <span class="project-card-tag">DevOps · Platform</span>
+                        <h3>Codzgarage CI/CD</h3>
+                        <p>FTP → push-to-deploy for 40–50 developers. GitLab / GitHub pipelines with automated migrations across 3 environments.</p>
+                        <div class="project-tags"><span>GitLab / GitHub</span><span>Linux</span><span>Shell Scripts</span></div>
+                        <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
                     </a>
                 </div>
-            </div>
-        </nav>
-
-    <!-- Main content container with vertical spacing -->
-    <main class="relative z-10 pt-40">
-
-        <!-- 1. HERO SECTION (WHITE) -->
-        <section id="hero-projects" class="scroll-reveal bg-white py-24 relative overflow-hidden">
-            <!-- Decorative background elements -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
-            </div>
-            
-             <!-- Container for content -->
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
-                <div class="max-w-4xl mx-auto">
-                    <!-- Badge above heading -->
-                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
-                        <i class="fas fa-folder-open text-blue-600"></i>
-                        <span class="text-blue-700 font-semibold text-sm">Project Showcase</span>
-                    </div>
-                    
-                    <!-- Main Title -->
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-                        Project <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Portfolio</span>
-                    </h1>
-                    
-                    <!-- Description -->
-                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
-                        A detailed breakdown of my work, from <span class="text-blue-600 font-semibold">enterprise-scale .NET applications</span> and <span class="text-blue-600 font-semibold">database architecture</span> to my early personal projects.
-                    </p>
-                    
-                    <!-- Stats/Metadata -->
-                    <div class="flex flex-wrap justify-center items-center gap-6 mb-8 text-gray-600">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-code text-blue-600"></i>
-                            <span class="text-sm">Enterprise Applications</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-database text-purple-600"></i>
-                            <span class="text-sm">Database Architecture</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-mobile-alt text-green-600"></i>
-                            <span class="text-sm">Mobile & Web Apps</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Feature Badges -->
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full">
-                            <i class="fas fa-check-circle text-blue-600"></i>
-                            <span class="text-blue-700 font-medium text-sm">50+ Projects Delivered</span>
-                        </div>
-                        <div class="flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
-                            <i class="fas fa-star text-yellow-600"></i>
-                            <span class="text-yellow-700 font-medium text-sm">4.7/5 Client Rating</span>
-                        </div>
-                        <div class="flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full">
-                            <i class="fas fa-check-circle text-green-600"></i>
-                            <span class="text-green-700 font-medium text-sm">Enterprise-Grade Solutions</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <section class="bg-white py-6 border-b border-gray-200">
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <nav class="flex items-center gap-3 text-sm text-gray-500" aria-label="Breadcrumb">
-                    <a href="/" class="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-home text-xs"></i>
-                        <span>Home</span>
-                    </a>
-                    <span>/</span>
-                    <span class="text-gray-900 font-medium flex items-center gap-1.5">
-                        <i class="fas fa-folder-open text-blue-600 text-xs"></i>
-                        <span>Portfolio</span>
-                    </span>
-                </nav>
-            </div>
-        </section>
-
-        <!-- 2. CORE SHOWCASE (DARK THEME) -->
-        <section id="core-showcase" class="scroll-reveal bg-black py-24">
-            <!-- Container for content -->
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-white mb-4">Core Showcase</h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Enterprise-scale projects that demonstrate technical expertise and business impact</p>
+        <section class="section section--tight-top scroll-reveal">
+            <div class="site-wrap">
+                <div class="section-header">
+                    <p class="section-label">More work</p>
+                    <h2 class="section-title">Everything else.</h2>
                 </div>
 
-                <div class="core-grid">
-                    <article class="core-card pinned">
-                        <div>
-                            <span class="core-card-chip"><i class="fas fa-thumbtack text-xs"></i>Pinned Case Study</span>
-                            <h3>Voila Cabs · High-Availability Ride Platform</h3>
-                            <p>Taking our backend from a startup setup to a high-availability platform ready for serious growth. Designed complete database & server architecture with 3-replica MySQL and MongoDB clusters, automatic failover, and sharding to ensure 99.9%+ uptime for thousands of concurrent users.</p>
-                        </div>
-                        <div class="core-card-metrics">
-                            <div>
-                                <h4>99.9%+</h4>
-                                <span>Uptime</span>
-                            </div>
-                            <div>
-                                <h4>1000s</h4>
-                                <span>Concurrent users</span>
-                            </div>
-                            <div>
-                                <h4>24/7</h4>
-                                <span>Operations</span>
-                            </div>
-                        </div>
-                        <div class="core-card-tags">
-                            <span>MySQL 3-Replica Cluster</span>
-                            <span>MongoDB Sharded</span>
-                            <span>Express.js & PHP</span>
-                            <span>AWS Infrastructure</span>
-                        </div>
-                        <div class="core-card-footer">
-                            <div class="text-sm text-gray-500">
-                                Tech Integrity Services · Featured on YourStory
-                            </div>
-                            <a href="/projects/voila-cabs-scaling-tech-for-growth/" class="core-card-link">
-                                Read full story <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
+                <div class="page-intro__content">
+                <div class="portfolio-grid">
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Enterprise · Web · Mobile</span>
+                        <h3>Employee Engagement Platform</h3>
+                        <p class="portfolio-card-desc">Employee engagement panel with chat modules and .NET Core APIs for mobile clients.</p>
+                        <div class="project-tags"><span>.NET Core</span><span>REST APIs</span><span>MSSQL</span></div>
                     </article>
 
-                    <article class="core-card">
-                        <div>
-                            <span class="core-card-chip">Platform Re-Architecture</span>
-                            <h3>Upvoit · The "Secret" Re-Architecture Mission</h3>
-                            <p>A complete architectural overhaul of a live Field Management SaaS platform in just 15 days. Re-architected a .NET monolith into a scalable system using Clean Architecture, CQRS, and multiple databases to handle daily requirements without conflicts.</p>
-                        </div>
-                        <div class="core-card-metrics">
-                            <div>
-                                <h4>15</h4>
-                                <span>Days sprint</span>
-                            </div>
-                            <div>
-                                <h4>Live</h4>
-                                <span>Platform</span>
-                            </div>
-                            <div>
-                                <h4>100%</h4>
-                                <span>Clean Architecture</span>
-                            </div>
-                        </div>
-                        <div class="core-card-tags">
-                            <span>.NET Core</span>
-                            <span>Clean Architecture</span>
-                            <span>CQRS</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <div class="core-card-footer">
-                            <div class="text-sm text-gray-500">
-                                Excelhunter Technologies
-                            </div>
-                            <a href="/projects/upvoit-secret-re-architecture-mission/" class="core-card-link">
-                                Read full story <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Analytics · Web</span>
+                        <h3>Survey &amp; Assessment App</h3>
+                        <p class="portfolio-card-desc">Dynamic assessments with configurable Q&amp;A, algorithmic scoring, and HR reporting dashboards.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
                     </article>
 
-                    <article class="core-card">
-                        <div>
-                            <span class="core-card-chip">Data Engineering</span>
-                            <h3>The "Unblockable" Social Media Engine</h3>
-                            <p>High-volume Facebook & Instagram scraper extracting millions of post details daily without getting banned. Built a resilient Python-based engine with proxy/VPN rotation, account rotation, and human behavior simulation to evade aggressive anti-bot algorithms.</p>
-                        </div>
-                        <div class="core-card-metrics">
-                            <div>
-                                <h4>Millions</h4>
-                                <span>Daily records</span>
-                            </div>
-                            <div>
-                                <h4>24/7</h4>
-                                <span>Autonomous</span>
-                            </div>
-                            <div>
-                                <h4>Near Zero</h4>
-                                <span>Ban rate</span>
-                            </div>
-                        </div>
-                        <div class="core-card-tags">
-                            <span>Python</span>
-                            <span>Selenium</span>
-                            <span>VPN/Proxies</span>
-                            <span>AI Logic</span>
-                        </div>
-                        <div class="core-card-footer">
-                            <div class="text-sm text-gray-500">
-                                Nextract Data Solutions Pvt Ltd
-                            </div>
-                            <a href="/projects/unblockable-social-media-engine/" class="core-card-link">
-                                Read full story <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">HealthTech · Web · Mobile</span>
+                        <h3>Care Plus</h3>
+                        <p class="portfolio-card-desc">Healthcare booking and practice management — scheduling, payments, invoicing, and multi-platform APIs.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
                     </article>
 
-                    <article class="core-card">
-                        <div>
-                            <span class="core-card-chip">DevOps Enablement</span>
-                            <h3>Codzgarage · From FTP to "Just Push It"</h3>
-                            <p>Building a custom, automated deployment pipeline to stop the manual madness. Created a centralized GitLab-based CI/CD system with configured runners, distinct environments (Staging, QA, Demos, Live), and automated migrations to support 40-50 developers working across multiple projects.</p>
-                        </div>
-                        <div class="core-card-metrics">
-                            <div>
-                                <h4>40-50</h4>
-                                <span>Developers</span>
-                            </div>
-                            <div>
-                                <h4>Zero</h4>
-                                <span>Friction</span>
-                            </div>
-                            <div>
-                                <h4>100%</h4>
-                                <span>Automated</span>
-                            </div>
-                        </div>
-                        <div class="core-card-tags">
-                            <span>GitLab CI/CD</span>
-                            <span>Linux Servers</span>
-                            <span>Shell Scripts</span>
-                            <span>Networking</span>
-                        </div>
-                        <div class="core-card-footer">
-                            <div class="text-sm text-gray-500">
-                                Codzgarage Infotech Private Limited
-                            </div>
-                            <a href="/projects/codzgarage-from-ftp-to-just-push-it/" class="core-card-link">
-                                Read full story <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
-                        </div>
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">FinTech · Web</span>
+                        <h3>Account Books</h3>
+                        <p class="portfolio-card-desc">Business accounting and ledger system with MSSQL core logic and Angular → React frontend migration.</p>
+                        <div class="project-tags"><span>.NET</span><span>React</span><span>Angular</span></div>
                     </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Consumer · Web</span>
+                        <h3>Flavour IQ</h3>
+                        <p class="portfolio-card-desc">Coffee profile quiz and consumer engagement experience with .NET API and Angular UI.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Field Services · Web · Mobile</span>
+                        <h3>SEC Work Management</h3>
+                        <p class="portfolio-card-desc">On-demand service operations — job scheduling and field coordination via Angular web admin and Flutter mobile.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>Flutter</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Health &amp; Fitness · Web · Mobile</span>
+                        <h3>Mi Sports Profile</h3>
+                        <p class="portfolio-card-desc">Sports and fitness platform for activity logging, nutrition tracking, and community on React web and Flutter mobile.</p>
+                        <div class="project-tags"><span>.NET</span><span>React</span><span>Flutter</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Supply Chain · Web</span>
+                        <h3>Truck Management System</h3>
+                        <p class="portfolio-card-desc">Warranty and supply chain platform — product lifecycle, reverse logistics, and repair services replacing Excel workflows.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Sales · Web</span>
+                        <h3>Agent Profit Plan</h3>
+                        <p class="portfolio-card-desc">Sales coaching for loan officers — weighted assessments, agent onboarding, and business plan scoring.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Retail · Web</span>
+                        <h3>Puppy Inventory System</h3>
+                        <p class="portfolio-card-desc">Inventory and operations for ethical puppy sales and pet counseling workflows.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Logistics · Web</span>
+                        <h3>Freight Pro App</h3>
+                        <p class="portfolio-card-desc">Freight operations — delivery orders, bills of lading, AR invoices, and carrier management.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">E-Commerce · Web</span>
+                        <h3>One Tree Brands</h3>
+                        <p class="portfolio-card-desc">USA e-commerce for vitamins, supplements, medical supplies, and related health categories.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">SaaS · Web</span>
+                        <h3>Form2Go</h3>
+                        <p class="portfolio-card-desc">Secure dynamic form builder for creating, publishing, and collecting submissions at scale.</p>
+                        <div class="project-tags"><span>.NET</span><span>Angular</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Manufacturing · Web</span>
+                        <h3>WindoorQuote</h3>
+                        <p class="portfolio-card-desc">Window and door dealer platform — quoting, Project Board, Avalara billing, and warehouse operations.</p>
+                        <div class="project-tags"><span>ASP.NET</span><span>Avalara</span><span>MSSQL</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">EdTech · Android</span>
+                        <h3>CodeSpot</h3>
+                        <p class="portfolio-card-outcome">50k+ downloads · top-5 in category</p>
+                        <p class="portfolio-card-desc">C programming tutorials with 200+ examples, Firebase chat, and Stack Overflow integration.</p>
+                        <div class="project-tags"><span>Android</span><span>Firebase</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Academic · Android</span>
+                        <h3>Study Mate</h3>
+                        <p class="portfolio-card-desc">Study material aggregator from government portals — books, PDFs, exam papers, and academic plans.</p>
+                        <div class="project-tags"><span>Android</span><span>PDF Viewer</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Social · Android</span>
+                        <h3>Diku — Status Community</h3>
+                        <p class="portfolio-card-desc">Video and text status sharing with likes, favorites, and watermarked downloads.</p>
+                        <div class="project-tags"><span>Android</span><span>SQLite</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Utility · Android</span>
+                        <h3>Instagram Profile Saver</h3>
+                        <p class="portfolio-card-desc">HD Instagram profile picture download utility with a simple gallery save flow.</p>
+                        <div class="project-tags"><span>Android</span><span>Instagram API</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">EdTech · Android</span>
+                        <h3>Kids Learning Game</h3>
+                        <p class="portfolio-card-desc">Letters and colors learning game for young children with reward feedback loops.</p>
+                        <div class="project-tags"><span>Android</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">Design · Android</span>
+                        <h3>Material Colour Palette</h3>
+                        <p class="portfolio-card-desc">Extract, save, and share color palettes from gallery or camera photos.</p>
+                        <div class="project-tags"><span>Android</span><span>Camera API</span></div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <span class="project-card-tag">SMB · Web</span>
+                        <h3>Kumar Hair Salon</h3>
+                        <p class="portfolio-card-desc">Salon appointment booking with Paytm payments and SMS/email confirmations.</p>
+                        <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Paytm</span></div>
+                    </article>
+
+                </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. ADDITIONAL PROJECTS (WHITE) -->
-        <section id="additional-projects" class="scroll-reveal py-24 bg-white">
-            <!-- Container for content -->
-            <div class="container mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Additional Projects & History</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">A comprehensive collection of projects spanning enterprise applications, mobile apps, and innovative solutions</p>
-                </div>
-                <div class="grid gap-8 md:grid-cols-2">
-                    
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-blue">
-                                <i class="fas fa-box"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Case Study</p>
-                                <h3 class="project-card-title">E-Commerce Inventory Management</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Managed the inventory panel for The Classy Home, building a .NET background service to auto-process supplier files (CSV, XLSX) and integrate stock management with AWS.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>The Classy Home</span>
-                            <span><i class="far fa-clock"></i>Automated supply ops</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET</span>
-                            <span>AWS</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Case study</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-green">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Platform</p>
-                                <h3 class="project-card-title">Employee Engagement Panel</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">For enterprise clients like KPMG &amp; Fujitsu, I integrated chat modules, managed .NET Core APIs for the mobile app, and supported the re-architecture of the growing platform.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>KPMG &amp; Fujitsu</span>
-                            <span><i class="fas fa-sitemap"></i>Employee experience</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET Core</span>
-                            <span>REST APIs</span>
-                            <span>Mobile</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Platform story</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-purple">
-                                <i class="fas fa-clipboard-list"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Analytics</p>
-                                <h3 class="project-card-title">Survey &amp; Assessment App</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Built a survey and assessment engine that performs algorithmic scoring and visualizes insights for leadership teams.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-braille"></i>Scoring workflows</span>
-                            <span><i class="far fa-chart-bar"></i>Decision support</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET</span>
-                            <span>Angular</span>
-                            <span>MSSQL</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Analytics</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-red">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">HealthTech</p>
-                                <h3 class="project-card-title">Care Plus - Health Platform</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Multi-platform booking &amp; scheduling system. I owned .NET back-end services, payment integrations, invoicing, and scheduling algorithms.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>Care Plus</span>
-                            <span><i class="fas fa-stethoscope"></i>Payments &amp; scheduling</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET</span>
-                            <span>Payment APIs</span>
-                            <span>Scheduling</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Healthtech</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-yellow">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">FinTech</p>
-                                <h3 class="project-card-title">Account Books - Financial App</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Led MSSQL logic for ledger management while coordinating backend/frontend teams during an Angular → React migration.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-user-tie"></i>Founder-led product</span>
-                            <span><i class="fas fa-random"></i>Migration leadership</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>MSSQL</span>
-                            <span>React</span>
-                            <span>.NET</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Finance</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-amber">
-                                <i class="fas fa-coffee"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Experience</p>
-                                <h3 class="project-card-title">Flavour IQ - Coffee Quiz</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Questionnaire-based experience that recommends a user’s coffee profile. Owned the .NET back-end and collaborated on the Angular UI launch.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-mug-hot"></i>Consumer engagement</span>
-                            <span><i class="fas fa-mobile-alt"></i>Web + mobile</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>.NET</span>
-                            <span>Angular</span>
-                            <span>Gamification</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Experience</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-pink">
-                                <i class="fas fa-cut"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">SMB</p>
-                                <h3 class="project-card-title">Kumar Hair Salon App</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Appointment booking platform built on a ThemeForest base. I handled the PHP backend, MySQL design, Paytm integration, and SMS/email automation.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>Kumar Salon</span>
-                            <span><i class="fas fa-credit-card"></i>Paytm + notifications</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>Paytm API</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">SMB build</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-indigo">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Product</p>
-                                <h3 class="project-card-title">C Programming Mobile App</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Personal Android app that hit top‑5 in its category with 50k+ users. Included 200+ curated programs, Firebase chat, Stack Overflow integration, and a thumb-friendly dark mode.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-users"></i>50k+ users</span>
-                            <span><i class="fas fa-trophy"></i>Top 5 category</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>Firebase</span>
-                            <span>APIs</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Indie app</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-cyan">
-                                <i class="fas fa-child"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">EdTech</p>
-                                <h3 class="project-card-title">Kids Learning Game</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Android game for kids (A-Z, color picking) with confetti feedback and reward loops that keep engagement high.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-magic"></i>Interactive learning</span>
-                            <span><i class="fas fa-tablet-alt"></i>Android</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>Animations</span>
-                            <span>Game UX</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Edtech</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-teal">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Tooling</p>
-                                <h3 class="project-card-title">Material Colour Palette</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Android tool that extracts palettes from photos (gallery or camera). Designers could save, pick, and share palettes using precise color libraries.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-lightbulb"></i>Design utility</span>
-                            <span><i class="fas fa-camera"></i>Camera &amp; gallery</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>Color Theory</span>
-                            <span>Camera API</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Tooling</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-purple">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Social</p>
-                                <h3 class="project-card-title">Diku - Status Community</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Android social app for video/text statuses. Users could like, favorite via SQLite, and download posts with an auto watermark.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-user-friends"></i>Community sharing</span>
-                            <span><i class="fas fa-shield-alt"></i>Watermarked exports</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>SQLite</span>
-                            <span>APIs</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Social</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-pink">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Utility</p>
-                                <h3 class="project-card-title">Instagram Profile Saver</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">One of my first Android apps. Users could input a profile URL or ID and download the high-definition display picture through Instagram’s API.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-link"></i>Profile lookup</span>
-                            <span><i class="fas fa-download"></i>HD media</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>Instagram API</span>
-                            <span>Automation</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Utility</span>
-                        </div>
-                    </div>
-
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-green">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Academic</p>
-                                <h3 class="project-card-title">Study Mate</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">Android app for students to check results and browse study materials sourced from official government portals.</p>
-                        <div class="project-card-meta">
-                            <span><i class="fas fa-university"></i>Gov resources</span>
-                            <span><i class="fas fa-users"></i>Student-first</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Android</span>
-                            <span>Content delivery</span>
-                            <span>PDF Viewer</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Academic</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. FOOTER (DARK) -->
-            {% include footer.html base_path="../" %}
-
+        {% include footer.html base_path="../" %}
     </main>
 
-
-    
     <script src="/assets/navbar/script.js"></script>
-    <script src="/assets/footer/script.js"></script>
-    <script src="/assets/subnav/script.js"></script>
-    <script src="/assets/portfolio-listing/script.js"></script>
+    <script src="/assets/landing-page/script.js"></script>
 </body>
-
 </html>

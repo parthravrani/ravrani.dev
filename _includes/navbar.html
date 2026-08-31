@@ -4,138 +4,49 @@
 <header id="navbar" class="navbar-container" role="banner">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-content">
-            <!-- Logo/Brand -->
             <a href="/" class="navbar-brand" aria-label="Parth Ravrani - Home">
                 <div class="navbar-logo">
                     <span class="navbar-logo-text">Parth Ravrani</span>
-                    <span class="navbar-logo-subtitle">Solutions Architect</span>
+                    <span class="navbar-logo-subtitle">Senior .NET Developer</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
             <div class="navbar-links" id="navbar-links">
-                <a href="/" 
-                   class="navbar-link {% if active_page == 'home' %}active{% endif %}" 
-                   data-page="home">
-                    <i class="fas fa-home"></i>
+                <a href="/" class="navbar-link {% if active_page == 'home' %}active{% endif %}">
                     <span>Home</span>
                 </a>
-                <a href="/portfolio/" 
-                   class="navbar-link {% if active_page == 'portfolio' %}active{% endif %}" 
-                   data-page="portfolio">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Portfolio</span>
+                <a href="/portfolio/" class="navbar-link {% if active_page == 'portfolio' %}active{% endif %}">
+                    <span>Work</span>
                 </a>
-                <div class="navbar-dropdown">
-                    <button class="navbar-link navbar-dropdown-toggle {% if active_page == 'expertise' %}active{% endif %}" aria-expanded="false">
-                        <i class="fas fa-code"></i>
-                        <span>Expertise</span>
-                        <i class="fas fa-chevron-down navbar-dropdown-icon"></i>
-                    </button>
-                    <div class="navbar-dropdown-menu">
-                        <a href="/expertise/dotnet/" class="navbar-dropdown-item {% if page.url contains '/expertise/dotnet/' %}active{% endif %}">
-                            <i class="fab fa-microsoft"></i>
-                            <span>.NET Architecture</span>
-                        </a>
-                        <a href="/expertise/cloud/" class="navbar-dropdown-item {% if page.url contains '/expertise/cloud/' %}active{% endif %}">
-                            <i class="fas fa-cloud"></i>
-                            <span>Cloud & DevOps</span>
-                        </a>
-                        <a href="/expertise/python/" class="navbar-dropdown-item {% if page.url contains '/expertise/python/' %}active{% endif %}">
-                            <i class="fab fa-python"></i>
-                            <span>Data Engineering</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="/game/" 
-                   class="navbar-link {% if active_page == 'game' %}active{% endif %}" 
-                   data-page="game">
-                    <div class="snake-icon-container">
-                        <img src="/assets/navbar/image.png" alt="Snake" class="snake-icon" />
-                        <i class="fas fa-gamepad snake-badge"></i>
-                    </div>
-                    <span>Snake Break</span>
+                <a href="/expertise/dotnet/" class="navbar-link {% if active_page == 'expertise' %}active{% endif %}">
+                    <span>Expertise</span>
                 </a>
-                {% comment %}
-                <a href="/blog/" 
-                   class="navbar-link {% if active_page == 'blog' %}active{% endif %}" 
-                   data-page="blog">
-                    <i class="fas fa-blog"></i>
-                    <span>Blog</span>
-                </a>
-                {% endcomment %}
             </div>
 
-            <!-- CTA Button -->
-            <a href="#contact" class="navbar-cta" aria-label="Get in touch">
-                <span>Get In Touch</span>
-                <i class="fas fa-arrow-right"></i>
+            <a href="#contact" class="navbar-cta" aria-label="Contact">
+                <span>Contact</span>
             </a>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="navbar-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <button class="navbar-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="navbar-mobile-toggle-line"></span>
                 <span class="navbar-mobile-toggle-line"></span>
                 <span class="navbar-mobile-toggle-line"></span>
             </button>
         </div>
 
-        <!-- Mobile Menu -->
         <div class="navbar-mobile-menu" id="mobile-menu">
             <div class="navbar-mobile-content">
-                <a href="/" 
-                   class="navbar-mobile-link {% if active_page == 'home' %}active{% endif %}" 
-                   data-page="home">
-                    <i class="fas fa-home"></i>
+                <a href="/" class="navbar-mobile-link {% if active_page == 'home' %}active{% endif %}">
                     <span>Home</span>
                 </a>
-                <a href="/portfolio/" 
-                   class="navbar-mobile-link {% if active_page == 'portfolio' %}active{% endif %}" 
-                   data-page="portfolio">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Portfolio</span>
+                <a href="/portfolio/" class="navbar-mobile-link {% if active_page == 'portfolio' %}active{% endif %}">
+                    <span>Work</span>
                 </a>
-                <div class="navbar-mobile-dropdown">
-                    <button class="navbar-mobile-link navbar-mobile-dropdown-toggle {% if active_page == 'expertise' %}active{% endif %}">
-                        <i class="fas fa-code"></i>
-                        <span>Expertise</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="navbar-mobile-dropdown-menu">
-                        <a href="/expertise/dotnet/" class="navbar-mobile-dropdown-item {% if page.url contains '/expertise/dotnet/' %}active{% endif %}">
-                            <i class="fab fa-microsoft"></i>
-                            <span>.NET Architecture</span>
-                        </a>
-                        <a href="/expertise/cloud/" class="navbar-mobile-dropdown-item {% if page.url contains '/expertise/cloud/' %}active{% endif %}">
-                            <i class="fas fa-cloud"></i>
-                            <span>Cloud & DevOps</span>
-                        </a>
-                        <a href="/expertise/python/" class="navbar-mobile-dropdown-item {% if page.url contains '/expertise/python/' %}active{% endif %}">
-                            <i class="fab fa-python"></i>
-                            <span>Data Engineering</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="/game/" 
-                   class="navbar-mobile-link {% if active_page == 'game' %}active{% endif %}" 
-                   data-page="game">
-                    <div class="snake-icon-container">
-                        <img src="/assets/navbar/image.png" alt="Snake" class="snake-icon" />
-                        <i class="fas fa-gamepad snake-badge"></i>
-                    </div>
-                    <span>Snake Break</span>
+                <a href="/expertise/dotnet/" class="navbar-mobile-link {% if active_page == 'expertise' %}active{% endif %}">
+                    <span>Expertise</span>
                 </a>
-                {% comment %}
-                <a href="/blog/" 
-                   class="navbar-mobile-link {% if active_page == 'blog' %}active{% endif %}" 
-                   data-page="blog">
-                    <i class="fas fa-blog"></i>
-                    <span>Blog</span>
-                </a>
-                {% endcomment %}
                 <a href="#contact" class="navbar-mobile-cta">
-                    <span>Get In Touch</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <span>Contact</span>
                 </a>
             </div>
         </div>
