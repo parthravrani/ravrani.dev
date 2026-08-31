@@ -45,7 +45,7 @@ active_page: "expertise"
         "provider": {
             "@type": "Person",
             "name": "Parth Ravrani",
-            "jobTitle": "Senior Solutions Architect",
+            "jobTitle": "Senior .NET Developer",
             "url": "https://ravrani.dev"
         },
         "areaServed": "Worldwide",
@@ -72,15 +72,17 @@ active_page: "expertise"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/landing-page/style.css">
+    <link rel="stylesheet" href="/assets/site/inner-pages.css">
     <link rel="stylesheet" href="/assets/footer/style.css">
     <link rel="stylesheet" href="/assets/subnav/style.css">
     <link rel="stylesheet" href="/assets/expertise-cloud/style.css">
 </head>
 
-<body class="text-gray-800" data-page="expertise-cloud">
+<body class="inner-page" data-page="expertise-cloud">
 
         {% include navbar.html base_path="../" active_page="expertise" %}
         
@@ -115,7 +117,7 @@ active_page: "expertise"
         </nav>
 
     <!-- Main Content -->
-    <main class="relative z-10 pt-40">
+    <main class="page-main">
 
         <!-- Breadcrumb -->
         <section class="bg-white py-6 border-b border-gray-200">
@@ -479,7 +481,7 @@ active_page: "expertise"
                             <span><i class="fas fa-users"></i>40-50 Developers</span>
                         </div>
                         <div class="project-card-tags">
-                            <span>GitLab CI/CD</span>
+                            <span>GitLab / GitHub</span>
                             <span>Linux Servers</span>
                             <span>Shell Scripts</span>
                             <span>Networking</span>

@@ -45,7 +45,7 @@ active_page: "expertise"
         "provider": {
             "@type": "Person",
             "name": "Parth Ravrani",
-            "jobTitle": "Senior Solutions Architect",
+            "jobTitle": "Senior .NET Developer",
             "url": "https://ravrani.dev"
         },
         "areaServed": "Worldwide",
@@ -72,15 +72,17 @@ active_page: "expertise"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/assets/navbar/style.css">
+    <link rel="stylesheet" href="/assets/landing-page/style.css">
+    <link rel="stylesheet" href="/assets/site/inner-pages.css">
     <link rel="stylesheet" href="/assets/footer/style.css">
     <link rel="stylesheet" href="/assets/subnav/style.css">
     <link rel="stylesheet" href="/assets/expertise-python/style.css">
 </head>
 
-<body class="text-gray-800" data-page="expertise-python">
+<body class="inner-page" data-page="expertise-python">
 
         {% include navbar.html base_path="../" active_page="expertise" %}
         
@@ -115,7 +117,7 @@ active_page: "expertise"
         </nav>
 
     <!-- Main Content -->
-    <main class="relative z-10 pt-40">
+    <main class="page-main">
 
         <!-- Breadcrumb -->
         <section class="bg-white py-6 border-b border-gray-200">
@@ -435,34 +437,6 @@ active_page: "expertise"
                     <p class="text-gray-600 max-w-2xl mx-auto">Explore projects showcasing Python and data engineering expertise</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="project-grid-card scroll-reveal">
-                        <div class="project-card-header">
-                            <div class="project-card-icon icon-purple">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div>
-                                <p class="project-card-badge">Data Engineering</p>
-                                <h3 class="project-card-title">The "Unblockable" Social Media Engine</h3>
-                            </div>
-                        </div>
-                        <p class="project-card-description">High-volume Facebook & Instagram scraper extracting millions of post details daily without getting banned. Built a resilient Python-based engine with proxy/VPN rotation, account rotation, and human behavior simulation to evade aggressive anti-bot algorithms.</p>
-                        <div class="project-card-meta">
-                            <span><i class="far fa-building"></i>Nextract Data Solutions</span>
-                            <span><i class="fas fa-shield-alt"></i>Near zero bans</span>
-                        </div>
-                        <div class="project-card-tags">
-                            <span>Python</span>
-                            <span>Selenium</span>
-                            <span>VPN/Proxies</span>
-                            <span>AI Logic</span>
-                        </div>
-                        <div class="project-card-footer">
-                            <span class="text-xs text-gray-500 uppercase tracking-wide">Data engineering</span>
-                            <a href="/projects/unblockable-social-media-engine/" class="project-card-link">
-                                Read story <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
                     <div class="project-grid-card scroll-reveal">
                         <div class="project-card-header">
                             <div class="project-card-icon icon-green">

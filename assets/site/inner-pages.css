@@ -1,0 +1,164 @@
+/* Shared overrides for legacy inner pages (expertise, case studies) */
+
+.inner-page {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.inner-page main.relative.z-10,
+.inner-page main.pt-40 {
+    padding-top: calc(72px + 1.5rem) !important;
+}
+
+/* Hide breadcrumbs */
+.inner-page section:has(nav[aria-label="Breadcrumb"]) {
+    display: none !important;
+}
+
+/* Hide old decorative blobs */
+.inner-page .absolute.inset-0.opacity-5 {
+    display: none !important;
+}
+
+/* Typography */
+.inner-page h1,
+.inner-page h2,
+.inner-page .text-3xl.font-bold,
+.inner-page .text-4xl.font-bold,
+.inner-page .text-5xl.font-bold {
+    font-family: var(--font-serif) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Accent color remap: legacy Tailwind blues → site orange */
+.inner-page .text-blue-600,
+.inner-page .text-blue-700,
+.inner-page .hover\:text-blue-600:hover {
+    color: var(--accent) !important;
+}
+
+.inner-page .bg-blue-50 {
+    background: var(--accent-muted) !important;
+}
+
+.inner-page .border-blue-100,
+.inner-page .border-blue-200 {
+    border-color: var(--accent-border) !important;
+}
+
+.inner-page .bg-gradient-to-r.from-blue-600 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    color: var(--accent) !important;
+}
+
+.inner-page .bg-clip-text.text-transparent {
+    -webkit-text-fill-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+/* Section backgrounds */
+.inner-page .bg-white {
+    background: var(--bg) !important;
+}
+
+.inner-page .bg-gray-100 {
+    background: var(--bg-elevated) !important;
+}
+
+.inner-page .bg-black {
+    background: var(--bg-dark) !important;
+}
+
+.inner-page .bg-gray-900 {
+    background: var(--bg-dark-elevated) !important;
+}
+
+/* Cards */
+.inner-page .expertise-card,
+.inner-page .case-study-card,
+.inner-page .inner-grey-card-solid,
+.inner-page .project-grid-card {
+    border-color: var(--border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: none !important;
+}
+
+.inner-page .expertise-card:hover,
+.inner-page .case-study-card:hover,
+.inner-page .inner-grey-card-solid:hover {
+    border-color: var(--accent-border) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+    transform: none !important;
+}
+
+/* Buttons */
+.inner-page .btn-primary-blue {
+    background: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-fg) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.inner-page .btn-primary-blue:hover {
+    background: var(--btn-primary-hover) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.inner-page .btn-primary-blue i {
+    display: none !important;
+}
+
+/* Expertise icons */
+.inner-page .expertise-icon.blue {
+    background: var(--accent-muted) !important;
+    color: var(--accent) !important;
+}
+
+/* Metric cards */
+.inner-page .metric-card {
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+/* Container width alignment */
+.inner-page .container.mx-auto.max-w-7xl {
+    max-width: var(--max-width) !important;
+}
+
+/* Reduce excessive hero padding */
+.inner-page section.bg-white.py-24,
+.inner-page section#overview.bg-white {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Hide pill badges clutter on heroes — keep but soften */
+.inner-page .inline-flex.items-center.gap-2.px-4.py-2.bg-blue-50 {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+}
+
+/* Links */
+.inner-page a.text-blue-600,
+.inner-page .core-card-link {
+    color: var(--text) !important;
+    font-weight: 600;
+}
+
+.inner-page a.text-blue-600:hover,
+.inner-page .core-card-link:hover {
+    color: var(--accent) !important;
+}
+
+/* Scroll reveal on inner pages — always visible */
+.inner-page .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+}

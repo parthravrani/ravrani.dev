@@ -1,0 +1,14 @@
+{% assign bp = include.base_path | default: "" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+{% include favicon.html %}
+<link rel="stylesheet" href="/assets/navbar/style.css">
+<link rel="stylesheet" href="/assets/landing-page/style.css">
+<link rel="stylesheet" href="/assets/site/inner-pages.css">
+<link rel="stylesheet" href="/assets/site/case-study.css">
+<link rel="stylesheet" href="/assets/site/case-study-v2.css">
+{% if include.extra_css %}
+<link rel="stylesheet" href="/assets/{{ include.extra_css }}">
+{% endif %}
