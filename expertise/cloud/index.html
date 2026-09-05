@@ -14,7 +14,8 @@ active_page: "expertise"
     <meta name="description" content="Expert cloud infrastructure services including AWS, Azure, GCP solutions for scalable, resilient cloud architecture and DevOps. Infrastructure as Code, CI/CD, and cloud migration expertise.">
     <meta name="keywords" content="AWS expert, Azure expert, cloud architect, DevOps engineer, cloud infrastructure, AWS solutions, Azure solutions, GCP, cloud migration, Infrastructure as Code, CI/CD">
     <meta name="author" content="Parth Ravrani">
-    <meta name="robots" content="index, follow">
+    <!-- Unlinked from nav/footer for launch. Flip back to "index, follow" and re-add to sitemap.xml when this page returns. -->
+    <meta name="robots" content="noindex, follow">
     <meta name="language" content="English">
     
     <!-- Open Graph / Facebook -->
@@ -70,17 +71,12 @@ active_page: "expertise"
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
+    {% include editorial-head.html base_path="/" %}
     <link rel="stylesheet" href="/assets/subnav/style.css">
     <link rel="stylesheet" href="/assets/expertise-cloud/style.css">
 </head>
 
-<body class="text-gray-800" data-page="expertise-cloud">
+<body class="home-page legacy-page" data-page="expertise-cloud">
 
         {% include navbar.html base_path="../" active_page="expertise" %}
         
@@ -115,7 +111,7 @@ active_page: "expertise"
         </nav>
 
     <!-- Main Content -->
-    <main class="relative z-10 pt-40">
+    <main class="rv-main legacy-main legacy-main--subnav">
 
         <!-- Breadcrumb -->
         <section class="bg-white py-6 border-b border-gray-200">
@@ -557,7 +553,7 @@ active_page: "expertise"
                     {% if post_count == 0 %}
                     <div class="col-span-full text-center py-8">
                         <p class="text-gray-500">No cloud-related blog posts yet. Check back soon!</p>
-                        <a href="/blog/" class="text-blue-600 hover:text-blue-700 font-medium text-sm mt-2 inline-block">View All Blogs</a>
+                        <a href="/articles/" class="text-blue-600 hover:text-blue-700 font-medium text-sm mt-2 inline-block">View All Blogs</a>
                         </div>
                     {% endif %}
                 </div>

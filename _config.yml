@@ -3,8 +3,19 @@
 
 # Site settings
 title: "Parth Ravrani"
-description: "Senior Solutions Architect | .NET, Python & Cloud Specialist"
+description: "Senior Solutions Architect · .NET, Cloud & Community Contributor"
 url: "https://ravrani.dev"
+author: "Parth Ravrani"
+author_role: "Senior Solutions Architect · .NET & Cloud"
+author_eyebrow: "Senior Solutions Architect · 7+ years shipping production systems"
+author_bio: "7+ years shipping .NET and cloud systems. I write what I needed when I was figuring it out — field notes from production, not slide decks."
+author_avatar: "/favicon/web-app-manifest-192x192.png"
+email: "parthravrani@hotmail.com"
+github: "parthravrani"
+linkedin: "parthravrani"
+
+# Default social card, 1200x630. Override per post with `image:` in front matter.
+image: "/images/og-default.png"
 
 # Build settings
 markdown: kramdown
@@ -16,17 +27,14 @@ kramdown:
 permalink: pretty
 highlighter: rouge
 
-# Blog settings - DISABLED
-# Posts will be in _posts directory
-# Custom permalink for posts: /blog/slug/ (no dates, using slug from front matter)
-# Blog is currently hidden - uncomment to enable
-# defaults:
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       permalink: /blog/:slug/
-#       output: true
+# Blog settings
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /articles/:slug/
+      output: true
 
 # Disable Sass processing (we don't use it)
 sass:
@@ -40,14 +48,18 @@ exclude:
   - vendor
   - .git
   - .gitignore
-  - blog
-  - _posts
+  # Internal docs — these were being published at ravrani.dev/README.md
+  - README.md
+  - README_JEKYLL.md
+  - JEKYLL_SETUP.md
+  - COMMANDS.md
+  # Scaffolds full of placeholder copy and href="#" links
+  - articles/blog-post-template.html
+  - projects/project-template
 
 # Minimal plugins (none needed for includes)
 plugins: []
 
-# Keep all files (don't exclude HTML)
-include:
-  - "*.html"
-  - "**/*.html"
-  # - "_posts"  # Blog posts excluded - uncomment to enable
+# No `include:` list here on purpose. Jekyll already processes .html by default,
+# and `include` takes precedence over `exclude` — a "**/*.html" entry silently
+# republishes anything listed above.

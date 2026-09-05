@@ -1,0 +1,190 @@
+/* Bridge legacy Tailwind pages into the dark editorial system */
+
+.home-page.legacy-page {
+    min-height: 100vh;
+}
+
+.home-page .legacy-main {
+    padding-top: calc(var(--navbar-height) + 2.5rem);
+    position: relative;
+    z-index: 1;
+}
+
+.home-page .legacy-main--subnav {
+    padding-top: calc(var(--navbar-height) + 4.75rem);
+}
+
+/* Tailwind background overrides */
+.home-page .bg-white {
+    background-color: var(--hp-bg) !important;
+}
+
+.home-page .bg-gray-50,
+.home-page .bg-gray-100 {
+    background-color: var(--hp-surface) !important;
+}
+
+.home-page .from-green-50,
+.home-page .from-blue-50,
+.home-page .via-white,
+.home-page .to-blue-50,
+.home-page .to-purple-50 {
+    background: var(--hp-surface) !important;
+}
+
+.home-page .bg-blue-50 {
+    background-color: rgba(91, 143, 214, 0.08) !important;
+}
+
+.home-page .bg-green-50 {
+    background-color: rgba(34, 197, 94, 0.08) !important;
+}
+
+.home-page .bg-purple-50,
+.home-page .bg-orange-50 {
+    background-color: var(--hp-surface-raised) !important;
+}
+
+/* Text */
+.home-page .text-gray-900,
+.home-page .text-gray-800 {
+    color: var(--hp-text) !important;
+}
+
+.home-page .text-gray-700,
+.home-page .text-gray-600 {
+    color: var(--hp-muted) !important;
+}
+
+.home-page .text-gray-500 {
+    color: var(--hp-muted-soft) !important;
+}
+
+.home-page .text-blue-600,
+.home-page .text-blue-700 {
+    color: var(--hp-blue) !important;
+}
+
+.home-page .text-green-600,
+.home-page .text-purple-600 {
+    color: var(--hp-blue) !important;
+}
+
+.home-page .bg-gradient-to-r.from-blue-600,
+.home-page .bg-clip-text.text-transparent {
+    background: linear-gradient(120deg, #b8d4f5, #6ba3e0, #9ec4f0) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Borders */
+.home-page .border-gray-100,
+.home-page .border-gray-200,
+.home-page .border-blue-100,
+.home-page .border-blue-200,
+.home-page .border-green-100 {
+    border-color: var(--hp-border) !important;
+}
+
+.home-page .border-l-4.border-blue-500 {
+    border-left-color: var(--hp-blue) !important;
+}
+
+/* Cards & surfaces */
+.home-page .rounded-2xl,
+.home-page .rounded-3xl,
+.home-page .rounded-xl {
+    border-color: var(--hp-border);
+}
+
+.home-page .shadow-lg,
+.home-page .shadow-xl,
+.home-page .shadow-2xl {
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.home-page .inner-grey-card-solid,
+.home-page .project-grid-card,
+.home-page .core-showcase-card,
+.home-page .expertise-card,
+.home-page .blog-card:not(.home-post-row),
+.home-page .achievement-card {
+    background: linear-gradient(165deg, var(--hp-surface-raised) 0%, var(--hp-surface) 100%) !important;
+    border-color: var(--hp-border) !important;
+    color: var(--hp-text);
+}
+
+.home-page .project-grid-card:hover,
+.home-page .expertise-card:hover,
+.home-page .blog-card:not(.home-post-row):hover {
+    border-color: var(--hp-border-hover) !important;
+    box-shadow: 0 12px 40px -16px rgba(0, 0, 0, 0.6) !important;
+}
+
+.home-page .project-card-footer,
+.home-page .core-card-footer {
+    border-top-color: var(--hp-border) !important;
+}
+
+/* Hide decorative light blurs on dark */
+.home-page .absolute.inset-0.opacity-5 {
+    opacity: 0.03 !important;
+}
+
+/* Breadcrumbs */
+.home-page .breadcrumb-link,
+.home-page a.text-gray-500 {
+    color: var(--hp-muted) !important;
+}
+
+.home-page a.hover\:text-blue-600:hover,
+.home-page .hover\:text-blue-600:hover {
+    color: var(--hp-text) !important;
+}
+
+/* Buttons — align with editorial ghost style */
+.home-page .btn-primary-blue {
+    background: transparent !important;
+    color: var(--hp-text) !important;
+    border: 1px solid var(--hp-border) !important;
+    box-shadow: none !important;
+}
+
+.home-page .btn-primary-blue:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: var(--hp-border-hover) !important;
+    box-shadow: none !important;
+    transform: translateY(-1px);
+}
+
+.home-page .btn-primary-blue i {
+    background: var(--hp-blue) !important;
+    color: #fff !important;
+}
+
+/* Game page shell */
+.home-page.game-page .game-wrapper {
+    padding-top: calc(var(--navbar-height) + 2rem);
+    background: transparent;
+}
+
+.home-page.game-page {
+    background: var(--hp-bg) !important;
+}
+
+/* Side nav (project pages) */
+.home-page .side-nav {
+    background: rgba(5, 5, 6, 0.95) !important;
+    border-color: var(--hp-border) !important;
+}
+
+.home-page .side-nav-item {
+    color: var(--hp-muted) !important;
+}
+
+.home-page .side-nav-item:hover,
+.home-page .side-nav-item.active {
+    color: var(--hp-text) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+}

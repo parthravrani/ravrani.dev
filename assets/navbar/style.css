@@ -2,20 +2,20 @@
    NAVBAR STYLES - Modern Glassmorphism Design
    ============================================ */
 
-/* Root Variables - Light Theme Only */
+/* Root Variables â€” dark editorial (site default) */
 :root {
-    --navbar-height: 80px;
-    --navbar-bg: rgba(255, 255, 255, 0.98);
-    --navbar-bg-scrolled: rgba(255, 255, 255, 0.99);
-    --navbar-border: rgba(226, 232, 240, 0.8);
-    --navbar-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    --navbar-shadow-scrolled: 0 8px 24px rgba(0, 0, 0, 0.1);
-    --navbar-text: #111827;
-    --navbar-text-hover: #111827;
-    --navbar-accent: #2563eb;
-    --navbar-accent-hover: #1d4ed8;
-    --navbar-cta-bg: #f97316;
-    --navbar-cta-hover: #ea580c;
+    --navbar-height: 64px;
+    --navbar-bg: rgba(5, 5, 6, 0.88);
+    --navbar-bg-scrolled: rgba(5, 5, 6, 0.96);
+    --navbar-border: rgba(255, 255, 255, 0.06);
+    --navbar-shadow: none;
+    --navbar-shadow-scrolled: none;
+    --navbar-text: #9c9890;
+    --navbar-text-hover: #f5f3ef;
+    --navbar-accent: #5b8fd6;
+    --navbar-accent-hover: #7eb0e8;
+    --navbar-cta-bg: transparent;
+    --navbar-cta-hover: transparent;
     --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -47,7 +47,7 @@
 }
 
 .navbar-content {
-    max-width: 1280px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
@@ -77,19 +77,19 @@
 }
 
 .navbar-logo-text {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #000000;
-    letter-spacing: -0.5px;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #f5f3ef;
+    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
 .navbar-logo-subtitle {
-    font-size: 0.65rem;
-    font-weight: 500;
-    color: #6b7280;
+    font-size: 0.625rem;
+    font-weight: 400;
+    color: #6b6760;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
     line-height: 1;
 }
 
@@ -171,7 +171,7 @@
 
 .navbar-link:hover {
     color: var(--navbar-text-hover);
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .navbar-link:hover i {
@@ -183,8 +183,8 @@
 }
 
 .navbar-link.active {
-    color: var(--navbar-text);
-    background: rgba(0, 0, 0, 0.06);
+    color: var(--navbar-text-hover);
+    background: rgba(255, 255, 255, 0.04);
     font-weight: 600;
 }
 
@@ -205,9 +205,9 @@
     transform: translateX(-50%);
     width: 6px;
     height: 6px;
-    background: var(--navbar-cta-bg);
+    background: var(--navbar-accent);
     border-radius: 50%;
-    box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+    box-shadow: none;
 }
 
 /* Dropdown Menu */
@@ -284,20 +284,21 @@
     transform: translateX(4px);
 }
 
-/* CTA Button - Orange to match site theme */
+/* CTA Button */
 .navbar-cta {
     display: none;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--navbar-text);
     text-decoration: none;
     background: var(--navbar-cta-bg);
-    border-radius: 0.5rem;
+    border: 1px solid var(--navbar-border);
+    border-radius: 6px;
     box-shadow: none;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
 }
 
@@ -308,9 +309,11 @@
 }
 
 .navbar-cta:hover {
-    background: var(--navbar-cta-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    color: var(--navbar-text-hover);
+    border-color: rgba(255, 255, 255, 0.12);
+    background: transparent;
+    transform: none;
+    box-shadow: none;
 }
 
 .navbar-cta:active {
@@ -318,20 +321,14 @@
 }
 
 .navbar-cta i {
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    color: #000000;
-    font-weight: 900;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
-    line-height: 1;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    font-size: 0.875rem;
+    color: inherit;
+    font-weight: 400;
+    box-shadow: none;
 }
 
 .navbar-cta:hover i {
@@ -383,17 +380,17 @@
 /* Mobile Menu */
 .navbar-mobile-menu {
     position: fixed;
-    top: 80px;
+    top: var(--navbar-height);
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: calc(100vh - 80px);
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    height: calc(100vh - var(--navbar-height));
+    background: rgba(5, 5, 6, 0.98);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
     border-top: 1px solid var(--navbar-border);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1002;
@@ -435,8 +432,8 @@
 
 .navbar-mobile-link:hover,
 .navbar-mobile-link.active {
-    background: rgba(0, 0, 0, 0.04);
-    color: var(--navbar-text);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--navbar-text-hover);
     font-weight: 600;
     border: none;
     outline: none;
@@ -602,4 +599,95 @@ html {
 
 .navbar-mobile-dropdown.active .navbar-mobile-dropdown-toggle i:last-child {
     transform: rotate(180deg);
+}
+
+/* ===== HOMEPAGE DARK NAVBAR ===== */
+.editorial-home {
+    --navbar-height: 64px;
+    --navbar-bg: rgba(9, 10, 13, 0.92);
+    --navbar-bg-scrolled: rgba(9, 10, 13, 0.98);
+    --navbar-border: rgba(34, 37, 46, 0.9);
+    --navbar-shadow: none;
+    --navbar-shadow-scrolled: 0 8px 32px rgba(0, 0, 0, 0.35);
+    --navbar-text: #ece8e1;
+    --navbar-text-hover: #ffffff;
+    --navbar-accent: #5b8cff;
+    --navbar-accent-hover: #7aa3ff;
+    --navbar-cta-bg: #ece8e1;
+    --navbar-cta-hover: #ffffff;
+}
+
+.editorial-home .navbar-content {
+    height: 64px;
+}
+
+.editorial-home .navbar-logo-text {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.editorial-home .navbar-logo-subtitle {
+    color: #9b958a;
+}
+
+.editorial-home .navbar-link.active::after {
+    background: #5b8cff;
+}
+
+.editorial-home .navbar-cta {
+    background: #ece8e1;
+    color: #090a0d;
+}
+
+.editorial-home .navbar-cta:hover {
+    background: #ffffff;
+}
+
+.editorial-home .navbar-cta i {
+    background: #090a0d;
+    color: #ece8e1;
+}
+
+.editorial-home .navbar-mobile-menu {
+    background: #111318;
+    border-top-color: #22252e;
+}
+
+.editorial-home .navbar-dropdown-menu {
+    background: #171a21;
+    border-color: #2e3340;
+}
+
+.editorial-home .navbar-dropdown-item:hover {
+    background: rgba(91, 140, 255, 0.08);
+}
+
+/* Inline SVG icons on editorial pages — mirrors what the Font Awesome <i> rules gave */
+.navbar-link .icon {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-link:hover .icon {
+    transform: scale(1.1);
+}
+
+.navbar-cta .icon {
+    font-size: 0.9375rem;
+}
+
+.navbar-cta:hover .icon {
+    transform: translateX(2px);
+}
+
+.navbar-mobile-link .icon {
+    font-size: 1.125rem;
+    color: var(--navbar-text);
+    opacity: 0.6;
+}
+
+.navbar-mobile-cta .icon {
+    font-size: 1rem;
 }

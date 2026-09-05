@@ -16,7 +16,7 @@ title: "Case Study: The 'Unblockable' Social Media Engine"
     <meta name="description" content="Case study of a high-volume Facebook & Instagram scraper extracting millions of post details daily without getting banned by aggressive anti-bot algorithms.">
     <meta name="keywords" content="social media scraper, web scraping, Facebook scraper, Instagram scraper, anti-bot, data extraction, Python automation">
     <meta name="author" content="Parth Ravrani">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, follow">
     <meta name="language" content="English">
     
     <!-- Open Graph / Facebook -->
@@ -72,18 +72,13 @@ title: "Case Study: The 'Unblockable' Social Media Engine"
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
+    {% include editorial-head.html base_path="/" %}
     <link rel="stylesheet" href="/assets/subnav/style.css">
     <link rel="stylesheet" href="/assets/project-voila-cabs/style.css">
     <link rel="stylesheet" href="/assets/portfolio-listing/style.css">
 </head>
 
-<body class="text-gray-800" data-page="project-social-media-engine">
+<body class="home-page legacy-page" data-page="project-social-media-engine">
 
         {% include navbar.html base_path="../" active_page="portfolio" %}
 
@@ -140,7 +135,7 @@ title: "Case Study: The 'Unblockable' Social Media Engine"
     </nav>
 
     <!-- Main content container -->
-    <main class="relative z-10 pt-40">
+    <main class="rv-main legacy-main legacy-main--subnav">
 
         <!-- Breadcrumb Navigation -->
         <section class="bg-white py-6 border-b border-gray-200">

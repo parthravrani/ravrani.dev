@@ -1,22 +1,24 @@
 /* Sub Navigation Styles */
 .subnav-container {
     position: fixed;
-    top: 80px; /* Navbar height */
+    top: var(--navbar-height, 64px);
     left: 0;
     right: 0;
-    z-index: 999; /* Below navbar (1000) but above content */
-    background: #ffffff;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    z-index: 999;
+    background: rgba(5, 5, 6, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: none;
     transition: all 0.3s ease;
-    margin-top: -1px; /* Overlap with navbar border to remove double border */
+    margin-top: -1px;
 }
 
 
 .subnav-content {
-    max-width: 1280px;
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 0 1.5rem; /* Match navbar padding */
+    padding: 0 1.5rem;
 }
 
 .subnav-links {
@@ -34,10 +36,10 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
-    color: #9ca3af;
+    color: #6b6760;
     margin-right: 0.25rem;
     flex-shrink: 0;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .subnav-label i {
@@ -61,7 +63,7 @@
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #6b7280;
+    color: #9c9890;
     text-decoration: none;
     white-space: nowrap;
     border-radius: 0.5rem;
@@ -70,13 +72,13 @@
 }
 
 .subnav-link:hover {
-    color: #2563eb;
-    background: rgba(37, 99, 235, 0.05);
+    color: #f5f3ef;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .subnav-link.active {
-    color: #2563eb;
-    background: rgba(37, 99, 235, 0.1);
+    color: #5b8fd6;
+    background: rgba(91, 143, 214, 0.1);
     font-weight: 600;
 }
 
@@ -87,7 +89,7 @@
     left: 1rem;
     right: 1rem;
     height: 2px;
-    background: #2563eb;
+    background: #5b8fd6;
     border-radius: 2px 2px 0 0;
 }
 

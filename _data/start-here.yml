@@ -1,0 +1,21 @@
+paths:
+  - title: ".NET architecture"
+    description: "Structure systems before they structure you."
+    posts:
+      - when-to-choose-microservices-over-monolith
+      - dotnet-api-design-building-apis-that-dont-break
+      - domain-driven-design-dotnet-beyond-basics
+
+  - title: "Cloud & DevOps"
+    description: "Ship infrastructure and pipelines that survive production."
+    posts:
+      - infrastructure-as-code-dotnet-applications
+      - github-actions-dotnet-beyond-basic-cicd
+      - cicd-for-dotnet-from-zero-to-production
+
+  - title: "Data & scale"
+    description: "Databases, performance, and growing past the first thousand users."
+    posts:
+      - strategic-database-design-dotnet-applications
+      - entity-framework-performance-5-common-mistakes
+      - saas-scaling-lessons-from-2k-to-10k-users

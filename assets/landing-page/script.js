@@ -43,25 +43,16 @@
                 // Tech icons matching your tech toolbox - using actual technologies you know
                 const allTechIcons = [
                     { icon: 'fa-brands fa-microsoft', color: '#512BD4', name: '.NET', type: 'fontawesome' },
-                    { icon: 'fa-brands fa-python', color: '#3776AB', name: 'Python', type: 'fontawesome' },
-                    { icon: 'https://cdn.simpleicons.org/django/092E20', color: '#092E20', name: 'Django', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/fastapi/009688', color: '#009688', name: 'FastAPI', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/postgresql/4169E1', color: '#4169E1', name: 'PostgreSQL', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/mysql/4479A1', color: '#4479A1', name: 'MySQL', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/mongodb/47A248', color: '#47A248', name: 'MongoDB', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/redis/DC382D', color: '#DC382D', name: 'Redis', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/elasticsearch/005571', color: '#005571', name: 'Elasticsearch', type: 'image' },
                     { icon: 'fa-brands fa-aws', color: '#FF9900', name: 'AWS', type: 'fontawesome' },
                     { icon: 'fa-brands fa-microsoft', color: '#0078D4', name: 'Azure', type: 'fontawesome' },
                     { icon: 'fa-brands fa-docker', color: '#2496ED', name: 'Docker', type: 'fontawesome' },
                     { icon: 'https://cdn.simpleicons.org/kubernetes/326CE5', color: '#326CE5', name: 'Kubernetes', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/terraform/7B42BC', color: '#7B42BC', name: 'Terraform', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/githubactions/2088FF', color: '#2088FF', name: 'GitHub Actions', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/nginx/009639', color: '#009639', name: 'Nginx', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/pandas/150458', color: '#150458', name: 'Pandas', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/numpy/013243', color: '#013243', name: 'NumPy', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/apachespark/E25A1C', color: '#E25A1C', name: 'Apache Spark', type: 'image' },
-                    { icon: 'https://cdn.simpleicons.org/apacheairflow/017CEE', color: '#017CEE', name: 'Airflow', type: 'image' },
                     { icon: 'https://cdn.simpleicons.org/graphql/E10098', color: '#E10098', name: 'GraphQL', type: 'image' }
                 ];
                 

@@ -1,0 +1,16 @@
+<div class="post-author-wrap">
+    <div class="post-author">
+        <img class="post-author-avatar" src="{{ site.author_avatar }}" alt="{{ site.author }}" width="64" height="64" loading="lazy" decoding="async">
+        <div class="post-author-body">
+            <span class="post-author-label">Written by</span>
+            <p class="post-author-name">{{ site.author }}</p>
+            <p class="post-author-role">{{ site.author_role }}</p>
+            <p class="post-author-bio">{{ site.author_bio }}</p>
+            <div class="post-author-links">
+                <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer">{% include icon.html name="github" %}<span>GitHub</span></a>
+                <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener noreferrer">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a>
+                <a href="/feed.xml">{% include icon.html name="rss" %}<span>RSS</span></a>
+            </div>
+        </div>
+    </div>
+</div>

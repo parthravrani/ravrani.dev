@@ -13,7 +13,7 @@ This is a minimal Jekyll setup used **only** for reusing the navbar and footer c
 Jekyll is already installed via Bundler. To use it:
 
 ```bash
-# Install dependencies (already done)
+# Install dependencies
 bundle install
 
 # Build the site
@@ -22,6 +22,8 @@ bundle exec jekyll build
 # Serve locally for testing
 bundle exec jekyll serve
 ```
+
+> **Note:** This project uses Jekyll 4.x with Bundler 4.x, compatible with Ruby 4.0+. If you see `undefined method 'untaint'` errors, delete `vendor/bundle` and `Gemfile.lock`, then run `bundle install` again.
 
 ## How It Works
 

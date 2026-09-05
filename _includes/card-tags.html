@@ -1,0 +1,8 @@
+{% assign tag_list = include.tags %}
+{% if tag_list and tag_list.size > 0 %}
+<div class="home-card-tags" aria-label="Topics">
+    {% for tag in tag_list %}
+    <span class="home-card-tag">{{ tag }}</span>
+    {% endfor %}
+</div>
+{% endif %}

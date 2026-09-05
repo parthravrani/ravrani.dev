@@ -1,9 +1,16 @@
-body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff; /* White background */
-            color: #1f2937; /* Gray 800 */
-            overflow-x: hidden;
-        }
+body.home-page {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--hp-bg);
+    color: var(--hp-text);
+    overflow-x: hidden;
+}
+
+body:not(.home-page) {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+    overflow-x: hidden;
+}
 
         /* Inner card for project details on GREY bg */
         .inner-grey-card-solid {

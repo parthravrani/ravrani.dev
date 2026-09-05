@@ -1,75 +1,35 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Homepage -->
+{% comment %}
+  Writing-only sitemap. The portfolio, expertise and project pages are
+  intentionally left out while they're unlinked from the site; they also
+  carry a noindex tag. Re-add them here when they go back into the nav.
+{% endcomment %}
+{% if site.posts.size > 0 %}{% assign latest = site.posts.first.date | date: "%Y-%m-%d" %}{% else %}{% assign latest = site.time | date: "%Y-%m-%d" %}{% endif %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
-        <loc>https://ravrani.dev/</loc>
-        <lastmod>2025-01-15</lastmod>
+        <loc>{{ site.url }}/</loc>
+        <lastmod>{{ latest }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Portfolio -->
-    <url>
-        <loc>https://ravrani.dev/portfolio/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Expertise Pages -->
-    <url>
-        <loc>https://ravrani.dev/expertise/dotnet/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://ravrani.dev/expertise/cloud/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://ravrani.dev/expertise/python/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Project Pages -->
-    <url>
-        <loc>https://ravrani.dev/projects/voila-cabs-scaling-tech-for-growth/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://ravrani.dev/projects/unblockable-social-media-engine/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://ravrani.dev/projects/codzgarage-from-ftp-to-just-push-it/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://ravrani.dev/projects/upvoit-secret-re-architecture-mission/</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-</urlset>
 
+    <url>
+        <loc>{{ site.url }}/articles/</loc>
+        <lastmod>{{ latest }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+{% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.last_modified_at | default: post.date | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+{% endfor %}
+</urlset>

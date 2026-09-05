@@ -15,7 +15,8 @@ active_page: "portfolio"
     <meta name="keywords" content="software portfolio, case studies, enterprise projects, .NET projects, Python projects, cloud solutions, ride-hailing platform, scalable architecture">
     <meta name="author" content="Parth Ravrani">
     <meta name="application-name" content="Parth Ravrani">
-    <meta name="robots" content="index, follow">
+    <!-- Unlinked from nav/footer for launch. Flip back to "index, follow" and re-add to sitemap.xml when this page returns. -->
+    <meta name="robots" content="noindex, follow">
     <meta name="language" content="English">
     
     <!-- Open Graph / Facebook -->
@@ -67,19 +68,15 @@ active_page: "portfolio"
     }
     </script>
     
+    <!-- This page's layout is built from Tailwind utilities; legacy-pages.css only recolours them. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/assets/navbar/style.css">
-    <link rel="stylesheet" href="/assets/footer/style.css">
+    {% include editorial-head.html base_path="/" %}
     <link rel="stylesheet" href="/assets/subnav/style.css">
     <link rel="stylesheet" href="/assets/portfolio-listing/style.css">
 </head>
 
-<body class="text-gray-800" data-page="portfolio">
+<body class="home-page legacy-page" data-page="portfolio">
 
         {% include navbar.html base_path="../" active_page="portfolio" %}
         
@@ -100,7 +97,7 @@ active_page: "portfolio"
         </nav>
 
     <!-- Main content container with vertical spacing -->
-    <main class="relative z-10 pt-40">
+    <main class="rv-main legacy-main legacy-main--subnav">
 
         <!-- 1. HERO SECTION (WHITE) -->
         <section id="hero-projects" class="scroll-reveal bg-white py-24 relative overflow-hidden">
